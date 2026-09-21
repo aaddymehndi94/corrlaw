@@ -1,0 +1,40 @@
+# Local environments, credentials, caches and raw bulky outputs.
+.venv/
+venv/
+.julia/
+.codex/
+.codex-log/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+.coverage
+htmlcov/
+.DS_Store
+.idea/
+.vscode/
+work/
+.research/runtime/
+*.npz
+*.npy
+*.pkl
+*.pickle
+*.joblib
+*.h5
+*.hdf5
+*.parquet
+*.arrow
+*.log
+# Deliberately TRACK .research notes/events/freezes, small result files, reports,
+# configs and requirements.lock.txt. Do NOT add a blanket .research/ exclusion.

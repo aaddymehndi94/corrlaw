@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "budget_hours": 10,
+  "report_reserve_minutes": 60,
+  "max_threads": 4,
+  "max_simultaneous_experiments": 1,
+  "local_commits": true,
+  "automatic_push": false,
+  "max_tracked_file_bytes": 2097152,
+  "pysr_setup_budget_minutes": 25,
+  "literature_budget_minutes": 30,
+  "preferred_workflow": "one_lead_agent; sequential implementation and skeptical review",
+  "notes": "The runner enforces deadline/timeouts and one run at a time. Thread limits are environment requests, not a CPU or memory sandbox. Git push is never executed by the helper."
+}

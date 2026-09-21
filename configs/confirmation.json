@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "status": "NOT_READY",
+  "stage": "confirmation",
+  "tasks": [
+    "C",
+    "D",
+    "E",
+    "F"
+  ],
+  "seeds": [
+    91001,
+    91002,
+    91003,
+    91004,
+    91005
+  ],
+  "constraint_widths": [
+    0,
+    0.01
+  ],
+  "output_noise_std": [
+    0,
+    0.01
+  ],
+  "n_fit": 128,
+  "n_calibration": 64,
+  "n_query_candidates": 2048,
+  "query_budgets": [
+    0,
+    1,
+    2,
+    4,
+    8
+  ],
+  "policies": [
+    "random",
+    "qbc",
+    "diversified_qbc",
+    "regularized_d_optimal",
+    "augmented_qbc"
+  ],
+  "notes": "These seeds are held out from method tuning, not secret from the coding agent. Finalize the suite using development runtimes before opening confirmation results. At least two confirmation tasks and all five policies are required for a completed pilot."
+}

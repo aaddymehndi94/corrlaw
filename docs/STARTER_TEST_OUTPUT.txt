@@ -1,0 +1,37 @@
+test_advisory_lock_is_exclusive (test_lab.LabTests.test_advisory_lock_is_exclusive) ... ok
+test_atomic_json_round_trip (test_lab.LabTests.test_atomic_json_round_trip) ... ok
+test_checkpoint_exact_file_only (test_lab.LabTests.test_checkpoint_exact_file_only) ... ok
+test_checkpoint_refuses_directory_and_sensitive_filename (test_lab.LabTests.test_checkpoint_refuses_directory_and_sensitive_filename) ... ok
+test_checkpoint_refuses_large_file (test_lab.LabTests.test_checkpoint_refuses_large_file) ... ok
+test_checkpoint_refuses_preexisting_index (test_lab.LabTests.test_checkpoint_refuses_preexisting_index) ... ok
+test_checkpoint_refuses_secret_content (test_lab.LabTests.test_checkpoint_refuses_secret_content) ... ok
+test_confirmation_accepts_matching_freeze (test_lab.LabTests.test_confirmation_accepts_matching_freeze) ... ok
+test_confirmation_requires_freeze (test_lab.LabTests.test_confirmation_requires_freeze) ... ok
+test_duplicate_id_not_overwritten (test_lab.LabTests.test_duplicate_id_not_overwritten) ... ok
+test_failed_command_preserved (test_lab.LabTests.test_failed_command_preserved) ... ok
+test_freeze_detects_added_file (test_lab.LabTests.test_freeze_detects_added_file) ... ok
+test_freeze_detects_changed_file (test_lab.LabTests.test_freeze_detects_changed_file) ... ok
+test_freeze_refuses_draft (test_lab.LabTests.test_freeze_refuses_draft) ... ok
+test_freeze_refuses_uncommitted_source (test_lab.LabTests.test_freeze_refuses_uncommitted_source) ... ok
+test_freeze_verification_and_immutability (test_lab.LabTests.test_freeze_verification_and_immutability) ... ok
+test_ids_cannot_escape (test_lab.LabTests.test_ids_cannot_escape) ... ok
+test_missing_executable_recorded (test_lab.LabTests.test_missing_executable_recorded) ... ok
+test_nonfinite_json_rejected (test_lab.LabTests.test_nonfinite_json_rejected) ... ok
+test_note_uses_unique_event_files (test_lab.LabTests.test_note_uses_unique_event_files) ... ok
+test_orphaned_run_reconciliation_preserves_output (test_lab.LabTests.test_orphaned_run_reconciliation_preserves_output) ... ok
+test_paths_cannot_escape (test_lab.LabTests.test_paths_cannot_escape) ... ok
+test_ready_header_cannot_hide_unresolved_protocol (test_lab.LabTests.test_ready_header_cannot_hide_unresolved_protocol) ... ok
+test_reporting_reserve_blocks_new_experiments (test_lab.LabTests.test_reporting_reserve_blocks_new_experiments) ... ok
+test_run_requires_start (test_lab.LabTests.test_run_requires_start) ... ok
+test_source_addition_invalidates_run (test_lab.LabTests.test_source_addition_invalidates_run) ... ok
+test_source_mutation_invalidates_run (test_lab.LabTests.test_source_mutation_invalidates_run) ... ok
+test_start_does_not_reset_budget (test_lab.LabTests.test_start_does_not_reset_budget) ... ok
+test_success_records_provenance (test_lab.LabTests.test_success_records_provenance) ... ok
+test_symlinks_rejected (test_lab.LabTests.test_symlinks_rejected) ... ok
+test_timeout (test_lab.LabTests.test_timeout) ... ok
+test_supplied_circle_example (test_lab.SanityTests.test_supplied_circle_example) ... ok
+
+----------------------------------------------------------------------
+Ran 32 tests in 11.529s
+
+OK

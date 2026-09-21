@@ -1,0 +1,10 @@
+# Resolve compatible versions in a project-local venv; write the resulting
+# exact, portable package versions to requirements.lock.txt before confirmation.
+# Python/Julia/platform compatibility must be checked on the user's laptop.
+numpy
+scipy
+sympy
+scikit-learn
+matplotlib
+pytest
+# PySR is optional and installed separately after a bounded smoke test.
