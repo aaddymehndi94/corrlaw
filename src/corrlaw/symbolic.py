@@ -164,7 +164,10 @@ def fit(obs, seed, settings, diversified=False, history=(), generation=0):
                              runtime_seconds=time.perf_counter()-start))
     if not full_candidates:
         raise RuntimeError('no bounded full-data PySR candidate')
-    selected = min(full_candidates, key=lambda r: r['errors'][3]+1e-8*r['complexity'])
+    # Rank the persisted candidate set itself; lexical ties are independent of
+    # whether an equation first appeared in a bootstrap or full-data search.
+    full_candidates=[r for r in candidates if r['search']==0]
+    selected = min(full_candidates, key=lambda r: (r['errors'][3]+1e-8*r['complexity'],r['expression']))
     best = Expression(selected['expression'], a.shape[1])
     committee = [Expression(r['expression'], a.shape[1]) for r in candidates if r['admissible']]
     return SymbolicFit(lib, best, committee or [best], candidates, searches, not committee)

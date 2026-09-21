@@ -1,0 +1,11 @@
+{
+  "valid": false,
+  "expected_units": 10,
+  "completed_units": 10,
+  "failed_units": [],
+  "witnesses_checked": 500,
+  "candidates_checked": 3087,
+  "errors": [
+    "A-s202-w0-n0-constrained-random: common point-model selection"
+  ]
+}

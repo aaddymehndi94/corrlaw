@@ -63,7 +63,7 @@ def inspect_run(path):
                 check(expression.bounded(c['search_settings']['max_complexity']),'candidate complexity/coefficient cap')
                 equations+=1
             full=[r for r in candidates if r['search']==0]
-            selected=min(full,key=lambda r:r['errors'][3]+1e-8*r['complexity'])
+            selected=min(full,key=lambda r:(r['errors'][3]+1e-8*r['complexity'],r['expression']))
             check(selected['expression']==model['selected_expression'],'common point-model selection')
             check(base.physical_expression(lib)==model['physical_expression'],'physical expression')
             plausible=[r['expression'] for r in candidates if r['admissible']]
