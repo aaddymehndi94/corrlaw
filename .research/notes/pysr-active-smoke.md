@@ -32,3 +32,17 @@ candidates and use `(score, expression_string)` as an explicit lexical tie rule.
 Audit uses the same declared total ordering. Preserve the original failed audit;
 no retrospective edits to its result or smoke002. A third bounded smoke and fresh
 process replay will check the final rule before development and confirmation.
+
+## Final smoke and reproduction
+
+Smoke003 (e1ce316):10/10 complete in145.33s. Audit003 valid:3163 candidate records
+and500 alternatives, all queries/metrics reconstructed. No numerical errors.
+After a conservative numerical rejection screen before symbolic construction,
+fresh process replay of A-s203-w0-n0-constrained-augmented_qbc matched ALL scientific
+JSON exactly:51258273dd52241adbf4426162b0bb885a71fe1661a597d8ec3476bb3258431d.
+Recorded augmentation time on that trajectory fell from1.426s to0.434s; descriptive
+single-process timing, not a cross-machine speed guarantee. No final tolerance or
+saved-error calculation changed. Source optimization commit7581285.
+
+The watchdog's first timed reminder was accepted18:13:55UTC. See local delivery log.
+Next:360-unit A/B development across3 seeds,3 widths,2 noise levels and all controls.

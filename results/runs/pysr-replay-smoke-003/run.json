@@ -1,0 +1,37 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "corrlaw.symbolic_audit",
+    "results/runs/pysr-active-smoke-003",
+    "--reproduce",
+    "A-s203-w0-n0-constrained-augmented_qbc",
+    "--output",
+    "results/runs/pysr-replay-smoke-003"
+  ],
+  "duration_seconds": 36.056584,
+  "ended_utc": "2026-09-21T18:18:03+00:00",
+  "error": null,
+  "freeze_id": null,
+  "git": {
+    "branch": "research/corrlaw-sprint-01",
+    "commit": "75812850507f0931e99c0992204b2ff16d0f2e35",
+    "working_tree_dirty": true
+  },
+  "log_path": "work/runs/pysr-replay-smoke-003/console.log",
+  "log_sha256": "dba5979456b29dd6ea7957722b3f30fc5f107fd03b5364c6a40566946def0510",
+  "phase": "audit",
+  "pid": 82836,
+  "platform": "Darwin",
+  "purpose": "Fresh-process exact scientific replay after conservative witness prefilter optimization",
+  "python": "3.14.5",
+  "result_validation": "NOT_REVIEWED",
+  "returncode": 0,
+  "run_id": "pysr-replay-smoke-003",
+  "schema_version": 1,
+  "started_utc": "2026-09-21T18:17:27+00:00",
+  "status": "completed",
+  "task": "T13",
+  "threads_requested": 4,
+  "timeout_seconds": 600.0
+}

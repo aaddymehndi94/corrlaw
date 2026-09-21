@@ -1,0 +1,35 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "corrlaw.symbolic_audit",
+    "results/runs/pysr-active-smoke-003",
+    "--output",
+    "reports/audit/pysr-active-smoke-003"
+  ],
+  "duration_seconds": 5.919771,
+  "ended_utc": "2026-09-21T18:16:40+00:00",
+  "error": null,
+  "freeze_id": null,
+  "git": {
+    "branch": "research/corrlaw-sprint-01",
+    "commit": "e1ce3164e214ff249b743fb958fdf9930d2b58c2",
+    "working_tree_dirty": true
+  },
+  "log_path": "work/runs/pysr-smoke-audit-003/console.log",
+  "log_sha256": "7ee1a99228ef40141339e7d8affa9e036ee8b103bbbb3eae5e75b3ef748dbd7c",
+  "phase": "audit",
+  "pid": 82773,
+  "platform": "Darwin",
+  "purpose": "Validate final-tie-rule PySR smoke with complete expression/query reconstruction",
+  "python": "3.14.5",
+  "result_validation": "NOT_REVIEWED",
+  "returncode": 0,
+  "run_id": "pysr-smoke-audit-003",
+  "schema_version": 1,
+  "started_utc": "2026-09-21T18:16:34+00:00",
+  "status": "completed",
+  "task": "T13",
+  "threads_requested": 4,
+  "timeout_seconds": 600.0
+}

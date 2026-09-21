@@ -1,0 +1,35 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "corrlaw.symbolic_audit",
+    "results/runs/pysr-active-smoke-002",
+    "--output",
+    "reports/audit/pysr-active-smoke-002"
+  ],
+  "duration_seconds": 5.034356,
+  "ended_utc": "2026-09-21T18:12:14+00:00",
+  "error": null,
+  "freeze_id": null,
+  "git": {
+    "branch": "research/corrlaw-sprint-01",
+    "commit": "39ce0a7e224f1248d7d88d13cbab9e4447ccfd0f",
+    "working_tree_dirty": true
+  },
+  "log_path": "work/runs/pysr-smoke-audit-002/console.log",
+  "log_sha256": "514596195138e8666baa46db1cd8e85019e5c52ab6efe4de19f59e3d8b107384",
+  "phase": "audit",
+  "pid": 82557,
+  "platform": "Darwin",
+  "purpose": "Reconstruct every PySR smoke equation, alternative, acquisition and metric",
+  "python": "3.14.5",
+  "result_validation": "NOT_REVIEWED",
+  "returncode": 1,
+  "run_id": "pysr-smoke-audit-002",
+  "schema_version": 1,
+  "started_utc": "2026-09-21T18:12:09+00:00",
+  "status": "failed",
+  "task": "T13",
+  "threads_requested": 4,
+  "timeout_seconds": 600.0
+}

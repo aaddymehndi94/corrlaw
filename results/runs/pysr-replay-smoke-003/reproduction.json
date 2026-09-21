@@ -1,0 +1,7 @@
+{
+  "parent": "results/runs/pysr-active-smoke-003",
+  "unit_id": "A-s203-w0-n0-constrained-augmented_qbc",
+  "exact_match": true,
+  "original_scientific_sha256": "51258273dd52241adbf4426162b0bb885a71fe1661a597d8ec3476bb3258431d",
+  "repeated_scientific_sha256": "51258273dd52241adbf4426162b0bb885a71fe1661a597d8ec3476bb3258431d"
+}

@@ -1,0 +1,34 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "corrlaw.symbolic_experiment",
+    "--config",
+    "configs/pysr-smoke-v2.json"
+  ],
+  "duration_seconds": 129.864963,
+  "ended_utc": "2026-09-21T18:11:41+00:00",
+  "error": null,
+  "freeze_id": null,
+  "git": {
+    "branch": "research/corrlaw-sprint-01",
+    "commit": "39ce0a7e224f1248d7d88d13cbab9e4447ccfd0f",
+    "working_tree_dirty": true
+  },
+  "log_path": "work/runs/pysr-active-smoke-002/console.log",
+  "log_sha256": "974e481fd73c41829383dc0a4b1daebbbdbb7c3482c052d7da6ee10aaad0613a",
+  "phase": "development",
+  "pid": 82427,
+  "platform": "Darwin",
+  "purpose": "PySR fixed 30 iterations and revalidated equation retention: paired A/B all policies",
+  "python": "3.14.5",
+  "result_validation": "NOT_REVIEWED",
+  "returncode": 0,
+  "run_id": "pysr-active-smoke-002",
+  "schema_version": 1,
+  "started_utc": "2026-09-21T18:09:31+00:00",
+  "status": "completed",
+  "task": "T13",
+  "threads_requested": 4,
+  "timeout_seconds": 1800.0
+}

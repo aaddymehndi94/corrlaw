@@ -29,8 +29,8 @@ remain blocked/incomplete. Label that scope honestly; do not mark skipped scienc
 | ID | Depends on | Task | Acceptance evidence | Status |
 |---|---|---|---|---|
 | T12 | T11 | Same-thread watchdog and explicit overnight deadline | OVERNIGHT.json; queue delivery test; local live PID 81797 | DONE |
-| T13 | T12 | Actual PySR five-policy active learner, tests and smoke | pending | ACTIVE |
-| T14 | T13 | Development/profiling and fresh frozen protocol | pending | NOT_STARTED |
+| T13 | T12 | Actual PySR five-policy active learner, tests and smoke | smoke003 audit valid; replay003 exact; 9 focused tests | DONE |
+| T14 | T13 | Development/profiling and fresh frozen protocol | configs/pysr-development.json; development001 next | ACTIVE |
 | T15 | T14 | Repeated PySR confirmation with all baselines and controls | pending | NOT_STARTED |
 | T16 | T13 | Search-failure and physical-prior diagnostics | pending | NOT_STARTED |
 | T17 | T15,T16 | Artifact audit, reproduction, updated report and handoff | pending | NOT_STARTED |

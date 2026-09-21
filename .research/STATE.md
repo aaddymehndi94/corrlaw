@@ -1,17 +1,19 @@
 # Current state
-Status: ACTIVE — overnight extension authorized by user
+Status: ACTIVE — user-authorized overnight research
 Owner: Codex lead; branch research/corrlaw-sprint-01
-Deadline: 2026-09-22 08:00 IST / 02:30 UTC; new experiments end 01:30 UTC.
-Original SPRINT.json preserved. Pilot T01–T11 evidence remains intact (8a382b7).
-User explicitly requested continued research and a watchdog while asleep.
-Native overnight goal ACTIVE; local watchdog queues same-thread reminders every 15m.
-Watchdog details: .research/OVERNIGHT.json; tools/overnight_watchdog.py;
-work/overnight-watchdog/{pid,deliveries.jsonl,STOP}. Queue smoke accepted.
-Do not call the old finite-library completion gate completion of overnight research.
-Current task T13: implement genuine PySR active acquisition comparison, all policies.
-New symbolic engine/runner and 8 focused tests implemented; all 8 pass.
-Next: real PySR A/B five-policy smoke, run pysr-active-smoke-001, timeout 1800s.
-Active run: pysr-active-smoke-001 (runner PID 81951), timeout 1800s.
-No source/config edits until run finishes. Audit design: work/overnight-audit-design.md.
-No pushes or publication authorized.
-Exact next action: run pysr-active-smoke-001 with configs/pysr-smoke.json.
+Deadline: 2026-09-22 08:00 IST / 02:30 UTC; experiments end01:30UTC.
+Original SPRINT.json preserved. Native overnight goal ACTIVE. Watchdog PID81797
+queues same-thread reminders every15m; first scheduled delivery accepted18:13:55UTC.
+Logs/STOP: work/overnight-watchdog. No new agent sessions or pushes.
+T01–T11 pilot complete; T12 watchdog complete; T13 PySR engine smoke/audit/replay DONE.
+Smoke003:10/10 trajectories;3163 candidates/500 witnesses audited; exact fresh
+process scientific replay passed after conservative prefilter optimization.
+Smoke002 failed tie-order audit retained; subsequent explicit lexical tie fixed it.
+Current taskT14: pysr-development-001,360 A/B units, all5 policies,3 seeds, widths
+0/.01/.05,noise0/.01,independent/shuffle/restricted controls. Configpysr-development.
+Run timeout10800s; measure runtime before freezing feasible C/D/E/F confirmation.
+No source/config edits while run is active. Draft diagnostics may be built in work/.
+T16 preregistered exploratory follow-ups: notes/diagnostic-plan.md.
+Exact next action: inspect results/runs/pysr-development-001/manifest.json and
+work/runs/pysr-development-001/console.log; then full artifact audit and freeze.
+Do not mistake the old pilot completion gate for completion of overnight research.

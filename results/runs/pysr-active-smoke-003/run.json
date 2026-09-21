@@ -1,0 +1,34 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "corrlaw.symbolic_experiment",
+    "--config",
+    "configs/pysr-smoke-v3.json"
+  ],
+  "duration_seconds": 145.327474,
+  "ended_utc": "2026-09-21T18:16:20+00:00",
+  "error": null,
+  "freeze_id": null,
+  "git": {
+    "branch": "research/corrlaw-sprint-01",
+    "commit": "e1ce3164e214ff249b743fb958fdf9930d2b58c2",
+    "working_tree_dirty": true
+  },
+  "log_path": "work/runs/pysr-active-smoke-003/console.log",
+  "log_sha256": "abb981038dbb21d504d7db17b04e3df017757f804af020e570f6c5b37501b325",
+  "phase": "development",
+  "pid": 82641,
+  "platform": "Darwin",
+  "purpose": "Final bounded PySR smoke with explicit lexical ties and retained-equation revalidation",
+  "python": "3.14.5",
+  "result_validation": "NOT_REVIEWED",
+  "returncode": 0,
+  "run_id": "pysr-active-smoke-003",
+  "schema_version": 1,
+  "started_utc": "2026-09-21T18:13:54+00:00",
+  "status": "completed",
+  "task": "T13",
+  "threads_requested": 4,
+  "timeout_seconds": 1800.0
+}
