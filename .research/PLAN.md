@@ -28,8 +28,8 @@ remain blocked/incomplete. Label that scope honestly; do not mark skipped scienc
 
 | ID | Depends on | Task | Acceptance evidence | Status |
 |---|---|---|---|---|
-| T12 | T11 | Same-thread watchdog and explicit overnight deadline | OVERNIGHT.json; queue delivery test; local live PID 81797 | DONE |
-| T13 | T12 | Actual PySR five-policy active learner, tests and smoke | old smoke003 valid; fair-cap revision requires new smoke/audit/replay | ACTIVE |
+| T12 | T11 | Same-thread watchdog and explicit overnight deadline | OVERNIGHT.json; queue delivery test; idle-only daemon; live PID in work/overnight-watchdog/pid | DONE |
+| T13 | T12 | Actual PySR five-policy active learner, tests and smoke | fair smoke001 valid: 4379 candidates/460 witnesses; fair replay001 exact | DONE |
 | T14 | T13 | Development/profiling and fresh frozen protocol | development001 interrupted for fair-cap revision; development002 pending | ACTIVE |
 | T15 | T14 | Repeated PySR confirmation with all baselines and controls | pending | NOT_STARTED |
 | T16 | T13 | Search-failure and physical-prior diagnostics | pending | NOT_STARTED |

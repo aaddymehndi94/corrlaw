@@ -52,3 +52,8 @@ Do not edit source/config while an experiment runs. One heavy process, <=4 numer
 threads. Local scoped commits only; preserve failures. No push, paid APIs, cloud,
 system configuration changes, or additional Codex sessions. Drafts in work/ remain
 for provenance; installed files are now the authoritative implementations.
+
+Milestone19:16UTC: fair smoke completed10/10, strengthened artifact audit valid
+(4379 candidates/460 witnesses), and fresh B fair-replay001 exactly matched.
+T13 nowDONE; next is full development002, config pysr-development-v2.json.
+No new confirmation yet. Fair smoke validation note has exact hash.

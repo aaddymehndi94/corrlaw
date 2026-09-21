@@ -61,6 +61,7 @@ def inspect_run(path):
                 check(np.allclose(error,record['errors'],rtol=1e-12,atol=1e-12),'candidate errors')
                 check(record['admissible']==symbolic.admissible(expression,error,obs.noise_std,c['search_settings']['max_complexity']),'candidate admissibility')
                 check(expression.bounded(c['search_settings']['max_complexity']),'candidate complexity/coefficient cap')
+                check(record['complexity']==expression.complexity,'recorded arithmetic complexity')
                 equations+=1
             full=[r for r in candidates if r['search']==0]
             selected=min(full,key=lambda r:(r['errors'][3]+1e-8*r['complexity'],r['expression']))
@@ -70,6 +71,8 @@ def inspect_run(path):
             check(model['search_committee']==(plausible or [base.expression]),'search committee')
             ordinary=[symbolic.Expression(s,p) for s in model['search_committee']]
             fitted=symbolic.SymbolicFit(lib,base,ordinary,candidates,model['searches'],not plausible)
+            check(len(model['searches'])==c['search_settings']['searches'],'number of search fits')
+            streams=np.random.SeedSequence([u['seed'],1400,budget]).spawn(c['search_settings']['searches'])
             for search in model['searches']:
                 ix=np.asarray(search['bootstrap_indices']);n=c['n_fit']
                 check(len(ix)==n+budget and np.all(ix[:n]>=0) and np.all(ix[:n]<n),'bootstrap original rows')
@@ -77,7 +80,19 @@ def inspect_run(path):
                 weight=np.ones(n+budget)
                 if budget:weight[n:]=n/budget
                 check(np.array_equal(weight,search['weights']),'acquisition fitness weights')
+                repetition=search['repetition']
+                rng=np.random.default_rng(streams[repetition])
+                expected_indices=np.arange(n) if repetition==0 else rng.integers(n,size=n)
+                expected_indices=np.concatenate((expected_indices,np.arange(n,n+budget)))
+                expected_columns=np.arange(p)
+                if u['policy']=='diversified_qbc' and repetition:
+                    expected_columns=np.sort(rng.choice(expected_columns,max(7,int(.7*p)),replace=False))
+                expected_seed=int(rng.integers(1,2**31-1))
+                check(np.array_equal(ix,expected_indices),'bootstrap stream replay')
+                check(search['seed']==expected_seed,'search seed replay')
                 columns=search['columns']
+                check(columns==expected_columns.tolist(),'feature-subset stream replay')
+                check(all(r['search_complexity']<=c['search_settings']['search_maxsize'] for r in search['equations']),'native search budget')
                 check(len(set(columns))==len(columns) and all(0<=i<p for i in columns),'search feature subset')
                 if search['repetition']==0:
                     check(np.array_equal(ix,np.arange(n+budget)) and columns==list(range(p)),'common full-data search')
@@ -89,6 +104,9 @@ def inspect_run(path):
                 check(np.count_nonzero(q)<=3 and np.max(np.abs(q))<=20,'sparse witness cap')
                 check(witness['base']==base.expression,'witness base identity')
                 alt=symbolic.Expression(witness['alternative'],p)
+                check(witness['complexity']==alt.complexity,'witness arithmetic complexity')
+                check(np.allclose(witness['errors'],symbolic.errors(alt,matrices,obs),rtol=1e-12,atol=1e-12),'stored witness errors')
+                check(np.allclose(witness['base_errors'],symbolic.errors(base,matrices,obs),rtol=1e-12,atol=1e-12),'stored base errors')
                 for expression in (base,alt):
                     check(symbolic.admissible(expression,symbolic.errors(expression,matrices,obs),obs.noise_std,c['search_settings']['max_complexity']),'witness admissibility')
                 phi=lib.transform(obs.pool);difference=alt.predict(phi)-base.predict(phi)
@@ -97,6 +115,9 @@ def inspect_run(path):
                 check(location==witness['disagreement_query_id'],'witness disagreement location')
                 check(np.isclose(abs(difference[location]),witness['max_pool_difference'],atol=1e-12),'witness disagreement value')
                 witnesses+=1
+            _,recomputed_witnesses,recomputed_diagnostic=symbolic.augment(obs,fitted,c['search_settings'])
+            check(digest(recomputed_witnesses)==digest(model['witnesses']),'complete witness-search replay')
+            check(recomputed_diagnostic==model['diagnostic'],'diagnostic state')
             expected_committee=model['search_committee']+([w['alternative'] for w in model['witnesses']] if u['policy']=='augmented_qbc' else [])
             check(model['committee']==expected_committee,'acquisition committee')
             if budget<8:
@@ -113,6 +134,13 @@ def inspect_run(path):
     for group,rows in groups.items():
         if {r['policy'] for r in rows}!=set(c['policies']):issues.append(f'{group}: missing policy')
         if len({r['models'][0]['selected_expression'] for r in rows})!=1:issues.append(f'{group}: unpaired initial estimator')
+        for budget in range(9):
+            histories=defaultdict(set)
+            for unit in rows:
+                history=tuple(r['query_id'] for r in unit['queries'][:budget])
+                histories[history].add(unit['models'][budget]['selected_expression'])
+            if any(len(values)!=1 for values in histories.values()):
+                issues.append(f'{group}: unequal point models on identical measurement histories at budget{budget}')
     return dict(valid=not issues and not failed,expected_units=len(expected),completed_units=completed,
                 failed_units=failed,witnesses_checked=witnesses,candidates_checked=equations,errors=issues)
 

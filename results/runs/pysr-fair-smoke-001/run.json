@@ -1,0 +1,34 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "corrlaw.symbolic_experiment",
+    "--config",
+    "configs/pysr-fair-smoke.json"
+  ],
+  "duration_seconds": 119.584445,
+  "ended_utc": "2026-09-21T19:10:31+00:00",
+  "error": null,
+  "freeze_id": null,
+  "git": {
+    "branch": "research/corrlaw-sprint-01",
+    "commit": "552f2f0ea1d131af5ba2d2b7af6ca15400a9543e",
+    "working_tree_dirty": true
+  },
+  "log_path": "work/runs/pysr-fair-smoke-001/console.log",
+  "log_sha256": "f59f49e96c82c5229303dd55a06b871fb0b540a1b702171ef92a0095921fe0d1",
+  "phase": "development",
+  "pid": 85380,
+  "platform": "Darwin",
+  "purpose": "Fair-cap PySR smoke: every searched and added equation has the same15-node arithmetic budget",
+  "python": "3.14.5",
+  "result_validation": "NOT_REVIEWED",
+  "returncode": 0,
+  "run_id": "pysr-fair-smoke-001",
+  "schema_version": 1,
+  "started_utc": "2026-09-21T19:08:32+00:00",
+  "status": "completed",
+  "task": "T13",
+  "threads_requested": 4,
+  "timeout_seconds": 1800.0
+}

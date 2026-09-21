@@ -1,0 +1,7 @@
+{
+  "parent": "results/runs/pysr-fair-smoke-001",
+  "unit_id": "B-s204-w0-n0-constrained-augmented_qbc",
+  "exact_match": true,
+  "original_scientific_sha256": "06fd0bf2dc82ab55f1bb6904a79d9154c5852292dcc938b3d1c6875ace2f6fdb",
+  "repeated_scientific_sha256": "06fd0bf2dc82ab55f1bb6904a79d9154c5852292dcc938b3d1c6875ace2f6fdb"
+}

@@ -1,0 +1,37 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "corrlaw.symbolic_audit",
+    "results/runs/pysr-fair-smoke-001",
+    "--output",
+    "results/runs/pysr-fair-replay-001",
+    "--reproduce",
+    "B-s204-w0-n0-constrained-augmented_qbc"
+  ],
+  "duration_seconds": 37.467678,
+  "ended_utc": "2026-09-21T19:15:30+00:00",
+  "error": null,
+  "freeze_id": null,
+  "git": {
+    "branch": "research/corrlaw-sprint-01",
+    "commit": "552f2f0ea1d131af5ba2d2b7af6ca15400a9543e",
+    "working_tree_dirty": true
+  },
+  "log_path": "work/runs/pysr-fair-replay-001/console.log",
+  "log_sha256": "dba5979456b29dd6ea7957722b3f30fc5f107fd03b5364c6a40566946def0510",
+  "phase": "development",
+  "pid": 85707,
+  "platform": "Darwin",
+  "purpose": "Fresh-process exact replay of revised arithmetic-budget PySR augmented trajectory",
+  "python": "3.14.5",
+  "result_validation": "NOT_REVIEWED",
+  "returncode": 0,
+  "run_id": "pysr-fair-replay-001",
+  "schema_version": 1,
+  "started_utc": "2026-09-21T19:14:53+00:00",
+  "status": "completed",
+  "task": "T13",
+  "threads_requested": 4,
+  "timeout_seconds": 600.0
+}

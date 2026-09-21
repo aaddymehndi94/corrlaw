@@ -1,0 +1,35 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "corrlaw.symbolic_audit",
+    "results/runs/pysr-fair-smoke-001",
+    "--output",
+    "results/runs/pysr-fair-smoke-001"
+  ],
+  "duration_seconds": 10.159581,
+  "ended_utc": "2026-09-21T19:14:46+00:00",
+  "error": null,
+  "freeze_id": null,
+  "git": {
+    "branch": "research/corrlaw-sprint-01",
+    "commit": "552f2f0ea1d131af5ba2d2b7af6ca15400a9543e",
+    "working_tree_dirty": true
+  },
+  "log_path": "work/runs/pysr-fair-smoke-audit-001/console.log",
+  "log_sha256": "1b91fdd587c64c5174a34f73b758c52b6488485a0702dcc2da9e97ee32a0a182",
+  "phase": "development",
+  "pid": 85669,
+  "platform": "Darwin",
+  "purpose": "Reconstruct all fair-cap smoke artifacts, random streams, complete witness search and paired estimators",
+  "python": "3.14.5",
+  "result_validation": "NOT_REVIEWED",
+  "returncode": 0,
+  "run_id": "pysr-fair-smoke-audit-001",
+  "schema_version": 1,
+  "started_utc": "2026-09-21T19:14:36+00:00",
+  "status": "completed",
+  "task": "T13",
+  "threads_requested": 4,
+  "timeout_seconds": 600.0
+}

@@ -1,17 +1,11 @@
 # Current state
 Repository: /Users/devikasv/dev/corrlaw
-Status: ACTIVE — overnight research authorized until 2026-09-22 08:00 IST.
-Hard deadline 02:30 UTC; experiments end 01:30 UTC. Original SPRINT unchanged.
-Native overnight goal ACTIVE. Watchdog uses same thread, no competing agent.
-Latest phase: correct a pre-confirmation complexity fairness issue.
-Old PySR search maxsize10 versus final SymPy cap31 was not a matched class.
-Development001 interrupted intentionally; preserve all records. No new confirmation.
-Revision: search and all accepted expressions share arithmetic-tree cap15. Powers,
-subtraction and division counted explicitly. New config validation rejects mismatches.
-Read notes/complexity-fairness-revision.md. Revised smoke is pysr-fair-smoke-001;
-config configs/pysr-fair-smoke.json. Then full development002, all360 A/B units.
-T13 reopened for fair smoke/audit/replay; T14 follows. T16 code and tests installed.
-Deadline helper overlay and idle-only watchdog are installed; original clock intact.
-Diagnostics: notes/diagnostic-plan.md. Interpretation: notes/overnight-interpretation-checklist.md.
-Exact next action: run pysr-fair-smoke-001 after the current test/checkpoint step.
-No active heavy experiment currently. No pushes or publication authorized.
+Status: ACTIVE overnight; deadline02:30 UTC, new-experiment cutoff01:30 UTC.
+T13 DONE: fair smoke10/10,4379 candidates/460 witnesses audit valid; exact B replay.
+Common15-node arithmetic cap for searches and accepted equations.
+Superseded development001 intentionally interrupted at224 units; preserved.
+T14: start pysr-development-002 using configs/pysr-development-v2.json,360 A/B units.
+No new C/D/E/F PySR confirmation yet; scope finalized only after development timings.
+One heavy process; do not edit source/config during run. Draft documents in work/.
+Native goal active; watchdog PID85026, caffeinate85027, idle-only same-thread queue.
+Next action: run development002, then audit and review before v3 freeze.
