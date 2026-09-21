@@ -1,0 +1,13 @@
+{
+  "complete": false,
+  "issues": [
+    "T09 lacks DONE evidence",
+    "T10 lacks DONE evidence",
+    "T11 lacks DONE evidence",
+    "missing reports/confirmation/summary.json",
+    "missing results/runs/confirmation-v1-001/validation.json",
+    "missing results/runs/reproduce-v1-001/reproduction.json"
+  ],
+  "scope": "bounded finite-library research pilot; no guarantee of research advantage",
+  "watchdog": "completion gate plus active Codex task goal; no background agent restart"
+}

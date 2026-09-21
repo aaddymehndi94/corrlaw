@@ -13,9 +13,9 @@ One ACTIVE implementation task by default. All rows below start NOT_STARTED.
 | T05 | T04 | Complete one small end-to-end finite-library comparison | finite-smoke-001/validation.json: 10 units, 500 witnesses checked | DONE |
 | T06 | T05 | Development sweep and failure analysis | development-001/validation.json; reports/development; 360 complete units | DONE |
 | T07 | T05 | Bounded PySR smoke and small comparison | pysr-smoke-001/pysr.json; pysr-compare-001/comparison.json (six fits) | DONE |
-| T08 | T06,T07 | Freeze a feasible confirmation protocol | freezes/v1.json; lab verify passed (34 files); source commit 7757dd5 | DONE |
-| T09 | T08 | Run held-out confirmation without changing methods | confirmation-v1-001: 1,000 policy units; frozen v1 inputs | ACTIVE |
-| T10 | T09 | Independent-process reproduction and skeptical audit | reproduced artifact/metrics; leakage/fairness/freeze audit; unresolved issues listed | NOT_STARTED |
+| T08 | T06,T07 | Freeze a feasible confirmation protocol | v1 preserved; preparing v2 replay-check fix with fresh seeds | ACTIVE |
+| T09 | T08 | Run held-out confirmation without changing methods | v1 retained as exploratory after checker fix; fresh v2 round pending | NOT_STARTED |
+| T10 | T09 | Independent-process reproduction and skeptical audit | v1 numeric hashes match but Python container equality failed; regression fix | NOT_STARTED |
 | T11 | T10 | Write evidence-linked report and handoff; final local checkpoint | report, figures, claims ledger, exact reproduction commands and Git status | NOT_STARTED |
 
 T07 may use the documented fallback and still satisfy its dependency. A missing PySR

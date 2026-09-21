@@ -1,0 +1,37 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "corrlaw.audit",
+    "results/runs/confirmation-v1-001",
+    "--reproduce",
+    "C-s91001-w0-n0.01-constrained-augmented_qbc",
+    "--output",
+    "results/runs/reproduce-v1-001"
+  ],
+  "duration_seconds": 1.041321,
+  "ended_utc": "2026-09-21T17:33:07+00:00",
+  "error": null,
+  "freeze_id": "v1",
+  "git": {
+    "branch": "research/corrlaw-sprint-01",
+    "commit": "8a207f0ae9e36fc2648304b12ec91a4ff3fc4cd4",
+    "working_tree_dirty": true
+  },
+  "log_path": "work/runs/reproduce-v1-001/console.log",
+  "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "phase": "audit",
+  "pid": 78227,
+  "platform": "Darwin",
+  "purpose": "Preselected exact scientific replay in a new Python process",
+  "python": "3.14.5",
+  "result_validation": "NOT_REVIEWED",
+  "returncode": 1,
+  "run_id": "reproduce-v1-001",
+  "schema_version": 1,
+  "started_utc": "2026-09-21T17:33:06+00:00",
+  "status": "failed",
+  "task": "T10",
+  "threads_requested": 4,
+  "timeout_seconds": 300.0
+}

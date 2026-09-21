@@ -1,0 +1,35 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "corrlaw.audit",
+    "results/runs/confirmation-v1-001",
+    "--output",
+    "results/runs/confirmation-v1-001"
+  ],
+  "duration_seconds": 16.891217,
+  "ended_utc": "2026-09-21T17:32:51+00:00",
+  "error": null,
+  "freeze_id": "v1",
+  "git": {
+    "branch": "research/corrlaw-sprint-01",
+    "commit": "8a207f0ae9e36fc2648304b12ec91a4ff3fc4cd4",
+    "working_tree_dirty": true
+  },
+  "log_path": "work/runs/confirmation-audit-v1-001/console.log",
+  "log_sha256": "be5d5e91d86e21de2e742488c62b003d9be1108924b9da692d4ab5d815ce155e",
+  "phase": "audit",
+  "pid": 78181,
+  "platform": "Darwin",
+  "purpose": "Reconstruct and validate every saved confirmation unit and witness",
+  "python": "3.14.5",
+  "result_validation": "NOT_REVIEWED",
+  "returncode": 0,
+  "run_id": "confirmation-audit-v1-001",
+  "schema_version": 1,
+  "started_utc": "2026-09-21T17:32:34+00:00",
+  "status": "completed",
+  "task": "T10",
+  "threads_requested": 4,
+  "timeout_seconds": 600.0
+}

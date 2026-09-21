@@ -8,3 +8,9 @@ GC and precompile thread. One helper-managed heavy experiment at a time.
 Julia bootstrap initially selected 1.13.0 under .venv/julia_project; its package depot
 is local .julia. Existence of a downloaded binary is not a successful PySR experiment.
 No global/system package, credentials, paid API, cloud or remote repository changes.
+
+Confirmed optional runtime: PySR 2.5.0, Julia 1.13.0; real smoke plus six fits succeeded.
+Exact Julia environment: configs/JuliaProject.toml and configs/JuliaManifest.toml.
+Main confirmation: 1,000 units in 343.107057 seconds (lab runner wall time), CPU only.
+No more experiments are needed for the registered scope; final audit/replay/report
+remain required before completion.

@@ -1,15 +1,15 @@
 # Current state
 Status: ACTIVE
-Task: T09 frozen confirmation
+Task: T08 v2 freeze after replay-check correction
 Owner: Codex lead; branch research/corrlaw-sprint-01
-Deadline: 2026-09-22 03:01 UTC; experiment cutoff 02:01 UTC.
-T01–T07 complete. 48 tests pass (.research/notes/final-tests.txt).
-Development-001: 360 units, no failures; 21,651 witnesses checked by artifact audit.
-A/B evidence shows no consistent unique advantage over QBC/D-optimal.
-PySR smoke and six A/B static fits succeeded; separate from policy benchmark.
-Protocol v1 finalized before confirmation; all C/D/E/F remain uninspected.
-Freeze v1 verified: 34 committed inputs at 7757dd5.
-Next action: run
-confirmation-v1-001 with --phase confirmation --freeze v1 (1,000 units).
-Launching confirmation-v1-001; do not edit frozen source/configuration. No push/publication authorization.
-Completion guard: active goal + tools/completion_check.py; durable plan/state.
+Deadline 2026-09-22 03:01 UTC; experiment cutoff 02:01 UTC (ample time remains).
+V1: 1,000 units completed; full artifact audit valid, 96,345 alternatives checked.
+V1 replay was a false negative: exact scientific hashes match, tuple/list comparison
+was incorrect after JSON serialization. Failed record is preserved unchanged.
+Corrected checker compares canonical JSON exactly; regression test also rejects a
+changed numeric metric. No numeric method/config changes except fresh v2 seeds.
+Protocol v2 uses 92001–92005, all four tasks/all five policies/all controls.
+V1 evidence retained as exploratory after revision. No active experiments.
+Next action: run 49 tests, commit/freeze v2, run confirmation-v2-001 then replay
+C-s92001-w0-n0.01-constrained-augmented_qbc. See DECISIONS.md D007.
+Do not claim completion until the actual saved-JSON replay and evidence gate pass.

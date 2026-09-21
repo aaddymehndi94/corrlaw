@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "stage": "confirmation",
+  "tasks": [
+    "C",
+    "D",
+    "E",
+    "F"
+  ],
+  "seeds": [
+    91001,
+    91002,
+    91003,
+    91004,
+    91005
+  ],
+  "constraint_widths": [
+    0,
+    0.01
+  ],
+  "output_noise_std": [
+    0,
+    0.01
+  ],
+  "n_fit": 128,
+  "n_calibration": 64,
+  "n_query_candidates": 2048,
+  "query_budgets": [
+    0,
+    1,
+    2,
+    4,
+    8
+  ],
+  "policies": [
+    "random",
+    "qbc",
+    "diversified_qbc",
+    "regularized_d_optimal",
+    "augmented_qbc"
+  ],
+  "notes": "Executable finite-library configuration. All numerical choices are specified in docs/PROTOCOL.md and docs/METHOD.md; every measured label counts. Confirmation seeds are held out from method tuning.",
+  "engine": "finite_library",
+  "n_test": 2048,
+  "controls": [
+    "constrained",
+    "independent_inputs",
+    "matched_marginal_shuffle",
+    "surface_restricted_queries"
+  ]
+}

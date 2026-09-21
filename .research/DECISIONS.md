@@ -46,3 +46,17 @@ Development artifacts are immutable. Save future unit JSON compactly, preserving
 all numeric fields/candidates/witnesses; ~161 MB of pretty development evidence
 remains tracked and compresses in Git. Move chart legend below panels after visual
 inspection detected title overlap. Neither change alters computed scientific values.
+
+## D007 — 2026-09-21: preserve and correct a replay-check false negative
+confirmation-v1-001 completed 1,000 units; full artifact audit validated 96,345
+alternative records. reproduce-v1-001 returned exact_match=false even though both
+scientific hashes were identical (36e69b2b...e18e564). Cause: lib.powers is a list of
+tuples in memory but a list of lists after JSON loading. Python container equality
+was the wrong test of the serialized scientific contract. No numeric discrepancy
+was observed. Preserve the failed attempt rather than editing its boolean.
+Fix the checker to compare canonical serialized JSON exactly, with no rounding or
+numeric tolerance. Add regression tests that accept saved-container equivalence
+and reject a 1e-6 metric change. Because source is revised after the first round,
+create protocol v2 with fresh seeds 92001–92005 and retain the first round as
+exploratory. No learning method, threshold, metric, acquisition or scope changes.
+Preselect the corresponding noisy C unit at seed 92001 for v2 replay.

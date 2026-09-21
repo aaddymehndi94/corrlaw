@@ -169,6 +169,21 @@ class ScienceTests(unittest.TestCase):
         self.assertEqual(w,[])
         self.assertEqual(state,'poor_observational_fit')
 
+    def test_saved_json_reproduction_preserves_exact_science(self):
+        from corrlaw.experiment import run
+        from corrlaw.audit import reproduce
+        c=self.config();c['tasks']=['A'];c['policies']=['augmented_qbc']
+        with tempfile.TemporaryDirectory() as d:
+            output=Path(d)/'original'; run(c,output)
+            replay=Path(d)/'replay';replay.mkdir()
+            key=next((output/'units').glob('*.json')).stem
+            self.assertTrue(reproduce(output,key,replay))
+            record=json.loads((replay/'reproduction.json').read_text())
+            self.assertEqual(record['original_scientific_sha256'],record['repeated_scientific_sha256'])
+            original=output/'units'/f'{key}.json';value=json.loads(original.read_text())
+            value['metrics'][0]['off_rmse']+=1e-6;original.write_text(json.dumps(value))
+            self.assertFalse(reproduce(output,key,replay))
+
     def test_strict_configuration(self):
         c=self.config(); c['typo']=1
         with tempfile.TemporaryDirectory() as d:

@@ -79,7 +79,10 @@ def reproduce(path, unit_id, output):
     trial=make_trial(original['task'],original['seed'],original['width'],original['noise'],original['control'],c)
     repeated=run_policy(trial,original['policy'],c)
     original_science={k:original[k] for k in scientific_content(repeated)}
-    exact=original_science==scientific_content(repeated)
+    # Compare the serialized scientific contract: JSON represents tuples as arrays.
+    # No rounding or floating-point tolerance is introduced.
+    exact=(json.dumps(original_science,sort_keys=True,allow_nan=False) ==
+           json.dumps(scientific_content(repeated),sort_keys=True,allow_nan=False))
     save(Path(output)/'reproduction.json',dict(parent=str(path),unit_id=unit_id,exact_match=exact,
           original_scientific_sha256=digest(original_science),
           repeated_scientific_sha256=digest(scientific_content(repeated)),

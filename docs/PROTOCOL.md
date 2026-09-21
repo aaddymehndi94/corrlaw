@@ -1,7 +1,10 @@
 # CorrLaw experimental protocol
 Status: READY_TO_FREEZE
-Protocol ID: v1
-Finalized: 2026-09-21, after A/B development and before any C/D/E/F run.
+Protocol ID: v2
+Finalized: 2026-09-21, after v1 verification exposed a JSON-container comparison bug.
+Revision v2 changes the replay checker and uses fresh confirmation seeds; numerical
+learning, metrics and acquisition settings are unchanged. The first round is retained
+as exploratory evidence after this revision, with its false-negative replay record.
 
 ## Question and scope
 Does explicit near-nullspace candidate augmentation add useful acquisition value
@@ -24,7 +27,7 @@ A boundary-aware circle identity is tested; no prior-aware numerical sweep is cl
 - Development file: configs/pilot.json; A/B, seeds 101–103; widths 0,0.01,0.05;
   noise standard deviations 0,0.01; all five policies; 360 policy units completed.
 - Confirmation file: configs/confirmation.json; C/D/E/F, seeds
-  91001,91002,91003,91004,91005; constrained widths 0,0.01; noise 0,0.01.
+  92001,92002,92003,92004,92005; constrained widths 0,0.01; noise 0,0.01.
 - Independent-input, matched-marginal-shuffle and surface-restricted-query controls
   run at width 0 for both noise levels on every task/seed/policy.
 - Confirmation total: 4 tasks × 5 seeds × (4 constrained + 6 control conditions)
@@ -89,11 +92,11 @@ expected/completed sets, pairing, labels, witness bounds and re-evaluated errors
 No failed policy/seed can be silently excluded. Resume requires matching engine,
 config and artifact hashes; preserve orphaned files and use a new run ID if unverified.
 
-Before confirmation inspect only A/B outcomes. After confirmation do not alter
+Before v2 confirmation, tune only on A/B outcomes; v1 produced no method changes. After confirmation do not alter
 methods, metrics or configurations and call the same seeds fresh confirmation.
 Any correctness bug requires retaining/invalidating affected evidence and a new
 protocol with fresh seeds. Preselect reproduction unit
-C-s91001-w0-n0.01-constrained-augmented_qbc from confirmation-v1-001. A new process
+C-s92001-w0-n0.01-constrained-augmented_qbc from confirmation-v2-001. A new process
 must exactly match scientific JSON (excluding timing/RSS); save mismatch if any.
 Figures and tables must regenerate from saved artifacts.
 
@@ -108,7 +111,7 @@ or broad discovery/novelty claim is planned absent materially stronger evidence.
 
 ## Review and freeze evidence
 All decisions resolved: YES.
-Scientific tests: .research/notes/final-tests.txt (48 passing tests).
+Scientific tests: .research/notes/final-tests.txt (49 passing tests).
 Development validation: results/runs/development-001/validation.json (360 complete,
 21,651 witnesses checked, no validation errors). Development summary:
 reports/development/summary.json; no unique advantage over established active
@@ -116,6 +119,6 @@ baselines was established, so this is a comparison, not a method-win search.
 Prior-work/equivalence: docs/RELATED_WORK.md and docs/EQUIVALENCE.md.
 Python 3.14.5; exact packages requirements.lock.txt. Optional PySR 2.5.0, Julia 1.13.0;
 Julia Project/Manifest copies in configs. PySR smoke and six static A/B fits archived.
-Code/config/input commit and exact hashes: immutable .research/freezes/v1.json,
+Code/config/input commit and exact hashes: immutable .research/freezes/v2.json,
 created only after committing these inputs. Keep this ready header unchanged after
-freezing so the content hash remains stable. Confirmation names freeze v1 explicitly.
+freezing so the content hash remains stable. Confirmation names freeze v2 explicitly.

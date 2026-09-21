@@ -1,0 +1,35 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "corrlaw",
+    "run",
+    "--config",
+    "configs/confirmation.json"
+  ],
+  "duration_seconds": 343.107057,
+  "ended_utc": "2026-09-21T17:32:19+00:00",
+  "error": null,
+  "freeze_id": "v1",
+  "git": {
+    "branch": "research/corrlaw-sprint-01",
+    "commit": "8a207f0ae9e36fc2648304b12ec91a4ff3fc4cd4",
+    "working_tree_dirty": true
+  },
+  "log_path": "work/runs/confirmation-v1-001/console.log",
+  "log_sha256": "9eadd360ebce9a37033696361cdb9501871c85ceeb213581602190fccc4e7069",
+  "phase": "confirmation",
+  "pid": 77986,
+  "platform": "Darwin",
+  "purpose": "Frozen C/D/E/F paired confirmation, five seeds and all controls",
+  "python": "3.14.5",
+  "result_validation": "NOT_REVIEWED",
+  "returncode": 0,
+  "run_id": "confirmation-v1-001",
+  "schema_version": 1,
+  "started_utc": "2026-09-21T17:26:36+00:00",
+  "status": "completed",
+  "task": "T09",
+  "threads_requested": 4,
+  "timeout_seconds": 1800.0
+}

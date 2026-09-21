@@ -21,20 +21,20 @@ def main():
             issues.append(f'T{task:02d} lacks DONE evidence')
     required=['reports/REPORT.md','.research/CLAIMS.md','.research/HANDOFF.md',
               'requirements.lock.txt','reports/confirmation/summary.json',
-              'results/runs/confirmation-v1-001/validation.json',
-              'results/runs/reproduce-v1-001/reproduction.json',
+              'results/runs/confirmation-v2-001/validation.json',
+              'results/runs/reproduce-v2-001/reproduction.json',
               '.research/notes/final-tests.txt']
     for path in required:
         if not (ROOT/path).is_file():issues.append(f'missing {path}')
-    validation=ROOT/'results/runs/confirmation-v1-001/validation.json'
+    validation=ROOT/'results/runs/confirmation-v2-001/validation.json'
     if validation.exists():
         data=json.loads(validation.read_text())
         if not data.get('valid') or data.get('completed_units')!=data.get('expected_units'):
             issues.append('confirmation is incomplete or invalid')
-    replay=ROOT/'results/runs/reproduce-v1-001/reproduction.json'
+    replay=ROOT/'results/runs/reproduce-v2-001/reproduction.json'
     if replay.exists() and not json.loads(replay.read_text()).get('exact_match'):
         issues.append('fresh-process reproduction does not match')
-    result=subprocess.run([sys.executable,'tools/lab.py','verify','--id','v1'],cwd=ROOT,capture_output=True,text=True)
+    result=subprocess.run([sys.executable,'tools/lab.py','verify','--id','v2'],cwd=ROOT,capture_output=True,text=True)
     if result.returncode:issues.append('protocol freeze verification failed: '+result.stderr.strip())
     tests=ROOT/'.research/notes/final-tests.txt'
     if tests.exists() and ('passed' not in tests.read_text() or 'FAILED' in tests.read_text()):
