@@ -199,13 +199,25 @@ def augment(obs, fitted, settings):
     valid = admissible(fitted.best, base_error, obs.noise_std, settings['max_complexity'])
     accepted, alternatives, directions = [], [], []
     if valid:
+        base_predictions=[fitted.best.predict(a) for a in matrices]
         for ratio, subset, q in proposals:
             if any(np.allclose(q, old, rtol=1e-6, atol=1e-7) for old in directions):
                 continue
             used = False
+            q_predictions=[a@q for a in matrices]
+            q_expr=None
             for alpha in (-1., -.25, .25, 1.):
+                # Cheap conservative rejection before symbolic construction.
+                # Final acceptance and saved errors still use the serialized
+                # expression with the original tolerances, without this slack.
+                predicted=[base+alpha*delta for base,delta in zip(base_predictions,q_predictions)]
+                if (rmse(predicted[0],obs.y)>tolerance(obs.noise_std)+1e-9 or
+                    rmse(predicted[1],obs.calibration_y)>tolerance(obs.noise_std)+1e-9 or
+                    (len(predicted[2]) and np.max(abs(predicted[2]-obs.acquired_y))>.002+4*obs.noise_std+1e-9)):
+                    continue
                 # Keep 17-digit coefficients in the persisted symbolic contract.
-                q_expr = sum(sp.Float(float(v), 17)*z for v, z in zip(q, fitted.best.symbols))
+                if q_expr is None:
+                    q_expr = sum(sp.Float(float(v), 17)*z for v, z in zip(q, fitted.best.symbols))
                 alt = Expression(str(fitted.best.symbolic+sp.Float(alpha, 17)*q_expr), len(q))
                 try:
                     error = errors(alt, matrices, obs)
