@@ -45,8 +45,8 @@ def load_config(path):
     settings = c['search_settings']
     if set(settings) != SETTINGS or any(type(v)!=int or v<=0 for v in settings.values()):
         raise ValueError('invalid search settings')
-    if settings['searches'] < 2 or settings['max_complexity'] < settings['search_maxsize']:
-        raise ValueError('invalid ensemble or complexity limits')
+    if settings['searches'] < 2 or settings['max_complexity'] != settings['search_maxsize']:
+        raise ValueError('search and accepted formulas require the same arithmetic complexity cap')
     return c
 
 
@@ -138,7 +138,9 @@ def run(c, output, resume=False):
     else:
         save(output/'config.json',c);save(output/'engine.json',provenance)
     unit_dir=output/'units';unit_dir.mkdir(exist_ok=True)
-    manifest=[];failed=0;expected=list(units(c))
+    # Complete every task for one seed before moving to the next seed, so a
+    # deadline interruption does not systematically leave the hardest task last.
+    manifest=[];failed=0;expected=[row for seed in c['seeds'] for row in units(c) if row[2]==seed]
     for key,task,seed,width,noise,control,policy in expected:
         path=unit_dir/f'{key}.json'
         identity=dict(unit_id=key,task=task,seed=seed,width=width,noise=noise,control=control,

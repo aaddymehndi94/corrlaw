@@ -82,6 +82,35 @@ class LabTests(unittest.TestCase):
         self.assertEqual(self.call("start"), 0)
         self.assertEqual(before, p.read_bytes())
 
+    def test_overnight_overlay_shortens_but_never_extends_sprint(self):
+        import datetime as dt
+        self.call("start")
+        sprint_path = self.root / ".research/SPRINT.json"
+        original = sprint_path.read_bytes()
+        record = lab.load(sprint_path)
+        cutoff = record["deadline_unix"] - 600
+        def stamp(value):
+            return dt.datetime.fromtimestamp(value, dt.timezone.utc).isoformat()
+        overlay = self.root / ".research/OVERNIGHT.json"
+        lab.atomic(overlay, {"deadline_utc": stamp(cutoff),
+                             "experiment_cutoff_utc": stamp(cutoff - 300)})
+        self.assertAlmostEqual(lab.effective_cutoff(self.root, "audit"), cutoff, places=5)
+        self.assertAlmostEqual(lab.effective_cutoff(self.root, "confirmation"), cutoff - 300, places=5)
+        lab.atomic(overlay, {"deadline_utc": stamp(cutoff + 10000),
+                             "experiment_cutoff_utc": stamp(cutoff + 5000)})
+        self.assertEqual(lab.effective_cutoff(self.root, "audit"), record["deadline_unix"])
+        self.assertEqual(lab.effective_cutoff(self.root, "development"),
+                         record["deadline_unix"] - record["report_reserve_seconds"])
+        self.assertEqual(original, sprint_path.read_bytes())
+
+    def test_invalid_overnight_overlay_fails_closed(self):
+        self.call("start")
+        lab.atomic(self.root / ".research/OVERNIGHT.json",
+                   {"deadline_utc": "2026-09-22T02:30:00",
+                    "experiment_cutoff_utc": "2026-09-22T01:30:00"})
+        with self.assertRaises(lab.LabError):
+            lab.remaining(self.root, "audit")
+
     def test_paths_cannot_escape(self):
         for name in ("../secret", "/tmp/secret"):
             with self.assertRaises(lab.LabError):

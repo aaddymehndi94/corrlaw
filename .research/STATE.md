@@ -1,19 +1,17 @@
 # Current state
-Status: ACTIVE — user-authorized overnight research
-Owner: Codex lead; branch research/corrlaw-sprint-01
-Deadline: 2026-09-22 08:00 IST / 02:30 UTC; experiments end01:30UTC.
-Original SPRINT.json preserved. Native overnight goal ACTIVE. Watchdog PID81797
-queues same-thread reminders every15m; first scheduled delivery accepted18:13:55UTC.
-Logs/STOP: work/overnight-watchdog. No new agent sessions or pushes.
-T01–T11 pilot complete; T12 watchdog complete; T13 PySR engine smoke/audit/replay DONE.
-Smoke003:10/10 trajectories;3163 candidates/500 witnesses audited; exact fresh
-process scientific replay passed after conservative prefilter optimization.
-Smoke002 failed tie-order audit retained; subsequent explicit lexical tie fixed it.
-Current taskT14: pysr-development-001,360 A/B units, all5 policies,3 seeds, widths
-0/.01/.05,noise0/.01,independent/shuffle/restricted controls. Configpysr-development.
-Run timeout10800s; measure runtime before freezing feasible C/D/E/F confirmation.
-No source/config edits while run is active. Draft diagnostics may be built in work/.
-T16 preregistered exploratory follow-ups: notes/diagnostic-plan.md.
-Exact next action: inspect results/runs/pysr-development-001/manifest.json and
-work/runs/pysr-development-001/console.log; then full artifact audit and freeze.
-Do not mistake the old pilot completion gate for completion of overnight research.
+Repository: /Users/devikasv/dev/corrlaw
+Status: ACTIVE — overnight research authorized until 2026-09-22 08:00 IST.
+Hard deadline 02:30 UTC; experiments end 01:30 UTC. Original SPRINT unchanged.
+Native overnight goal ACTIVE. Watchdog uses same thread, no competing agent.
+Latest phase: correct a pre-confirmation complexity fairness issue.
+Old PySR search maxsize10 versus final SymPy cap31 was not a matched class.
+Development001 interrupted intentionally; preserve all records. No new confirmation.
+Revision: search and all accepted expressions share arithmetic-tree cap15. Powers,
+subtraction and division counted explicitly. New config validation rejects mismatches.
+Read notes/complexity-fairness-revision.md. Revised smoke is pysr-fair-smoke-001;
+config configs/pysr-fair-smoke.json. Then full development002, all360 A/B units.
+T13 reopened for fair smoke/audit/replay; T14 follows. T16 code and tests installed.
+Deadline helper overlay and idle-only watchdog are installed; original clock intact.
+Diagnostics: notes/diagnostic-plan.md. Interpretation: notes/overnight-interpretation-checklist.md.
+Exact next action: run pysr-fair-smoke-001 after the current test/checkpoint step.
+No active heavy experiment currently. No pushes or publication authorized.

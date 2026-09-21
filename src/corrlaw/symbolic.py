@@ -15,6 +15,39 @@ from .discovery import rmse, tolerance
 from .acquisition import leverage
 
 
+def arithmetic_complexity(expression):
+    """Nodes in an explicit +,-,*,/ tree over feature terminals and constants.
+
+    Integer powers cost repeated multiplication; reciprocal factors are grouped
+    into a division. Subtraction does not incur a fictitious extra -1 product.
+    This makes the final cap commensurate with PySR's native search-tree budget.
+    """
+    if expression.is_Symbol or expression.is_Number:
+        return 1
+    if expression.is_Add:
+        absolute=[-term if term.could_extract_minus_sign() else term for term in expression.args]
+        costs=[arithmetic_complexity(term) for term in absolute]
+        first_cost=min(arithmetic_complexity(term)-cost
+                       for term,cost in zip(expression.args,costs))
+        return sum(costs)+len(costs)-1+first_cost
+    if expression.is_Mul:
+        numerator=[];denominator=[]
+        for term in expression.args:
+            if term.is_Pow and term.exp.is_Integer and term.exp<0:
+                denominator.append(sp.Pow(term.base,-term.exp))
+            else:
+                numerator.append(term)
+        def product_cost(terms):
+            return sum(arithmetic_complexity(t) for t in terms)+len(terms)-1 if terms else 1
+        return product_cost(numerator)+(product_cost(denominator)+1 if denominator else 0)
+    if expression.is_Pow and expression.exp.is_Integer:
+        n=int(expression.exp)
+        if n==0:return 1
+        repeated=abs(n)*arithmetic_complexity(expression.base)+abs(n)-1
+        return repeated+(2 if n<0 else 0)
+    raise ValueError('expression outside the declared arithmetic grammar')
+
+
 def configure_julia():
     root = Path(__file__).resolve().parents[2]
     os.environ['JULIA_DEPOT_PATH'] = str(root/'.julia')
@@ -48,7 +81,7 @@ class Expression:
 
     @property
     def complexity(self):
-        return sum(1 for _ in sp.preorder_traversal(self.symbolic))
+        return arithmetic_complexity(self.symbolic)
 
     def bounded(self, max_complexity):
         return (self.complexity <= max_complexity and

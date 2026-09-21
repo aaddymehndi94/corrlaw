@@ -18,6 +18,7 @@ def summarize(run, output):
     import matplotlib.pyplot as plt
     run=Path(run); output=Path(output); output.mkdir(parents=True,exist_ok=True)
     manifest=json.loads((run/'manifest.json').read_text())
+    config=json.loads((run/'config.json').read_text())
     records=[json.loads((run/r['path']).read_text()) for r in manifest['units']]
     completed=[r for r in records if r['status']=='completed']
     condition_groups=defaultdict(list)
@@ -75,6 +76,10 @@ def summarize(run, output):
                 first_query.append(dict(task=task,comparator=comparator,matches=sum(agreements),pairs=len(agreements)))
     result=dict(source_run=str(run),units=len(records),failed=[r['unit_id'] for r in records if r['status']!='completed'],
                 summaries=summaries,paired_auc_deltas=paired,first_query_agreement=first_query)
+    if config.get('engine')!='finite_library':
+        result.update(engine=config.get('engine'),search_settings=config.get('search_settings'),
+                      prior=config.get('prior'),expected_units=manifest['expected_units'],
+                      incomplete=len(records)!=manifest['expected_units'])
     save(output/'summary.json',result)
     lines=['| Task | Control | Policy | AUC | Error at 8 | Seeds |','|---|---|---|---:|---:|---:|']
     for r in summaries:
@@ -96,7 +101,14 @@ def summarize(run, output):
     for ax in list(axes.flat)[len(tasks):]: ax.set_visible(False)
     handles,labels=axes.flat[0].get_legend_handles_labels()
     fig.legend(handles,labels,loc='outside lower center',ncol=5,frameon=False)
-    fig.suptitle('Constrained preparations · means across conditions; shading is seed range',fontsize=12)
+    title='Constrained preparations · means across conditions; shading is seed range'
+    if config.get('engine')=='pysr_feature_grammar':
+        title=f"PySR feature grammar · {config['search_settings']['niterations']} iterations per search\n"+title
+    elif config.get('engine')=='finite_library_prior_control':
+        label={'none':'No additional prior','zero_origin':'Known zero at origin',
+               'zero_origin_and_even':'Known zero at origin + coordinate symmetry'}[config['prior']]
+        title=label+'\n'+title
+    fig.suptitle(title,fontsize=12)
     svg = output/'error_curves.svg'
     fig.savefig(svg,bbox_inches='tight',metadata={'Date': None})
     svg.write_text('\n'.join(line.rstrip() for line in svg.read_text().splitlines())+'\n')

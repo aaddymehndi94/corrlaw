@@ -1,33 +1,54 @@
-# Handoff — active overnight extension
-User requested continuation while asleep until2026-09-22 08:00IST(02:30UTC).
-Experiments end01:30UTC; preserve original sprint, reserve final hour for audit/report.
-Native goal ACTIVE. Same-thread watchdog PID81797 queues reminders every15m until
-deadline; keep-awake PID81798. Logs/STOP in work/overnight-watchdog. User stop always
-supersedes reminders. Queue acceptance is not guaranteed host/service availability.
+# Handoff — active overnight research
+Repository: /Users/devikasv/dev/corrlaw; branch research/corrlaw-sprint-01.
+User requested unattended work until 2026-09-22 08:00 IST (02:30 UTC), with final
+hour for audit/reporting. Experiments end 01:30 UTC. SPRINT.json unchanged; lab.py
+now enforces the earlier OVERNIGHT.json deadline by min, never extending the clock.
+Native goal remains ACTIVE. Same-thread watchdog has an explicit deadline and STOP
+file under work/overnight-watchdog. It now nudges only after15m without real file/run
+progress, once per unchanged progress timestamp, and retries queue failures.
+Read current PID in work/overnight-watchdog/pid; bounded caffeinate keeps host awake.
+Queue acceptance was tested and timed deliveries succeeded; availability is not
+unconditional. User stop/scope changes always supersede queued reminders.
 
-T13 complete: symbolic.py implements actual PySR over generic normalized feature
-terminals;3 searches/refit,30iterations,all5 policies, retained/revalidated candidates,
-full-search-only common point predictor, explicit score/expression lexical ties.
-Acquired rows retained in bootstraps and given total weight n_initial. Alternatives
-have common final admissibility and complexity checks. Conservative1e-9-slack
-prefilter accelerates gross rejection; actual thresholds/saved errors unchanged.
-Smoke00310/10valid; audit3163candidates/500witnesses; replay003 EXACT hash
-51258273dd52241adbf4426162b0bb885a71fe1661a597d8ec3476bb3258431d.
-Smoke002's failed tie-order audit is retained. No confirmation yet for this engine.
+IMPORTANT: before ANY new PySR confirmation, a fairness issue was found. Search
+maxsize10 versus accepted SymPy complexity31 could favor added alternatives.
+Development001 was deliberately interrupted (all completed units preserved).
+notes/complexity-fairness-revision.md explains the change. Do not call that partial
+run final evidence. Revised search and every accepted expression share a15-node
+arithmetic-tree budget (+,-,*,/), including expanded integer powers. Loader rejects
+unequal caps. T13 reopened for revised smoke/audit/replay, then T14 development.
 
-CurrentT14: run pysr-development-001,configs/pysr-development.json,360 A/B units,
-3seeds201–203,widths0/.01/.05,noise0/.01,allcontrols/all5policies;timeout10800s.
-Next: inspect progress; validate entire run via corrlaw.symbolic_audit; summarize via
-existing corrlaw.summarize; freeze feasible confirmation with F/C/D/E fresh seeds
-before inspecting outcomes. Preselect a noisy near-constraint augmented replay.
-No source/config edits while the runner is active. Work/ drafts may be prepared.
+Next: pysr-fair-smoke-001, configs/pysr-fair-smoke.json, A/B seed204, five policies,
+30iterations per search. After validation, run pysr-development-002 using
+configs/pysr-development-v2.json (360 units; all widths/noise/controls; three seeds).
+Execution now goes seed-first to cover tasks fairly if an unexpected cutoff happens.
+Review complete A/B results and actual runtime before finalizing frozen C/D/E/F
+scope. Candidate primary/100-iteration sensitivity scope is in
+work/pysr-confirmation-scope-plan.md; reduce counts BEFORE freeze if necessary.
+No new C/D/E/F PySR outcomes have been inspected. All old v2 finite results remain
+historical pilot evidence. Confirmation needs a new v3 freeze and fresh93001+ seeds.
 
-T16 exploratory follow-ups declared in notes/diagnostic-plan.md: exhaustive supports
-<=3 on archived pilot observations (diagnose greedy search), and B origin/parity
-prior controls shared equally. Implement/validate separately; never retrofit main
-confirmation based on diagnostic outcomes. Draft protocol: work/pysr-protocol-draft.md.
+New installed files: diagnostics.py (generic exhaustive<=3-support search and B
+origin/parity library controls); search_diagnostic.py; prior_experiment.py and audit;
+positivity.py; explain.py; CLI dispatch; summary figure labels. Their declared
+exploratory designs are in notes/diagnostic-plan.md. Five draft tests passed before
+installation; the installed full suite passed67 tests (notes/overnight-tests-02.txt). No full diagnostic experiment
+yet. Explanations on old C and PySR A artifacts rendered and visually inspected under
+work/witness-preview and work/witness-pysr-preview. These are previews, not outcomes.
 
-Historical pilot v2 source c15cad8 and final report8a382b7 remain intact. New source
-files extend inventory so old freeze needs historical verification, not live check.
-Its negative result is finite-library-only; don't claim broader research complete.
-No push/publication, paid APIs/cloud, global settings or competing writers authorized.
+Further interpretation limits: notes/overnight-interpretation-checklist.md and
+notes/dimensional-prior-note.md. Direct SymPy unit balances for A/C/D show strong
+full-dimensional priors fix monomial powers under no-additional-parameter assumptions;
+reports/audit/dimensional-prior-algebra.json stores them. APS Buckingham1914 metadata
+verified; no novelty claim. Positivity and numerical fit tolerance are not global
+physical validity or structural uniqueness proofs.
+
+Old smoke003 passed 3163 candidate/500 witness audit and exact replay under its own
+former complexity rule. Its earlier failed tie-order audit002 remains recorded.
+Current tests include a new explicit arithmetic-budget regression and equal-cap guard.
+Pytest discovery restricted to tests/ to avoid duplicate ignored work/ draft modules.
+
+Do not edit source/config while an experiment runs. One heavy process, <=4 numerical
+threads. Local scoped commits only; preserve failures. No push, paid APIs, cloud,
+system configuration changes, or additional Codex sessions. Drafts in work/ remain
+for provenance; installed files are now the authoritative implementations.

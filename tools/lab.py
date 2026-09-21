@@ -197,12 +197,28 @@ def start(root: Path) -> int:
     return status(root)
 
 
-def remaining(root: Path, phase: str) -> float:
+def effective_cutoff(root: Path, phase: str) -> float:
     record = load(root / ".research/SPRINT.json")
     cutoff = float(record["deadline_unix"])
     if phase != "audit":
         cutoff -= float(record["report_reserve_seconds"])
-    return cutoff - time.time()
+    overlay = root / ".research/OVERNIGHT.json"
+    if overlay.exists():
+        data = load(overlay)
+        try:
+            deadline = dt.datetime.fromisoformat(str(data["deadline_utc"]).replace("Z", "+00:00"))
+            experiment = dt.datetime.fromisoformat(str(data["experiment_cutoff_utc"]).replace("Z", "+00:00"))
+            if deadline.tzinfo is None or experiment.tzinfo is None or experiment > deadline:
+                raise ValueError("timezone-aware ordered deadlines required")
+        except (KeyError, TypeError, ValueError) as exc:
+            raise LabError("Invalid explicit overnight deadline overlay: " + str(exc))
+        # A new user cutoff can only shorten the original recorded allowance.
+        cutoff = min(cutoff, (deadline if phase == "audit" else experiment).timestamp())
+    return cutoff
+
+
+def remaining(root: Path, phase: str) -> float:
+    return effective_cutoff(root, phase) - time.time()
 
 
 def status(root: Path) -> int:
@@ -214,7 +230,8 @@ def status(root: Path) -> int:
         print(json.dumps({"started_utc": record["started_utc"],
                           "remaining_total_seconds": round(remaining(root, "audit")),
                           "remaining_experiment_seconds": round(remaining(root, "development")),
-                          "deadline_utc": dt.datetime.fromtimestamp(record["deadline_unix"], dt.timezone.utc).isoformat()}, indent=2))
+                          "deadline_utc": dt.datetime.fromtimestamp(record["deadline_unix"], dt.timezone.utc).isoformat(),
+                          "effective_deadline_utc": dt.datetime.fromtimestamp(effective_cutoff(root, "audit"), dt.timezone.utc).isoformat()}, indent=2))
     counts: Dict[str, int] = {}
     for path in sorted((root / "results/runs").glob("*/run.json")):
         record = load(path)

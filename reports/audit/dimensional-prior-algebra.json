@@ -1,0 +1,80 @@
+{
+  "assumptions": "Only the two named dimensional inputs; no additional dimensional constants or reference scales admitted as physical parameters. Unknown dimensionless multiplicative coefficient remains. Classical dimensional analysis, not a new theorem.",
+  "records": [
+    {
+      "task": "A",
+      "input_dimension_matrix_M_L_T": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          -2,
+          0
+        ]
+      ],
+      "output_dimensions": [
+        1,
+        1,
+        -2
+      ],
+      "monomial_exponents": "{(1, 1)}",
+      "rank": 2,
+      "input_nullspace_dimension": 0
+    },
+    {
+      "task": "C",
+      "input_dimension_matrix_M_L_T": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          -1,
+          0
+        ]
+      ],
+      "output_dimensions": [
+        0,
+        1,
+        -2
+      ],
+      "monomial_exponents": "{(2, -1)}",
+      "rank": 2,
+      "input_nullspace_dimension": 0
+    },
+    {
+      "task": "D",
+      "input_dimension_matrix_M_L_T": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          -1
+        ]
+      ],
+      "output_dimensions": [
+        1,
+        2,
+        -2
+      ],
+      "monomial_exponents": "{(1, 2)}",
+      "rank": 2,
+      "input_nullspace_dimension": 0
+    }
+  ]
+}

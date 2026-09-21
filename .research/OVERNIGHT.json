@@ -4,8 +4,10 @@
   "deadline_local": "2026-09-22T08:00:00+05:30",
   "experiment_cutoff_utc": "2026-09-22T01:30:00Z",
   "original_sprint_preserved": true,
-  "watchdog_interval_seconds": 900,
   "thread_id": "01a0c4e7-a53d-76a2-a9b2-233b0a5bea85",
   "queue_delivery_test": "01a0c51d-8d9a-7a41-9ff8-5993f5bcafa3",
-  "goal": "active overnight research; original pilot completion does not end this scope"
+  "goal": "active overnight research; original pilot completion does not end this scope",
+  "watchdog_poll_seconds": 60,
+  "watchdog_idle_seconds": 900,
+  "watchdog_policy": "one accepted reminder per unchanged inactive progress state; no reminder accumulation during active work"
 }

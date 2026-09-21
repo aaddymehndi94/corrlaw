@@ -45,3 +45,12 @@ The parity prior eliminates these particular odd cubic witnesses. Positivity has
 not been supplied in this control and must not be silently assumed; the resulting
 regression class permits signed alternatives despite the potential interpretation.
 A positivity prior would be another, stronger experiment and needs its own filter.
+
+3. Descriptive positivity sensitivity (no acquisition rerun). For all primary
+C/D/E/F saved witnesses, compute base and alternative minimum on the public broad
+probe set. Count witnesses whose two expressions are nonnegative there (allowing
+1e-10 rounding slack), and conditions with at least one such witness. Nonnegative
+outputs were not supplied as primary priors. This analysis quantifies a material
+physical-interpretation limitation without changing the primary experiment. A
+finite-probe pass is not a proof of positivity everywhere. Do not cherry-pick only
+positive examples or call this a prior-aware acquisition experiment.

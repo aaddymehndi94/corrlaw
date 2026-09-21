@@ -6,9 +6,11 @@ import unittest
 from unittest.mock import patch
 from types import SimpleNamespace
 import numpy as np
+import sympy as sp
 from corrlaw.features import Library
 from corrlaw.oracle import make_trial, reference
 from corrlaw.symbolic import Expression, SymbolicFit, augment, errors, admissible, select
+from corrlaw.symbolic import arithmetic_complexity
 from corrlaw.symbolic_experiment import load_config, scientific_content
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -16,7 +18,7 @@ ROOT=Path(__file__).resolve().parents[1]
 
 class SymbolicTests(unittest.TestCase):
     def setUp(self):
-        self.config=load_config(ROOT/'configs/pysr-smoke.json')
+        self.config=load_config(ROOT/'configs/pysr-fair-smoke.json')
         self.trial=make_trial('A',201,0,0,'constrained',self.config)
         self.obs=self.trial.observations([])
         self.lib=Library.build(self.obs.bounds,self.obs.probes)
@@ -49,6 +51,16 @@ class SymbolicTests(unittest.TestCase):
         self.assertFalse(Expression('z0+z1+z2',3).bounded(2))
         np.testing.assert_array_equal(Expression('2',3).predict(np.zeros((3,3))),np.full(3,2.))
 
+    def test_common_arithmetic_tree_budget(self):
+        examples={'z0-z1':3,'z0/z1':3,'z0**3':5,'z0**(-2)':5,
+                  'z0/(z1+z2)':5,'z0/z1+z2':5,'z0*z1*z2':5,
+                  '-z0-z1':5,'-2*z0-z1':5,'z0**2-z1**2':7,
+                  '(z0+z1)*(z0-z1)':7,'z0**2/z1**3':9}
+        for expression,expected in examples.items():
+            self.assertEqual(arithmetic_complexity(sp.sympify(expression)),expected,expression)
+        self.assertTrue(Expression('z0**8',3).bounded(15))
+        self.assertFalse(Expression('z0**9',3).bounded(15))
+
     def test_saved_alternatives_are_valid_and_discriminating(self):
         fitted=self.base();settings=self.config['search_settings']
         committee,ws,state=augment(self.obs,fitted,settings)
@@ -56,7 +68,7 @@ class SymbolicTests(unittest.TestCase):
         matrices=[self.lib.transform(x) for x in (self.obs.x,self.obs.calibration_x,self.obs.acquired_x)]
         for w in ws:
             alt=Expression(w['alternative'],len(self.lib.powers))
-            self.assertTrue(admissible(alt,errors(alt,matrices,self.obs),0,31))
+            self.assertTrue(admissible(alt,errors(alt,matrices,self.obs),0,self.config['search_settings']['max_complexity']))
             self.assertGreater(w['max_pool_difference'],.01)
             q=np.array(w['q']);self.assertAlmostEqual(np.sqrt(np.mean((self.lib.transform(self.obs.probes)@q)**2)),1)
         selected,score=select('augmented_qbc',self.obs,fitted,committee,[],2)
@@ -86,6 +98,12 @@ class SymbolicTests(unittest.TestCase):
     def test_config_rejects_invalid_methods(self):
         with tempfile.TemporaryDirectory() as d:
             c=self.config;c['search_settings']['searches']=1
+            p=Path(d)/'config.json';p.write_text(json.dumps(c))
+            with self.assertRaises(ValueError):load_config(p)
+
+    def test_config_rejects_search_and_alternative_budget_mismatch(self):
+        with tempfile.TemporaryDirectory() as d:
+            c=self.config;c['search_settings']['max_complexity']=31
             p=Path(d)/'config.json';p.write_text(json.dumps(c))
             with self.assertRaises(ValueError):load_config(p)
 
