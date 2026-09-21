@@ -1,0 +1,35 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "corrlaw",
+    "run",
+    "--config",
+    "configs/confirmation.json"
+  ],
+  "duration_seconds": 328.501479,
+  "ended_utc": "2026-09-21T17:42:28+00:00",
+  "error": null,
+  "freeze_id": "v2",
+  "git": {
+    "branch": "research/corrlaw-sprint-01",
+    "commit": "bebc5c84630e67ea2abf9d30f9a6873b36bda7e0",
+    "working_tree_dirty": true
+  },
+  "log_path": "work/runs/confirmation-v2-001/console.log",
+  "log_sha256": "d7e64d3df9dc4bff88b549fb06d4047b7329959d8524d5af6eb61e96caf34630",
+  "phase": "confirmation",
+  "pid": 79782,
+  "platform": "Darwin",
+  "purpose": "Fresh-seed confirmation of unchanged numerical method under corrected replay protocol v2",
+  "python": "3.14.5",
+  "result_validation": "NOT_REVIEWED",
+  "returncode": 0,
+  "run_id": "confirmation-v2-001",
+  "schema_version": 1,
+  "started_utc": "2026-09-21T17:37:00+00:00",
+  "status": "completed",
+  "task": "T09",
+  "threads_requested": 4,
+  "timeout_seconds": 1800.0
+}

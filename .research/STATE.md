@@ -1,16 +1,17 @@
 # Current state
-Status: ACTIVE
-Task: T09 frozen v2 confirmation
+Status: FINALIZING_CHECKPOINT
+Task: T11 final evidence checkpoint and completion gate
 Owner: Codex lead; branch research/corrlaw-sprint-01
-Deadline 2026-09-22 03:01 UTC; experiment cutoff 02:01 UTC (ample time remains).
-V1: 1,000 units completed; full artifact audit valid, 96,345 alternatives checked.
-V1 replay was a false negative: exact scientific hashes match, tuple/list comparison
-was incorrect after JSON serialization. Failed record is preserved unchanged.
-Corrected checker compares canonical JSON exactly; regression test also rejects a
-changed numeric metric. No numeric method/config changes except fresh v2 seeds.
-Protocol v2 uses 92001–92005, all four tasks/all five policies/all controls.
-V1 evidence retained as exploratory after revision. No active experiments.
-49 tests passed; freeze v2 verified at c15cad8.
-Next action: execute confirmation-v2-001 then audit and replay
-C-s92001-w0-n0.01-constrained-augmented_qbc. See DECISIONS.md D007.
-Do not claim completion until the actual saved-JSON replay and evidence gate pass.
+Final protocol: v2, 34 frozen inputs at c15cad8; live freeze verifies.
+49 tests passed. Development: 360 policy units, all validated.
+Final confirmation-v2-001: 1,000 complete policy units, zero execution failures;
+91,325 accepted alternative records validated. Main runtime 328.50 s.
+Preselected noisy C seed 92001 reproduced exactly in a fresh process.
+Summary/CSV/table/SVG/PNG regeneration is byte-identical on the recorded environment.
+Outcome: augmented mean AUC worse than all three active baselines on every final task;
+no incremental acquisition advantage established. Report/claims include failure modes.
+V1 evidence and its false-negative replay checker record preserved; v2 fixes JSON
+container comparison and uses fresh seeds. Numerical method modules unchanged.
+No active experiments; no unresolved scientific computation. No pushes/publication.
+Next action: save final scoped evidence checkpoint, mark T11 DONE, then run
+`python3 tools/completion_check.py` and require complete=true before finishing.

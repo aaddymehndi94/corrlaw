@@ -1,0 +1,146 @@
+{
+  "parent": "results/runs/confirmation-v2-001",
+  "unit_id": "C-s92001-w0-n0.01-constrained-augmented_qbc",
+  "exact_match": true,
+  "original_scientific_sha256": "dd1620f6a8b36ba38916dabf119d62741c5a319d695cffa280d8bfe3f162d322",
+  "repeated_scientific_sha256": "dd1620f6a8b36ba38916dabf119d62741c5a319d695cffa280d8bfe3f162d322",
+  "metrics": [
+    {
+      "budget": 0,
+      "total_labels": 192,
+      "witness_count": 48,
+      "diagnostic": "ambiguity_witness_found",
+      "rounded_symbolic_recovery": false,
+      "off_rmse": 0.8440341753540781,
+      "same_rmse": 0.002179152171496761,
+      "committee_rms_std": 0.9580553928052749,
+      "false_consensus": false
+    },
+    {
+      "budget": 1,
+      "total_labels": 193,
+      "witness_count": 0,
+      "diagnostic": "no_witness_within_search_budget",
+      "rounded_symbolic_recovery": false,
+      "off_rmse": 0.13976290936809446,
+      "same_rmse": 0.0021791521714975897,
+      "committee_rms_std": 0.28799541049720395,
+      "false_consensus": false
+    },
+    {
+      "budget": 2,
+      "total_labels": 194,
+      "witness_count": 0,
+      "diagnostic": "no_witness_within_search_budget",
+      "rounded_symbolic_recovery": false,
+      "off_rmse": 0.010171304429881527,
+      "same_rmse": 0.0021793871621233205,
+      "committee_rms_std": 0.003367105145482769,
+      "false_consensus": false
+    },
+    {
+      "budget": 4,
+      "total_labels": 196,
+      "witness_count": 0,
+      "diagnostic": "no_witness_within_search_budget",
+      "rounded_symbolic_recovery": false,
+      "off_rmse": 0.004699342626472302,
+      "same_rmse": 0.0021237666332885774,
+      "committee_rms_std": 0.004042297543054119,
+      "false_consensus": false
+    },
+    {
+      "budget": 8,
+      "total_labels": 200,
+      "witness_count": 0,
+      "diagnostic": "no_witness_within_search_budget",
+      "rounded_symbolic_recovery": false,
+      "off_rmse": 0.007766536384444075,
+      "same_rmse": 0.002662908997086185,
+      "committee_rms_std": 0.0033369598466982536,
+      "false_consensus": false
+    }
+  ],
+  "queries": [
+    {
+      "query_id": 833,
+      "x": [
+        1.490232668756549,
+        0.5174244474141656
+      ],
+      "label": 4.293186141361318,
+      "noise_realization_id": "2:2:92001:0:100:0:query:833",
+      "acquisition_score": 12.391808733181923
+    },
+    {
+      "query_id": 516,
+      "x": [
+        0.5021440101721569,
+        1.4829810466634332
+      ],
+      "label": 0.17809356722051323,
+      "noise_realization_id": "2:2:92001:0:100:0:query:516",
+      "acquisition_score": 2.5748282840907506
+    },
+    {
+      "query_id": 118,
+      "x": [
+        0.502931355954013,
+        0.9175056905063762
+      ],
+      "label": 0.2881729214634317,
+      "noise_realization_id": "2:2:92001:0:100:0:query:118",
+      "acquisition_score": 0.00011168392610654419
+    },
+    {
+      "query_id": 1597,
+      "x": [
+        0.5008468434189732,
+        1.0450517379600508
+      ],
+      "label": 0.2547636726687806,
+      "noise_realization_id": "2:2:92001:0:100:0:query:1597",
+      "acquisition_score": 5.348942450221339e-05
+    },
+    {
+      "query_id": 1153,
+      "x": [
+        1.4663612603727325,
+        0.5095870096445916
+      ],
+      "label": 4.246682170170706,
+      "noise_realization_id": "2:2:92001:0:100:0:query:1153",
+      "acquisition_score": 0.00010292380518618948
+    },
+    {
+      "query_id": 150,
+      "x": [
+        1.4998238049063244,
+        0.9759267181801341
+      ],
+      "label": 2.304385261219144,
+      "noise_realization_id": "2:2:92001:0:100:0:query:150",
+      "acquisition_score": 0.00035607335916563527
+    },
+    {
+      "query_id": 789,
+      "x": [
+        0.5313133344052364,
+        1.4956423700076105
+      ],
+      "label": 0.18359813204526665,
+      "noise_realization_id": "2:2:92001:0:100:0:query:789",
+      "acquisition_score": 0.00011134779734165942
+    },
+    {
+      "query_id": 677,
+      "x": [
+        0.8534213273357134,
+        1.496384672697638
+      ],
+      "label": 0.46913030651048193,
+      "noise_realization_id": "2:2:92001:0:100:0:query:677",
+      "acquisition_score": 5.690898512071198e-05
+    }
+  ]
+}

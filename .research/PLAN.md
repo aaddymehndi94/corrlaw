@@ -14,9 +14,9 @@ One ACTIVE implementation task by default. All rows below start NOT_STARTED.
 | T06 | T05 | Development sweep and failure analysis | development-001/validation.json; reports/development; 360 complete units | DONE |
 | T07 | T05 | Bounded PySR smoke and small comparison | pysr-smoke-001/pysr.json; pysr-compare-001/comparison.json (six fits) | DONE |
 | T08 | T06,T07 | Freeze a feasible confirmation protocol | freezes/v2.json verified (34 inputs); c15cad8; v1 preserved | DONE |
-| T09 | T08 | Run held-out confirmation without changing methods | confirmation-v2-001, fresh seeds 92001–92005; 1,000 planned units | ACTIVE |
-| T10 | T09 | Independent-process reproduction and skeptical audit | v1 numeric hashes match but Python container equality failed; regression fix | NOT_STARTED |
-| T11 | T10 | Write evidence-linked report and handoff; final local checkpoint | report, figures, claims ledger, exact reproduction commands and Git status | NOT_STARTED |
+| T09 | T08 | Run held-out confirmation without changing methods | confirmation-v2-001/run.json and manifest: 1,000 complete, zero execution failures | DONE |
+| T10 | T09 | Independent-process reproduction and skeptical audit | confirmation-v2-001/validation.json; reproduce-v2-001 exact; reports/audit regeneration | DONE |
+| T11 | T10 | Write evidence-linked report and handoff; final local checkpoint | reports/REPORT.md, reports/confirmation, CLAIMS/HANDOFF; final checkpoint preparing | ACTIVE |
 
 T07 may use the documented fallback and still satisfy its dependency. A missing PySR
 run must not be described as an evolutionary-symbolic-regression result.

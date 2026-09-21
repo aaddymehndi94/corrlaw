@@ -1,0 +1,35 @@
+{
+  "valid": true,
+  "artifacts": [
+    {
+      "file": "summary.json",
+      "original_sha256": "4f1573f3dff1df43f7dad9d1f64e70c65f39426928feb88dbdeb5f9d5d4eb999",
+      "regenerated_sha256": "4f1573f3dff1df43f7dad9d1f64e70c65f39426928feb88dbdeb5f9d5d4eb999",
+      "exact_match": true
+    },
+    {
+      "file": "conditions.csv",
+      "original_sha256": "93664ae42ba525d44e4ecf5ddc914723f8f49b8f6568b3181189d4bd344b56a6",
+      "regenerated_sha256": "93664ae42ba525d44e4ecf5ddc914723f8f49b8f6568b3181189d4bd344b56a6",
+      "exact_match": true
+    },
+    {
+      "file": "tables.md",
+      "original_sha256": "d5cb2de1e5eeb9f16328128e7c3deceedd61195daec4df06da97c111eacf4077",
+      "regenerated_sha256": "d5cb2de1e5eeb9f16328128e7c3deceedd61195daec4df06da97c111eacf4077",
+      "exact_match": true
+    },
+    {
+      "file": "error_curves.svg",
+      "original_sha256": "4db45519688bd0be1940fb7739f25d4c88f0b8945be409189dc4d86fae91b739",
+      "regenerated_sha256": "4db45519688bd0be1940fb7739f25d4c88f0b8945be409189dc4d86fae91b739",
+      "exact_match": true
+    },
+    {
+      "file": "error_curves.png",
+      "original_sha256": "ff936eb8164150f7689324ab4d8f8a95411744fa60a4d8e1b5edf0a5ea7c80e7",
+      "regenerated_sha256": "ff936eb8164150f7689324ab4d8f8a95411744fa60a4d8e1b5edf0a5ea7c80e7",
+      "exact_match": true
+    }
+  ]
+}

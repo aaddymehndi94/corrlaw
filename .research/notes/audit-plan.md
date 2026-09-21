@@ -17,3 +17,9 @@
 8. Complete report/claims/state/handoff/plan, then run completion_check.py and require
    complete=true. The in-progress gate correctly refuses completion while T09–T11
    and validation/reproduction/report artifacts remain outstanding.
+
+V2 amendment after the preserved tuple/list false negative: exact comparison means
+canonical serialized JSON equality, not Python tuple/list object equality. This
+adds no rounding or tolerance. Use confirmation-v2-001 and preselected
+C-s92001-w0-n0.01-constrained-augmented_qbc; repeat every other check unchanged.
+The eight numerical method modules are unchanged (reports/audit/revision_provenance.json).

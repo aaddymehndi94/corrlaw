@@ -1,0 +1,18 @@
+{
+  "v1_frozen_commit": "7757dd5a2c12daaa1a7e3aaf8d04555f3ea5e684",
+  "v1_archived_files_checked": 34,
+  "v1_archive_mismatches": [],
+  "v2_frozen_commit": "c15cad86885a5942d1441dfff66b57985df979cf",
+  "numerical_method_files": [
+    "src/corrlaw/contracts.py",
+    "src/corrlaw/oracle.py",
+    "src/corrlaw/features.py",
+    "src/corrlaw/discovery.py",
+    "src/corrlaw/witnesses.py",
+    "src/corrlaw/acquisition.py",
+    "src/corrlaw/evaluation.py",
+    "src/corrlaw/experiment.py"
+  ],
+  "changed_numerical_method_files": [],
+  "valid": true
+}

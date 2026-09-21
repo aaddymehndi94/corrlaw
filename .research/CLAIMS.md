@@ -1,12 +1,29 @@
 # Claims ledger
 
-No research claims established at initialization.
+Every empirical claim below is tied to saved evidence; run exit success alone is
+not a scientific result. Confirmation claims are added only after artifact audit.
 
-| Claim ID | Precise claim and scope | Type/status | Supporting run IDs/files or source | Contradictory evidence/limits | Audit status |
+| ID | Precise claim and scope | Type/status | Evidence | Limits | Audit |
 |---|---|---|---|---|---|
+| C001 | Supplied circle functions agree on the unit ring and differ off it; an origin-boundary prior excludes the stated alternative. | Mathematical sanity check | results/runs/sanity-001/sanity.json; tests/test_science.py::test_circle_symbolic_and_prior | Supplied textbook identity, not a discovery | Symbolic/numerical checks passed |
+| C002 | Symmetric f±αq disagreement is α²q²; greedy regularized D-optimal gain ranks leverage. A single dominating direction can align rankings. | Mathematical overlap | docs/EQUIVALENCE.md; test_design_equivalence_and_determinant | Does not prove all actual acquisitions equivalent or establish novelty | Derived and numerically checked |
+| C003 | 360 A/B development policy units completed; 21,651 saved witnesses passed the artifact checks. | Numerical development observation | results/runs/development-001/validation.json; run.json | Three seeds, known ideal functions, finite dictionary | Validated |
+| C004 | Development constrained AUC: augmented A/B 0.0760901/0.0641300; ordinary QBC 0.0760821/0.0552343; D-optimal 0.0762492/0.0640452. | Numerical development observation | reports/development/summary.json, paired_auc_deltas; reports/development/conditions.csv | No consistent incremental advantage, not held-out confirmation | Validated and figures inspected |
+| C005 | PySR 2.5.0 / Julia 1.13.0 actually fit the smoke and six A/B static cases; selected initial-data aliases had high off-preparation error in some cases. | Numerical development engine check | results/runs/pysr-smoke-001/pysr.json; results/runs/pysr-compare-001/comparison.json | No five-policy PySR comparison; limited arithmetic search budget; unsimplified divisions retained | Equations and calibration/off errors inspected |
+| C006 | 49 automated tests passed before the v2 freeze, including numerical interfaces, label pairing, replay, witnesses and generated-metadata exclusion. | Engineering validation | .research/notes/final-tests.txt; tests/test_science.py; tests/test_lab.py | Tests do not independently validate a research hypothesis | Passed |
+| C007 | Protocol v1 froze 34 committed inputs before confirmation. | Provenance fact | .research/freezes/v1.json; source commit 7757dd5 | Hashes enforce provenance, not blindness from the coding agent | lab verify passed before launch |
+| C008 | The first replay checker reported false despite identical canonical scientific hashes because Python tuples differ from JSON-loaded lists. The failed record is preserved; v2 fixes exact serialized comparison and uses fresh seeds. | Engineering failure and correction | results/runs/reproduce-v1-001/reproduction.json; tests/test_science.py::test_saved_json_reproduction_preserves_exact_science; DECISIONS.md D007 | No numerical method change or numeric mismatch was found; first round treated as exploratory after revision | Regression passes, including deliberate metric perturbation rejection |
+| C009 | Archived v1 frozen files match their committed bytes; eight numerical method modules are byte-unchanged between v1 and v2. | Provenance audit | reports/audit/revision_provenance.json | Checker/configuration-seed/protocol revisions are explicit | Validated |
+| C010 | Final v2 confirmation completed all 1,000 policy units (200 paired conditions × five policies) in 328.50 s, with zero execution failures. 91,325 alternative records passed the artifact checks. | Validated confirmation | results/runs/confirmation-v2-001/run.json, manifest.json, validation.json | Repeated alternatives are not independent discoveries; scientific poor-fit cases remain | Validated |
+| C011 | On each final task C/D/E/F, augmented mean constrained AUC is better than random but worse than QBC, diversified QBC and D-optimal. No incremental acquisition advantage is established in this pilot. | Confirmation, negative finding | reports/confirmation/summary.json (summaries and paired_auc_deltas); conditions.csv | Five seed units per task; not a population-wide null-effect proof | Validated |
+| C012 | Augmented initial witness coverage is C 20/20, D 20/20, E 15/20, F 18/20 constrained trials; zero in 80 independent/shuffled trials. Restricted pools retain substantial off-preparation error. | Confirmation diagnostics | reports/confirmation/summary.json, budgets; tables.md | Some controls have poor fits; no-witness is not uniqueness or calibrated specificity | Validated |
+| C013 | E has false consensus in 18/20 constrained trials at budget 2 for both ordinary and augmented QBC. Augmented poor-fit counts at budget 8 are 10/20 on E and F. | Confirmation failure modes | reports/confirmation/summary.json, budget=2/8 fields | Fixed diagnostic thresholds; finite search and F misspecification; not process failures | Validated |
+| C014 | Augmented and D-optimal first-query IDs match in 47/80 constrained confirmation pairs, with 13/20,10/20,14/20,10/20 on C/D/E/F. | Numerical method overlap | reports/confirmation/summary.json, first_query_agreement | Not proof of complete policy equivalence | Validated |
+| C015 | Preselected noisy C seed 92001 has exact canonical scientific replay in a fresh process; complete original/repeated hashes match. | Replicated confirmation | results/runs/reproduce-v2-001/reproduction.json; run.json | Timing/RSS excluded; recorded environment only | Exact match |
+| C016 | Summary, condition CSV, tables and SVG/PNG regenerated byte-for-byte from saved v2 artifacts. | Artifact reproduction | reports/audit/report_regeneration.json | Same environment; original numeric unit outputs retained | Exact match |
+| C017 | The example C seed 92001 exact/noiseless witness pair and first query are actual saved outputs, not hand-inserted rivals. | Illustrative numerical observation | results/runs/confirmation-v2-001/units/C-s92001-w0-n0-constrained-augmented_qbc.json, models[0]/queries[0] | Selected illustration; no independent performance inference | Reconstructed by audit |
+| C018 | Witness work averages ~0.147 s per augmented trajectory; cumulative batch peak RSS is 117,653,504 bytes. | Resource observation | reports/confirmation/summary.json, runtime fields | Instrumented/evaluator-inclusive timings; batch cumulative RSS | Inspected |
 
-Types: mathematical proof, numerical observation, replicated confirmation,
-prior-work fact, conjecture, negative finding. Do not combine these categories.
-Every numerical report claim needs exact artifact paths. A passing test is not a
-new physics result. Existing source facts require exact source attribution.
-Withdraw invalidated claims explicitly instead of silently deleting their history.
+Not established: a new law, a novel active-learning principle, real laboratory
+performance, calibrated model confidence, exhaustive sparse identifiability,
+uniqueness when no witness is found, or publication readiness.

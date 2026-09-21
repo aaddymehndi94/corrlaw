@@ -1,0 +1,35 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "corrlaw.audit",
+    "results/runs/confirmation-v2-001",
+    "--output",
+    "results/runs/confirmation-v2-001"
+  ],
+  "duration_seconds": 16.148514,
+  "ended_utc": "2026-09-21T17:42:57+00:00",
+  "error": null,
+  "freeze_id": "v2",
+  "git": {
+    "branch": "research/corrlaw-sprint-01",
+    "commit": "bebc5c84630e67ea2abf9d30f9a6873b36bda7e0",
+    "working_tree_dirty": true
+  },
+  "log_path": "work/runs/confirmation-audit-v2-001/console.log",
+  "log_sha256": "4af09bb219c010698de34a321864b43a8be48d4e58628c716e8357417ce30954",
+  "phase": "audit",
+  "pid": 80053,
+  "platform": "Darwin",
+  "purpose": "Validate all fresh confirmation labels, metrics, pairing and witnesses",
+  "python": "3.14.5",
+  "result_validation": "NOT_REVIEWED",
+  "returncode": 0,
+  "run_id": "confirmation-audit-v2-001",
+  "schema_version": 1,
+  "started_utc": "2026-09-21T17:42:41+00:00",
+  "status": "completed",
+  "task": "T10",
+  "threads_requested": 4,
+  "timeout_seconds": 600.0
+}

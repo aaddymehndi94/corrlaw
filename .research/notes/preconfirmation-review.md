@@ -52,3 +52,10 @@ A scripted premature state update was corrected immediately after inspecting the
 failed command. Freeze/confirmation completion is recorded only after success.
 Also replaced inherited obsolete config notes before any confirmation. Numeric
 settings are unchanged. Final test count is 48 with the inventory regression.
+
+Final verification extension: after the first frozen round, serialized replay exposed
+a container-equality checker defect. See D007 and the preserved failed run. Protocol
+v2 changes only exact-JSON replay validation plus fresh seeds; core numeric modules
+are unchanged. The added 49th test accepts tuple-to-array serialization and rejects
+a real 1e-6 numeric modification. V1 is retained as exploratory; v2 independently
+repeats the complete intended task/policy/control grid. No method was tuned on v1.

@@ -1,0 +1,37 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "corrlaw.audit",
+    "results/runs/confirmation-v2-001",
+    "--reproduce",
+    "C-s92001-w0-n0.01-constrained-augmented_qbc",
+    "--output",
+    "results/runs/reproduce-v2-001"
+  ],
+  "duration_seconds": 1.169491,
+  "ended_utc": "2026-09-21T17:42:58+00:00",
+  "error": null,
+  "freeze_id": "v2",
+  "git": {
+    "branch": "research/corrlaw-sprint-01",
+    "commit": "bebc5c84630e67ea2abf9d30f9a6873b36bda7e0",
+    "working_tree_dirty": true
+  },
+  "log_path": "work/runs/reproduce-v2-001/console.log",
+  "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "phase": "audit",
+  "pid": 80071,
+  "platform": "Darwin",
+  "purpose": "Exact canonical JSON replay of preselected noisy confirmation unit in fresh process",
+  "python": "3.14.5",
+  "result_validation": "NOT_REVIEWED",
+  "returncode": 0,
+  "run_id": "reproduce-v2-001",
+  "schema_version": 1,
+  "started_utc": "2026-09-21T17:42:57+00:00",
+  "status": "completed",
+  "task": "T10",
+  "threads_requested": 4,
+  "timeout_seconds": 300.0
+}
