@@ -46,7 +46,11 @@ def load_config(path):
 def save(path, data):
     path = Path(path)
     tmp = path.with_suffix('.tmp')
-    tmp.write_text(json.dumps(data, indent=2, allow_nan=False)+'\n')
+    # Keep complete unit evidence compact; summary/manifest files remain readable.
+    compact = path.parent.name == 'units'
+    tmp.write_text(json.dumps(data, indent=None if compact else 2,
+                              separators=(',', ':') if compact else None,
+                              allow_nan=False)+'\n')
     tmp.replace(path)
 
 

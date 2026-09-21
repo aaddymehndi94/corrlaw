@@ -31,3 +31,18 @@ seeds 101–103, arithmetic +,-,*,/, maxsize 10, two populations of 20, ten iter
 60 s search cap each; select by calibration MSE + 1e-8 complexity. Archive all
 candidate equations. This checks engine behavior; it is not a PySR acquisition
 benchmark and cannot establish a general evolutionary-search advantage.
+
+## D005 — 2026-09-21: freeze broad confirmation without method tuning
+Development-001 completed 360 units in 86.23 s, validated 21,651 witnesses.
+Augmented constrained AUC A/B: 0.07609/0.06413; ordinary QBC: 0.07608/0.05523;
+D-optimal: 0.07625/0.06405. Evidence: reports/development/summary.json.
+No consistent unique advantage; retain thresholds and all baselines. Resources
+support C/D/E/F, five seeds, widths 0/.01, both noise levels and three controls:
+1,000 confirmation units. Preselect one noisy C augmented unit for exact replay.
+Do not change these decisions after opening confirmation outcomes.
+
+## D006 — 2026-09-21: artifact and reporting fixes before freeze
+Development artifacts are immutable. Save future unit JSON compactly, preserving
+all numeric fields/candidates/witnesses; ~161 MB of pretty development evidence
+remains tracked and compresses in Git. Move chart legend below panels after visual
+inspection detected title overlap. Neither change alters computed scientific values.

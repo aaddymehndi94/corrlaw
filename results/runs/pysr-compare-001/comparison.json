@@ -1,0 +1,224 @@
+{
+  "julia": [
+    1,
+    13,
+    0
+  ],
+  "records": [
+    {
+      "task": "A",
+      "seed": 101,
+      "selected": {
+        "index": 1,
+        "equation": "x1 * x1",
+        "complexity": 3,
+        "loss": 6.349088e-15,
+        "cal_rmse": 0.0
+      },
+      "candidates": [
+        {
+          "index": 0,
+          "equation": "x0",
+          "complexity": 1,
+          "loss": 0.10687047,
+          "cal_rmse": 0.28786593943482064
+        },
+        {
+          "index": 1,
+          "equation": "x1 * x1",
+          "complexity": 3,
+          "loss": 6.349088e-15,
+          "cal_rmse": 0.0
+        },
+        {
+          "index": 2,
+          "equation": "x0 / (x0 / (x0 * x0))",
+          "complexity": 7,
+          "loss": 6.279699e-15,
+          "cal_rmse": 6.128265163612872e-17
+        }
+      ],
+      "pysr_off_rmse": 0.4330930957782136,
+      "finite_library_off_rmse": 0.4330930957782134,
+      "elapsed_seconds": 10.978963958099484
+    },
+    {
+      "task": "A",
+      "seed": 102,
+      "selected": {
+        "index": 1,
+        "equation": "x1 * x0",
+        "complexity": 3,
+        "loss": 6.265821e-15,
+        "cal_rmse": 0.0
+      },
+      "candidates": [
+        {
+          "index": 0,
+          "equation": "x0",
+          "complexity": 1,
+          "loss": 0.10418981,
+          "cal_rmse": 0.2887510122416999
+        },
+        {
+          "index": 1,
+          "equation": "x1 * x0",
+          "complexity": 3,
+          "loss": 6.265821e-15,
+          "cal_rmse": 0.0
+        }
+      ],
+      "pysr_off_rmse": 0.0,
+      "finite_library_off_rmse": 0.4233401240340575,
+      "elapsed_seconds": 0.16895537497475743
+    },
+    {
+      "task": "A",
+      "seed": 103,
+      "selected": {
+        "index": 1,
+        "equation": "x0 * x1",
+        "complexity": 3,
+        "loss": 6.598888e-15,
+        "cal_rmse": 0.0
+      },
+      "candidates": [
+        {
+          "index": 0,
+          "equation": "x1",
+          "complexity": 1,
+          "loss": 0.08013743,
+          "cal_rmse": 0.30595656824110484
+        },
+        {
+          "index": 1,
+          "equation": "x0 * x1",
+          "complexity": 3,
+          "loss": 6.598888e-15,
+          "cal_rmse": 0.0
+        }
+      ],
+      "pysr_off_rmse": 0.0,
+      "finite_library_off_rmse": 0.4297479171722022,
+      "elapsed_seconds": 0.1874155830591917
+    },
+    {
+      "task": "B",
+      "seed": 101,
+      "selected": {
+        "index": 2,
+        "equation": "((x1 * x1) * 1.0) + 1.0",
+        "complexity": 7,
+        "loss": 1.7763568e-15,
+        "cal_rmse": 9.614813431917819e-17
+      },
+      "candidates": [
+        {
+          "index": 0,
+          "equation": "1.4032112",
+          "complexity": 1,
+          "loss": 0.12266773,
+          "cal_rmse": 0.35684842699092384
+        },
+        {
+          "index": 1,
+          "equation": "(x1 * x1) + 0.9720495",
+          "complexity": 5,
+          "loss": 0.00078123185,
+          "cal_rmse": 0.0279505
+        },
+        {
+          "index": 2,
+          "equation": "((x1 * x1) * 1.0) + 1.0",
+          "complexity": 7,
+          "loss": 1.7763568e-15,
+          "cal_rmse": 9.614813431917819e-17
+        }
+      ],
+      "pysr_off_rmse": 1.079581393453053,
+      "finite_library_off_rmse": 1.0795813934530536,
+      "elapsed_seconds": 0.18172120791859925
+    },
+    {
+      "task": "B",
+      "seed": 102,
+      "selected": {
+        "index": 2,
+        "equation": "(x1 * x1) + (x1 / x1)",
+        "complexity": 7,
+        "loss": 2.4424907e-15,
+        "cal_rmse": 1.0749688212373146e-16
+      },
+      "candidates": [
+        {
+          "index": 0,
+          "equation": "1.525332",
+          "complexity": 1,
+          "loss": 0.114288665,
+          "cal_rmse": 0.34177784136885075
+        },
+        {
+          "index": 1,
+          "equation": "0.90620106 + (x1 * x1)",
+          "complexity": 5,
+          "loss": 0.0087982435,
+          "cal_rmse": 0.09379893999999998
+        },
+        {
+          "index": 2,
+          "equation": "(x1 * x1) + (x1 / x1)",
+          "complexity": 7,
+          "loss": 2.4424907e-15,
+          "cal_rmse": 1.0749688212373146e-16
+        }
+      ],
+      "pysr_off_rmse": 1.0931995982681448,
+      "finite_library_off_rmse": 2.1863991965362897,
+      "elapsed_seconds": 0.1619152498897165
+    },
+    {
+      "task": "B",
+      "seed": 103,
+      "selected": {
+        "index": 1,
+        "equation": "1.0 + (x1 * x1)",
+        "complexity": 5,
+        "loss": 3.1086245e-15,
+        "cal_rmse": 1.2412670766236366e-16
+      },
+      "candidates": [
+        {
+          "index": 0,
+          "equation": "1.52978",
+          "complexity": 1,
+          "loss": 0.11867851,
+          "cal_rmse": 0.3601098905157509
+        },
+        {
+          "index": 1,
+          "equation": "1.0 + (x1 * x1)",
+          "complexity": 5,
+          "loss": 3.1086245e-15,
+          "cal_rmse": 1.2412670766236366e-16
+        }
+      ],
+      "pysr_off_rmse": 1.0865818755065393,
+      "finite_library_off_rmse": 2.1731637510130786,
+      "elapsed_seconds": 0.1696027920115739
+    }
+  ],
+  "scope": "A/B exact noiseless initial preparation; three search seeds; no acquisition comparison",
+  "parameters": {
+    "niterations": 10,
+    "populations": 2,
+    "population_size": 20,
+    "maxsize": 10,
+    "timeout_in_seconds": 60,
+    "operators": [
+      "+",
+      "-",
+      "*",
+      "/"
+    ]
+  }
+}

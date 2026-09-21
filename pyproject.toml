@@ -4,9 +4,14 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "corrlaw"
-version = "0.0.0"
-description = "Research scaffold for ambiguity-aware physical equation discovery"
-requires-python = ">=3.8"
+version = "0.1.0"
+description = "Reproducible ambiguity-aware equation discovery research pilot"
+requires-python = ">=3.11"
+dependencies = ["numpy>=2.0,<3", "scipy>=1.14,<2", "sympy>=1.14,<2", "matplotlib>=3.9,<4"]
+
+[project.optional-dependencies]
+pysr = ["pysr==2.5.0"]
+test = ["pytest>=9,<10"]
 
 [tool.setuptools.packages.find]
 where = ["src"]

@@ -28,3 +28,18 @@ Before freeze:
 - Add missing-library witness-search diagnostic and false-alarm controls.
 - Record actual configuration, dependency versions, resolved run counts and figure plan.
 - Keep any failed development attempt without silently rewriting its output.
+
+Resolved after development:
+- All 360 units completed; audit checked 21,651 witnesses without errors.
+- Both witness expressions now must be admissible; resume checks source/config and
+  existing manifest file hashes; tests include altered artifacts and missing library.
+- PySR smoke and six static A/B fits actually ran. No PySR policy sweep is claimed.
+- Thresholds retained unchanged; independent/shuffled A/B initial witness counts were
+  zero across six task-control replicates each. Exact/near findings remain empirical.
+- Pilot is fast enough for all C/D/E/F × five confirmation seeds × all controls,
+  1,000 policy units. No confirmation outcome inspected at this decision.
+- Plot legend overlapped the title on first render; moved legend below panels before
+  freeze and regeneration. Numeric output unaffected. Compact confirmation unit JSON
+  preserves all data while avoiding unnecessary pretty-print file expansion.
+- Fixed tolerance/complexity choices are not optimized statistical confidence.
+- No peer-independent validation or blind coding-agent evaluation is asserted.

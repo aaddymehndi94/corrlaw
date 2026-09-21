@@ -81,7 +81,7 @@ def summarize(run, output):
         lines.append(f'| {r["task"]} | {r["control"]} | {LABELS[r["policy"]]} | {r["auc_mean"]:.6g} | {r["budgets"][-1]["mean"]:.6g} | {len(r["seeds"])} |')
     (output/'tables.md').write_text('\n'.join(lines)+'\n')
     tasks=sorted({r['task'] for r in completed}); cols=2; rows=(len(tasks)+1)//2
-    plt.rcParams.update({'font.size':10,'axes.spines.top':False,'axes.spines.right':False,'svg.fonttype':'none'})
+    plt.rcParams.update({'font.size':10,'axes.spines.top':False,'axes.spines.right':False,'svg.fonttype':'none','svg.hashsalt':'corrlaw-v1'})
     fig,axes=plt.subplots(rows,cols,figsize=(11,3.7*rows),squeeze=False,layout='constrained')
     colors=['#757575','#0072B2','#009E73','#E69F00','#CC79A7']
     for ax,task in zip(axes.flat,tasks):
@@ -95,9 +95,12 @@ def summarize(run, output):
         ax.set_yscale('log'); ax.set_xticks([0,1,2,4,8]); ax.grid(alpha=.2)
     for ax in list(axes.flat)[len(tasks):]: ax.set_visible(False)
     handles,labels=axes.flat[0].get_legend_handles_labels()
-    fig.legend(handles,labels,loc='outside upper center',ncol=5,frameon=False)
-    fig.suptitle('Constrained preparations · means across conditions; shading is seed range',y=1.04,fontsize=12)
-    fig.savefig(output/'error_curves.svg',bbox_inches='tight'); fig.savefig(output/'error_curves.png',dpi=160,bbox_inches='tight'); plt.close(fig)
+    fig.legend(handles,labels,loc='outside lower center',ncol=5,frameon=False)
+    fig.suptitle('Constrained preparations · means across conditions; shading is seed range',fontsize=12)
+    svg = output/'error_curves.svg'
+    fig.savefig(svg,bbox_inches='tight',metadata={'Date': None})
+    svg.write_text('\n'.join(line.rstrip() for line in svg.read_text().splitlines())+'\n')
+    fig.savefig(output/'error_curves.png',dpi=160,bbox_inches='tight'); plt.close(fig)
     return result
 
 
