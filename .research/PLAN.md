@@ -2,7 +2,7 @@
 
 Change task status only with an evidence path/run ID. Keep old failures in dated notes.
 States: NOT_STARTED, ACTIVE, BLOCKED, DONE, SKIPPED_WITH_REASON.
-All tasks below have recorded completion evidence.
+T01–T11 are the completed pilot. T12–T17 are the user-authorized overnight extension.
 
 | ID | Depends on | Task | Acceptance evidence | Status |
 |---|---|---|---|---|
@@ -23,3 +23,14 @@ run must not be described as an evolutionary-symbolic-regression result.
 T09 completion at the minimum scope is a pilot, not a broad benchmark conclusion.
 At reporting cutoff, move to T10/T11 with existing evidence even when earlier tasks
 remain blocked/incomplete. Label that scope honestly; do not mark skipped science DONE.
+
+## Overnight extension (deadline 2026-09-22 08:00 IST)
+
+| ID | Depends on | Task | Acceptance evidence | Status |
+|---|---|---|---|---|
+| T12 | T11 | Same-thread watchdog and explicit overnight deadline | OVERNIGHT.json; queue delivery test; local live PID 81797 | DONE |
+| T13 | T12 | Actual PySR five-policy active learner, tests and smoke | pending | ACTIVE |
+| T14 | T13 | Development/profiling and fresh frozen protocol | pending | NOT_STARTED |
+| T15 | T14 | Repeated PySR confirmation with all baselines and controls | pending | NOT_STARTED |
+| T16 | T13 | Search-failure and physical-prior diagnostics | pending | NOT_STARTED |
+| T17 | T15,T16 | Artifact audit, reproduction, updated report and handoff | pending | NOT_STARTED |

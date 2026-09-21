@@ -1,30 +1,21 @@
-# Handoff — completed research pilot
-Branch research/corrlaw-sprint-01. Main evidence/report checkpoint 8070049; final
-completion metadata is in the latest local commit. V2 frozen inputs at c15cad8.
-All T01–T11 tasks completed. No active processes, blockers or outstanding science.
+# Handoff — active overnight research
+Read STATE.md, OVERNIGHT.json, notes/overnight-start.md and PLAN.md.
+Prior pilot T01–T11 is complete, but the user authorized continued research until
+2026-09-22 08:00 IST (02:30 UTC). Experiments end 01:30 UTC; preserve original sprint.
+A native persistent goal is active. Local same-thread watchdog reminders run every
+15 minutes; PID/log/STOP under work/overnight-watchdog. Never create competing agents.
+The watchdog cannot restart a powered-off host or guarantee service availability.
 
-Deliverables: implemented/tested research CLI, strict configs and package locks;
-360 A/B development policy units; 1,000 final C/D/E/F policy units with five paired
-seeds, five baselines, width/noise conditions and independent/shuffled/restricted
-controls; equation/witness/query records; audited summary tables and SVG/PNG figures;
-reports/REPORT.md and .research/CLAIMS.md. Actual optional PySR smoke plus six static
-A/B fits are separate from the main finite-library acquisition benchmark.
+T13 next: build separate generic numerical PySR engine and five-policy experiment
+runner with equation/witness/query artifacts; test on A/B. Then development, freeze
+fresh C/D/E/F seeds before outcomes, confirmation, targeted diagnostics, audit/report.
+Use existing source interfaces and oracle; learners receive anonymous arrays only.
+Old v2 freeze/evidence is historical and must remain verifiable against commit c15cad8.
+New files inside frozen inventory require a new freeze for new confirmation.
+No edits to source/config during running science jobs, one heavy process, <=4 threads.
+No pushes, paid APIs, new cloud jobs, or changes to system settings.
 
-Verification: 49 tests passed; live freeze v2 verified; full final artifact audit
-checked 91,325 alternative records without errors; preselected noisy C seed 92001
-reproduced exactly in a new process. All five generated report artifacts reproduced
-byte-for-byte. Final source/configuration did not change during/after confirmation.
-
-Scientific result: augmented mean primary AUC was worse than ordinary QBC,
-diversified QBC and D-optimal on all four final tasks; improvement over random did
-not establish an incremental acquisition advantage. Failures/controls remain visible.
-V1 evidence is retained as exploratory after a tuple/list replay-check defect;
-its failed checker record remains untouched. V2 compares canonical JSON exactly,
-uses fresh seeds, and leaves all eight numerical method modules unchanged.
-
-Git policy: local scoped commits only; no push, publication, credential or remote
-changes. Ignored .venv/.julia/work data remain local. No user changes were discarded.
-Exact safe next command: `python3 tools/completion_check.py`.
-See .research/completion.json for the gate result and .research/notes/final-audit.md
-for the skeptical review. Any further research needs a new explicit scope; do not
-restart or extend the ten-hour clock silently. No background agent is left running.
+Original result: finite-library augmented QBC did not improve mean primary AUC over
+active baselines on C/D/E/F; details reports/REPORT.md and reports/confirmation.
+49 tests passed, 1000 final units audited, exact saved-JSON reproduction passed.
+V1 failed replay checker was tuple/list equality defect; retain all records.

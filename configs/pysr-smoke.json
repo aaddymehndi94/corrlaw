@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "stage": "development",
+  "tasks": [
+    "A",
+    "B"
+  ],
+  "seeds": [
+    201
+  ],
+  "constraint_widths": [
+    0
+  ],
+  "output_noise_std": [
+    0
+  ],
+  "n_fit": 128,
+  "n_calibration": 64,
+  "n_query_candidates": 256,
+  "query_budgets": [
+    0,
+    1,
+    2,
+    4,
+    8
+  ],
+  "policies": [
+    "random",
+    "qbc",
+    "diversified_qbc",
+    "regularized_d_optimal",
+    "augmented_qbc"
+  ],
+  "controls": [
+    "constrained"
+  ],
+  "engine": "pysr_feature_grammar",
+  "notes": "Development smoke for actual PySR active learning; three searches per refit, all five acquisition policies.",
+  "n_test": 512,
+  "search_settings": {
+    "searches": 3,
+    "niterations": 10,
+    "search_maxsize": 10,
+    "max_complexity": 31,
+    "timeout_seconds": 30
+  }
+}
