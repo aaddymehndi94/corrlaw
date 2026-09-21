@@ -86,7 +86,7 @@ class SymbolicFit:
     poor_fit: bool
 
 
-def fit(obs, seed, settings, diversified=False):
+def fit(obs, seed, settings, diversified=False, history=(), generation=0):
     configure_julia()
     from pysr import PySRRegressor
     lib = Library.build(obs.bounds, obs.probes)
@@ -96,6 +96,20 @@ def fit(obs, seed, settings, diversified=False):
     n_initial = len(obs.x)-len(obs.acquired_x)
     streams = np.random.SeedSequence(seed).spawn(settings['searches'])
     candidates, searches, full_candidates = [], [], []
+    # Preserve discovered equations, but recompute every admissibility decision
+    # against all currently available observations. Never preserve old scores.
+    for old in history:
+        candidate = Expression(old['expression'], a.shape[1])
+        try:
+            error = errors(candidate, matrices, obs)
+            candidate.predict(domain)
+        except (ValueError, FloatingPointError, OverflowError):
+            continue
+        record = dict(old, errors=error,
+                      admissible=admissible(candidate,error,obs.noise_std,settings['max_complexity']))
+        if record['search']==0:
+            full_candidates.append(record)
+        candidates.append(record)
     for repetition, stream in enumerate(streams):
         rng = np.random.default_rng(stream)
         indices = (np.arange(n_initial) if repetition == 0 else
@@ -122,7 +136,7 @@ def fit(obs, seed, settings, diversified=False):
         raw = []
         for index, row in model.equations_.iterrows():
             expression = str(row['sympy_format'])
-            record = dict(expression=expression, search=repetition, index=int(index),
+            record = dict(expression=expression, search=repetition, generation=generation,index=int(index),
                           search_complexity=int(row['complexity']), search_loss=float(row['loss']))
             try:
                 candidate = Expression(expression, a.shape[1])
@@ -135,8 +149,12 @@ def fit(obs, seed, settings, diversified=False):
                 if record['bounded']:
                     if repetition == 0:
                         full_candidates.append(record)
-                    if not any(r['expression'] == expression for r in candidates):
+                    duplicate=next((r for r in candidates if r['expression']==expression),None)
+                    if duplicate is None:
                         candidates.append(record)
+                    elif repetition==0 and duplicate['search']!=0:
+                        # Full-data eligibility must survive expression deduplication.
+                        candidates[candidates.index(duplicate)]=record
             except (ValueError, TypeError, FloatingPointError, OverflowError) as exc:
                 record.update(rejected=str(exc), admissible=False)
             raw.append(record)

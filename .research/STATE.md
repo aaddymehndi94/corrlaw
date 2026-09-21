@@ -11,5 +11,7 @@ Do not call the old finite-library completion gate completion of overnight resea
 Current task T13: implement genuine PySR active acquisition comparison, all policies.
 New symbolic engine/runner and 8 focused tests implemented; all 8 pass.
 Next: real PySR A/B five-policy smoke, run pysr-active-smoke-001, timeout 1800s.
-No heavy experiment currently running. No pushes or publication authorized.
+Active run: pysr-active-smoke-001 (runner PID 81951), timeout 1800s.
+No source/config edits until run finishes. Audit design: work/overnight-audit-design.md.
+No pushes or publication authorized.
 Exact next action: run pysr-active-smoke-001 with configs/pysr-smoke.json.

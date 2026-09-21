@@ -80,18 +80,20 @@ def scientific_content(unit):
     return data
 
 
-def run_policy(trial, policy, c):
+def run_policy(trial, policy, c, enforce_cutoff=False):
     start = time.perf_counter()
     oracle = trial.oracle()
     records, models = [], []
     fitting_seconds = augmentation_seconds = 0.
+    history=[]
     for budget in range(9):
-        if time.time() >= DEADLINE:
+        if enforce_cutoff and time.time() >= DEADLINE:
             raise TimeoutError('overnight experiment cutoff reached')
         obs = trial.observations(oracle.records)
         fit_start = time.perf_counter()
         fitted = symbolic.fit(obs, [trial.seed, 1400, budget], c['search_settings'],
-                              diversified=policy=='diversified_qbc')
+                              diversified=policy=='diversified_qbc',history=history,generation=budget)
+        history=fitted.candidates
         fitting_seconds += time.perf_counter()-fit_start
         aug_start = time.perf_counter()
         augmented, witnesses, diagnostic = symbolic.augment(obs, fitted, c['search_settings'])
@@ -151,7 +153,7 @@ def run(c, output, resume=False):
         else:
             try:
                 trial=make_trial(task,seed,width,noise,control,c)
-                result=dict(identity,**run_policy(trial,policy,c))
+                result=dict(identity,**run_policy(trial,policy,c,enforce_cutoff=True))
             except Exception as exc:
                 result=dict(identity,status='failed',error=repr(exc),traceback=traceback.format_exc())
             save(path,result)

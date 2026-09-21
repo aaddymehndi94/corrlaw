@@ -3,6 +3,8 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
+from unittest.mock import patch
+from types import SimpleNamespace
 import numpy as np
 from corrlaw.features import Library
 from corrlaw.oracle import make_trial, reference
@@ -86,6 +88,31 @@ class SymbolicTests(unittest.TestCase):
             c=self.config;c['search_settings']['searches']=1
             p=Path(d)/'config.json';p.write_text(json.dumps(c))
             with self.assertRaises(ValueError):load_config(p)
+
+    def test_retention_preserves_good_models_and_refilters_old_aliases(self):
+        import pandas as pd
+        from corrlaw.symbolic import fit
+        class WeakSearch:
+            def __init__(self,**kwargs):pass
+            def fit(self,*args,**kwargs):
+                self.equations_=pd.DataFrame([{'sympy_format':'0','complexity':1,'loss':1.}])
+        correct=self.base().best
+        j=self.lib.powers.index((0,2))
+        alias=Expression(f'{self.lib.scale[j]:.17g}*z{j}',len(self.lib.powers))
+        history=[dict(expression=m.expression,search=0,generation=0,index=i,
+                      search_complexity=3,search_loss=0.,errors=[0.,0.,0.,0.],
+                      bounded=True,complexity=m.complexity,admissible=True)
+                 for i,m in enumerate((correct,alias))]
+        oracle=self.trial.oracle()
+        oracle.measure(int(np.argmax(abs(self.trial.pool[:,0]-self.trial.pool[:,1]))))
+        obs=self.trial.observations(oracle.records)
+        with patch.dict('sys.modules',{'pysr':SimpleNamespace(PySRRegressor=WeakSearch)}):
+            fitted=fit(obs,[201,1400,1],self.config['search_settings'],history=history,generation=1)
+        self.assertEqual(fitted.best.expression,correct.expression)
+        bad=next(r for r in fitted.candidates if r['expression']==alias.expression)
+        self.assertFalse(bad['admissible'])
+        self.assertGreater(bad['errors'][2],.1)
+        self.assertNotIn(alias.expression,[m.expression for m in fitted.committee])
 
 
 if __name__=='__main__':unittest.main()
