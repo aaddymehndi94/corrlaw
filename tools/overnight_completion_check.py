@@ -38,6 +38,19 @@ def main():
             issues.append(f'prior {prior} incomplete or invalid')
     search=read('results/runs/search-diagnostic-001/diagnostics.json',issues)
     if not search.get('complete'):issues.append('exhaustive-search diagnosis incomplete')
+    search_audit=read('results/runs/search-diagnostic-001/validation.json',issues)
+    if not search_audit.get('valid') or not search_audit.get('reproduction',{}).get('exact_coefficients'):
+        issues.append('exhaustive-search artifact audit/replay failed')
+    representation=read('results/runs/representation-diagnostic-001/diagnostic.json',issues)
+    if not representation.get('known_relation_alternatives'):issues.append('representation limitation check missing')
+    algebra=read('results/runs/physical-prior-algebra-001/algebra.json',issues)
+    if not algebra.get('valid'):issues.append('physical-prior exact algebra missing/invalid')
+    for name in ('pysr','finite'):
+        diagnostic=read(f'reports/committee-{name}/summary.json',issues)
+        if not diagnostic.get('rows') or not diagnostic.get('summaries'):
+            issues.append(f'{name} saved-committee diagnostic missing')
+    sensitivity=read('reports/compute-sensitivity/summary.json',issues)
+    if not sensitivity.get('paired_units'):issues.append('matched-condition compute sensitivity missing')
     positivity=read('reports/positivity-pysr/summary.json',issues)
     if positivity.get('failed_units'):issues.append('positivity input contains failures')
     regeneration=read('reports/audit/overnight-report-regeneration.json',issues)

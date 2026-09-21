@@ -1,5 +1,6 @@
 import ast
 import json
+import os
 from pathlib import Path
 import tempfile
 import unittest
@@ -50,6 +51,17 @@ class SymbolicTests(unittest.TestCase):
         self.assertFalse(Expression('21*z1',3).bounded(31))
         self.assertFalse(Expression('z0+z1+z2',3).bounded(2))
         np.testing.assert_array_equal(Expression('2',3).predict(np.zeros((3,3))),np.full(3,2.))
+
+    def test_optional_wrapper_deadline_keeps_reproduction_portable(self):
+        from corrlaw.symbolic_experiment import check_execution_cutoff
+        with patch.dict(os.environ,{},clear=True),patch('corrlaw.symbolic_experiment.time.time',return_value=10**12):
+            check_execution_cutoff()
+        with patch.dict(os.environ,{'CORRLAW_RUN_CUTOFF_UNIX':'100'}):
+            with patch('corrlaw.symbolic_experiment.time.time',return_value=99):check_execution_cutoff()
+            with patch('corrlaw.symbolic_experiment.time.time',return_value=100):
+                with self.assertRaises(TimeoutError):check_execution_cutoff()
+        with patch.dict(os.environ,{'CORRLAW_RUN_CUTOFF_UNIX':'nan'}):
+            with self.assertRaises(ValueError):check_execution_cutoff()
 
     def test_common_arithmetic_tree_budget(self):
         examples={'z0-z1':3,'z0/z1':3,'z0**3':5,'z0**(-2)':5,

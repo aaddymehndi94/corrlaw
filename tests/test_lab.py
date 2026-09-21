@@ -139,6 +139,16 @@ class LabTests(unittest.TestCase):
         self.assertTrue((self.root / "results/runs/success/source_hashes.json").exists())
         self.assertIn("evidence", (self.root / record["log_path"]).read_text())
 
+    def test_child_receives_bounded_execution_cutoff(self):
+        self.call("start")
+        code="import os; print(os.environ['CORRLAW_RUN_CUTOFF_UNIX'])"
+        self.assertEqual(self.run_command("cutoff_export",code),0)
+        record=lab.load(self.root/"results/runs/cutoff_export/run.json")
+        exported=float((self.root/record['log_path']).read_text().strip())
+        self.assertEqual(exported,record['run_cutoff_unix'])
+        self.assertLessEqual(exported,lab.effective_cutoff(self.root,'development')+.1)
+        self.assertLessEqual(exported,time.time()+5)
+
     def test_failed_command_preserved(self):
         self.call("start")
         self.assertEqual(self.run_command("failure", "raise SystemExit(7)"), 1)

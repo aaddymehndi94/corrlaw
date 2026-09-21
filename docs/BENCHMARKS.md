@@ -56,3 +56,19 @@ term-count and coefficient restrictions; positivity alone determines whether
 Laurent features are safe. Feature RMS uses 512 independent public unlabeled box
 probes, not labels or hidden tests, without centering the constant. Broad probes
 remain permitted for computation even when actual measurements are surface-limited.
+
+## Overnight PySR and prior-control extension
+
+The distributions, reference scales and anonymous numerical interfaces above apply
+to both engines. The representability statements about A–E and missing F concern
+the finite LINEAR span of the feature dictionary. The PySR extension composes those
+same generic feature terminals with arithmetic, including division, and can represent
+F. This does not guarantee its search will find F. See METHOD_PYSR.md and the current
+protocol for the common arithmetic cap, search budgets and exact confirmation grid.
+
+The original pilot's primary priors remain incomplete. The separate B follow-up
+supplies known origin/parity restrictions equally to every policy in each tier;
+its results concern the restricted degree<=3 polynomial class. Positivity checks
+on saved primary witnesses are descriptive finite-probe analyses, not a changed
+primary acquisition experiment. Full dimensional priors and analytical class
+counterexamples are discussed separately from algorithm-generated witnesses.

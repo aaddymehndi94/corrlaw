@@ -85,7 +85,7 @@ def summarize(run, output):
     for r in summaries:
         lines.append(f'| {r["task"]} | {r["control"]} | {LABELS[r["policy"]]} | {r["auc_mean"]:.6g} | {r["budgets"][-1]["mean"]:.6g} | {len(r["seeds"])} |')
     (output/'tables.md').write_text('\n'.join(lines)+'\n')
-    tasks=sorted({r['task'] for r in completed}); cols=2; rows=(len(tasks)+1)//2
+    tasks=sorted({r['task'] for r in completed}); cols=min(2,len(tasks)); rows=(len(tasks)+cols-1)//cols
     plt.rcParams.update({'font.size':10,'axes.spines.top':False,'axes.spines.right':False,'svg.fonttype':'none','svg.hashsalt':'corrlaw-v1'})
     fig,axes=plt.subplots(rows,cols,figsize=(11,3.7*rows),squeeze=False,layout='constrained')
     colors=['#757575','#0072B2','#009E73','#E69F00','#CC79A7']

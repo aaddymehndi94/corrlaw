@@ -349,12 +349,14 @@ def run(root: Path, args: argparse.Namespace) -> int:
         env.update({"MPLBACKEND": "Agg", "PYTHONUNBUFFERED": "1",
                     "CORRLAW_RUN_ID": identifier,
                     "CORRLAW_RESULT_DIR": str(result_dir),
-                    "CORRLAW_WORK_DIR": str(work_dir)})
+                    "CORRLAW_WORK_DIR": str(work_dir),
+                    "CORRLAW_RUN_CUTOFF_UNIX": str(min(time.time() + seconds, effective_cutoff(root, args.phase)))})
         begin = time.monotonic()
         meta = {"schema_version": 1, "run_id": identifier, "task": args.task,
                 "phase": args.phase, "freeze_id": args.freeze,
                 "purpose": args.purpose, "command": command, "started_utc": now(),
-                "timeout_seconds": seconds, "threads_requested": threads,
+                "timeout_seconds": seconds, "run_cutoff_unix": float(env["CORRLAW_RUN_CUTOFF_UNIX"]),
+                "threads_requested": threads,
                 "python": platform.python_version(), "platform": platform.system(),
                 "git": git_info(root), "status": "running", "pid": None,
                 "log_path": str(logpath.relative_to(root)), "result_validation": "NOT_REVIEWED"}
@@ -370,7 +372,7 @@ def run(root: Path, args: argparse.Namespace) -> int:
                                         stderr=subprocess.STDOUT, start_new_session=True)
                 meta["pid"] = proc.pid
                 atomic(result_dir / "run.json", meta)
-                exit_code = proc.wait(timeout=seconds)
+                exit_code = proc.wait(timeout=min(seconds, max(0., float(env["CORRLAW_RUN_CUTOFF_UNIX"]) - time.time())))
                 outcome = "completed" if exit_code == 0 else "failed"
         except subprocess.TimeoutExpired:
             outcome = "timed_out"

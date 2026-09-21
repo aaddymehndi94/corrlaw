@@ -1,59 +1,158 @@
-# Handoff — active overnight research
+# Overnight research handoff — active
+
 Repository: /Users/devikasv/dev/corrlaw; branch research/corrlaw-sprint-01.
-User requested unattended work until 2026-09-22 08:00 IST (02:30 UTC), with final
-hour for audit/reporting. Experiments end 01:30 UTC. SPRINT.json unchanged; lab.py
-now enforces the earlier OVERNIGHT.json deadline by min, never extending the clock.
-Native goal remains ACTIVE. Same-thread watchdog has an explicit deadline and STOP
-file under work/overnight-watchdog. It now nudges only after15m without real file/run
-progress, once per unchanged progress timestamp, and retries queue failures.
-Read current PID in work/overnight-watchdog/pid; bounded caffeinate keeps host awake.
-Queue acceptance was tested and timed deliveries succeeded; availability is not
-unconditional. User stop/scope changes always supersede queued reminders.
+Source checkpoint:87c5830. User authorized work until2026-09-22 08:00IST (02:30UTC).
+New experiments stop01:30UTC; final hour is for audit/reporting. Original SPRINT
+clock is preserved; OVERNIGHT overlay and wrapper enforce the earlier deadline.
+The native goal is ACTIVE. The old finite-pilot completion does not finish this scope.
 
-IMPORTANT: before ANY new PySR confirmation, a fairness issue was found. Search
-maxsize10 versus accepted SymPy complexity31 could favor added alternatives.
-Development001 was deliberately interrupted (all completed units preserved).
-notes/complexity-fairness-revision.md explains the change. Do not call that partial
-run final evidence. Revised search and every accepted expression share a15-node
-arithmetic-tree budget (+,-,*,/), including expanded integer powers. Loader rejects
-unequal caps. T13 reopened for revised smoke/audit/replay, then T14 development.
+## Latest milestone — supersedes the earlier draft-install sequence below
 
-Next: pysr-fair-smoke-001, configs/pysr-fair-smoke.json, A/B seed204, five policies,
-30iterations per search. After validation, run pysr-development-002 using
-configs/pysr-development-v2.json (360 units; all widths/noise/controls; three seeds).
-Execution now goes seed-first to cover tasks fairly if an unexpected cutoff happens.
-Review complete A/B results and actual runtime before finalizing frozen C/D/E/F
-scope. Candidate primary/100-iteration sensitivity scope is in
-work/pysr-confirmation-scope-plan.md; reduce counts BEFORE freeze if necessary.
-No new C/D/E/F PySR outcomes have been inspected. All old v2 finite results remain
-historical pilot evidence. Confirmation needs a new v3 freeze and fresh93001+ seeds.
+Development002 completed all360 units with0executionfailures at20:46:44UTC,
+duration5438.101186s. Its process/session ended normally; source87c5830 was unchanged
+while it ran. All25 reviewed files from the install manifest have NOW BEEN INSTALLED
+under a free runner lock. Do NOT reinstall the old draft manifest: original hashes
+will correctly differ now. Full installed tests passed74 in6.58s.
 
-New installed files: diagnostics.py (generic exhaustive<=3-support search and B
-origin/parity library controls); search_diagnostic.py; prior_experiment.py and audit;
-positivity.py; explain.py; CLI dispatch; summary figure labels. Their declared
-exploratory designs are in notes/diagnostic-plan.md. Five draft tests passed before
-installation; the installed full suite passed67 tests (notes/overnight-tests-02.txt). No full diagnostic experiment
-yet. Explanations on old C and PySR A artifacts rendered and visually inspected under
-work/witness-preview and work/witness-pysr-preview. These are previews, not outcomes.
+Next command: run pysr-development-audit-002 through lab, timeout1800, invoking
+`.venv/bin/python -m corrlaw.symbolic_audit results/runs/pysr-development-002
+--output results/runs/pysr-development-002`. Then summarize and review complete
+A/B results, profile100iterations using installed strong-development config,
+audit/replay that profile, execute the two installed analytical/evaluator examples,
+and finalize scope/protocol before v3freeze. No new CDEF PySR results have been seen.
+The detailed earlier checklist below remains useful, but its installation/test steps
+are COMPLETE. Installed source is authoritative; only PROTOCOL_V3 remains a draft.
 
-Further interpretation limits: notes/overnight-interpretation-checklist.md and
-notes/dimensional-prior-note.md. Direct SymPy unit balances for A/C/D show strong
-full-dimensional priors fix monomial powers under no-additional-parameter assumptions;
-reports/audit/dimensional-prior-algebra.json stores them. APS Buckingham1914 metadata
-verified; no novelty claim. Positivity and numerical fit tolerance are not global
-physical validity or structural uniqueness proofs.
+## Completed and preserved evidence
 
-Old smoke003 passed 3163 candidate/500 witness audit and exact replay under its own
-former complexity rule. Its earlier failed tie-order audit002 remains recorded.
-Current tests include a new explicit arithmetic-budget regression and equal-cap guard.
-Pytest discovery restricted to tests/ to avoid duplicate ignored work/ draft modules.
+- T13 DONE: fair-smoke001 has10/10 units; fair-smoke-audit001 validated4379 candidates
+  and460 witnesses, random streams, full witness search and actual acquisitions.
+- fair-replay001 exactly reproduced B-s204-w0-n0-constrained-augmented_qbc in a fresh
+  process. See notes/fair-smoke-validation.md and its reproduction.json.
+- Searches and accepted equations now share a15-node arithmetic-tree cap. The earlier
+ 10-node search/31-SymPy acceptance mismatch was corrected BEFORE new confirmation.
+  Development001 was deliberately interrupted at224 completed units and preserved.
+  No new C/D/E/F PySR confirmation outcomes have been inspected. NO v3 freeze yet.
+- Old smoke003/replay003 were valid under the former cap. Failed tie audit002 remains
+  archived; lexical point-model ties were corrected before revised development.
+- Installed suite passed67 tests at552f2f0. New draft committee/sensitivity tests
+  passed5 checks; draft wrapper-deadline tests passed2; exact algebra draft assertions
+  passed. Full installed suite is still required after integration (~74 tests).
 
-Do not edit source/config while an experiment runs. One heavy process, <=4 numerical
-threads. Local scoped commits only; preserve failures. No push, paid APIs, cloud,
-system configuration changes, or additional Codex sessions. Drafts in work/ remain
-for provenance; installed files are now the authoritative implementations.
+## Watchdog
 
-Milestone19:16UTC: fair smoke completed10/10, strengthened artifact audit valid
-(4379 candidates/460 witnesses), and fresh B fair-replay001 exactly matched.
-T13 nowDONE; next is full development002, config pysr-development-v2.json.
-No new confirmation yet. Fair smoke validation note has exact hash.
+Idle-only same-thread daemon PID85026; scoped caffeinate PID85027. Read actual PID
+file and health.json under work/overnight-watchdog. Queue acceptance was tested;
+previous timed deliveries are retained. The daemon polls60s, nudges after15min of
+no real progress, once per unchanged progress state, and ends at02:30UTC or STOP.
+Respect any later user stop. No new sessions, messages to other people or unbounded
+service. Availability is not guaranteed across app/host/service failure.
+Details: notes/watchdog-operation.md. Stop the daemon when work completes.
+
+## Exact next sequence after development finishes
+
+1. Inspect run status/source provenance and confirm runner lock is free.
+2. Review/install ONLY the25 mappings in work/drafts/install-manifest.json. Check
+   every destination still matches its recorded original SHA256 (or remains absent)
+   before copying. Do NOT blanket-copy old drafts. PROTOCOL_V3 is intentionally
+   excluded because scope/runtime fields are unresolved.
+3. Run full `.venv/bin/python -m pytest -q`, save a new test record. Inspect diffs;
+   checkpoint explicit owned leaf paths, development artifacts and metadata.
+4. Audit development with corrlaw.symbolic_audit; summarize into reports/pysr-development.
+   The strengthened symbolic auditor is already installed; don't overwrite it with
+   any stale file. Run through lab with a new audit ID and ample bounded timeout.
+5. Run `pysr-strong-development-001` using installed configs/pysr-strong-development.json:
+   A/B seed205, width0, noise.01, all5 policies,100 iterations,2048 pools/tests,10 units.
+   Audit it and fresh-replay B-s205-w0-n0.01-constrained-augmented_qbc. This profiles
+   the predetermined stronger budget before confirmation.
+6. Run the tiny exact/evaluator checks through lab: `physical-prior-algebra-001`
+   invokes examples/physical_prior_algebra.py; `representation-diagnostic-001`
+   invokes examples/representation_diagnostic.py --parent results/runs/pysr-development-002.
+7. Finalize current docs/PROTOCOL.md from work/drafts/PROTOCOL_V3.md; resolve every
+   PENDING/DRAFT field and record full development/strong timing evidence and tests.
+   Finalize primary/strong configs and scope BEFORE any new C/D/E/F outcomes.
+   Commit inputs, create freezev3, verify, commit freeze metadata; then run confirmation.
+8. After freeze, run declared full T16 search/prior diagnostics, full audits/replays,
+   primary and stronger confirmation, exact replays, numerical report bundle, visual
+   inspection, regeneration comparison, final report/claims/handoff/tests/gate.
+   Ordering can adapt to resource/time, but only one heavy process may run.
+
+## What the25 prepared mappings contain
+
+New source: committee_diagnostic.py, compute_sensitivity.py, search_diagnostic_audit.py.
+Modified execution code: symbolic_experiment.py and tools/lab.py replace the embedded
+historical cutoff with a wrapper-owned absolute cutoff. The wrapper still bounds
+both child and parent by the earlier authorized deadline; scientific numerics are
+unchanged. New/updated tests are included. New tools: render_overnight.py and updated
+completion gate. New examples: physical_prior_algebra.py, representation_diagnostic.py.
+Strong-development config; METHOD_PYSR; archived PROTOCOL_V2; updated README; annotated
+PILOT_REPORT (original bytes remain in Git, protocol link corrected). Plans/notes
+cover committee diagnostics, physical class limits, skeptical review, encoding
+limitation and updated interpretation checks. Older diagnostics/prior/positivity/
+explain/CLI/summarize drafts were ALREADY installed at552f2f0; do not replace them.
+
+## Scope and remaining run IDs
+
+work/pysr-confirmation-scope-plan.md records pre-outcome options.1000 primary units
+may be tight. Prefer considering noisy-only primary: CDEF, seeds93001–93005,
+widths0/.01, noise.01, allcontrols and5policies =500 units. This retains tasks,
+replicates, near/exact preparations and controls; explicitly disclose omitted
+noiseless PySR confirmation. Stronger tier can be100 units (width0 only) or200
+(widths0/.01), constrained/noise.01, same tasks/seeds/policies. Choose using COMPLETE
+A/B and100-iteration timings before freeze. Do not select by confirmation outcomes.
+Preselected primary replay F-s93001-w0.01-n0.01-constrained-augmented_qbc remains valid.
+Strong replay E-s93001-w0-n0.01-constrained-augmented_qbc remains valid.
+
+Planned IDs: pysr-confirmation-v3-001, pysr-confirmation-strong-v3-001,
+pysr-reproduce-v3-001, pysr-reproduce-strong-v3-001; search-diagnostic-001;
+prior-control-001; prior-reproduce-001. Prior replay is B-s301-w0.01-n0.01-constrained-
+augmented_qbc under zero_origin_and_even. Search diagnostic: old finite v2 parent,
+1200 rows; its new auditor replays E-s92001-w0-n0.01-constrained-augmented_qbc atq2.
+Diagnostic designs are declared, exploratory, and must not tune the new main method.
+
+The report tool renders all six summary families, both positivity and committee
+analyses, matched compute sensitivity, and preselected first CDEF witnesses at the
+FIRST CONFIGURED noise level. It also renders origin-only B. It checks input audits
+and hashes. Run once to reports, once to a NEW work directory with --compare reports
+--comparison-output reports/audit/overnight-report-regeneration.json. Byte equality
+covers numerical tables/diagnostics/figures; prose is separately reviewed.
+
+## Scientific limitations to retain
+
+B seed201 exact/noiseless initial fit has0 witnesses although a known circle relation
+fits. Its encoded alternatives cost19 arithmetic nodes; substituting the known
+constant feature z0=1 gives equivalent9-node forms. This is a selected development
+encoding/construction limitation, NOT discovered witnesses or a completed constant-
+folding ablation. Keep the method unchanged and disclose no-witness≠uniqueness.
+Saved scratch check: work/development002-representation-diagnostic.json.
+
+Analytical controls: origin alone permits cubic circle aliases. In degree<=3,
+origin plus local nonnegativity rules them out; origin+parity is the numerical
+control. Degree4 U+alpha*r²(r²-1) survives origin, parity and global positivity.
+A separate rational F family survives units, positivity, symmetry, zero-axis values
+and monotonicity, while agreeing on the diagonal. Neither family is claimed as
+an algorithm-generated15-node witness. Exact SymPy checks and stated assumptions
+are in the prepared example/note. Full dimensional priors fix A/C/D monomial powers
+under no-additional-parameter assumptions; reports/audit/dimensional-prior-algebra.json.
+
+D-optimal is linear-feature information gain, not universal nonlinear optimal
+design. Committee threshold crossings do not change the fixed predictor, prove
+calibration, or establish query value. Cross-engine comparisons change several
+model/search/weighting choices. All empirical tolerances and finite-probe limitations
+must stay explicit. Reused v2 diagnostics are exploratory. No novelty/publication claim.
+
+No pushes, paid APIs, cloud, global settings, discarded failures, or competing agents.
+
+Latest presentation-only draft: summarize.py now uses one real panel for a one-task
+prior report, with no empty second panel; multi-task figures remain unchanged.
+Install manifest now has25 mappings. Mention1e-10 log-plot display floor in report;
+CSV/JSON metrics are unclipped. Representation example ordinary spread=.435596,
+9members,false_consensus=False; this is NOT an ensemble-overconfidence example.
+
+BENCHMARKS.md draft now explicitly distinguishes finite-linear-span representability
+(Fabsent) from PySR arithmetic-composition representability(Fpossible), and explains
+the separate prior-control extension. No distributions/parameters changed.
+Freeze the scientific method/benchmark/related-work documents, configs/src/tests/
+tools/examples/dependencies and declared diagnostic plans; include the static
+SPRINT/OVERNIGHT deadline records. Do not freeze dynamicSTATE/PLAN/HANDOFF orreport
+outputs. Source remains unchanged during the active development run.

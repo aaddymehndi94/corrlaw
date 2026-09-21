@@ -22,7 +22,7 @@ dimension matrix has rank2 and no input-only dimensionless combination in A/C/D:
 An unknown dimensionless coefficient remains, including D's factor1/2. Under these
 strong assumptions the functional structure is already fixed by dimensional
 information; a symbolic-discovery comparison is unnecessary for those structures.
-The exact linear systems were solved with SymPy; work/dimensional-prior-algebra.json
+The exact linear systems were solved with SymPy; reports/audit/dimensional-prior-algebra.json
 contains matrices/ranks/exponents. These are derivations under stated assumptions,
 not empirical measurements or newly discovered laws.
 

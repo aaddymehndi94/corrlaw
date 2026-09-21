@@ -1,0 +1,156 @@
+{
+  "required_completed_run": "pysr-development-002",
+  "files": [
+    {
+      "source": "work/drafts/committee_diagnostic.py",
+      "target": "src/corrlaw/committee_diagnostic.py",
+      "original_sha256": null,
+      "installed_sha256": "89caa6288fcbf53a346bfe8966376a48c2e07d9f6aec39ff2f1430825717833f"
+    },
+    {
+      "source": "work/drafts/compute_sensitivity.py",
+      "target": "src/corrlaw/compute_sensitivity.py",
+      "original_sha256": null,
+      "installed_sha256": "28e0b854dc12c63f57e072420dd6d9b4fa51f7153967dbae9a4866e3e4f5c3fb"
+    },
+    {
+      "source": "work/drafts/search_diagnostic_audit.py",
+      "target": "src/corrlaw/search_diagnostic_audit.py",
+      "original_sha256": null,
+      "installed_sha256": "8674a9194903e2ab7645150a6a975e465e4893fcb854d7c120218c669bac7fbd"
+    },
+    {
+      "source": "work/drafts/symbolic_experiment.py",
+      "target": "src/corrlaw/symbolic_experiment.py",
+      "original_sha256": "4d6b5007142f5e2241c8582a5bea8177cf5599364e17a7fc21b747abf99c2ebe",
+      "installed_sha256": "ae6170498d9ef89a6ee15b282de7fabcc45855daf513c8b9dbf2b5c63e98b138"
+    },
+    {
+      "source": "work/drafts/test_committee_diagnostic.py",
+      "target": "tests/test_committee_diagnostic.py",
+      "original_sha256": null,
+      "installed_sha256": "b2d532561e3f2cfbb89fc2c5ba02ae6285c6298d2001accee895c4b839a3a47f"
+    },
+    {
+      "source": "work/drafts/test_compute_sensitivity.py",
+      "target": "tests/test_compute_sensitivity.py",
+      "original_sha256": null,
+      "installed_sha256": "8315321ec1c5a590f4c8a7ffacef23ecac108c8e14e8f2cf2324eabdb78e512f"
+    },
+    {
+      "source": "work/drafts/test_symbolic.py",
+      "target": "tests/test_symbolic.py",
+      "original_sha256": "466b3cf983920d5f75c5a60beb12dd2ede0d14768944088fc0495da2da758e97",
+      "installed_sha256": "bd65bff6643e9565067754c9fed91ae19880f642cc1f4eba9f6c1d0b35b9c34d"
+    },
+    {
+      "source": "work/drafts/test_lab.py",
+      "target": "tests/test_lab.py",
+      "original_sha256": "02ca472e11a6e252628ecb772c113109d312ae7ca6a9c5da99556d1818200cf8",
+      "installed_sha256": "488db685653dca0d21493b55d4e48d535109dea305e6ece820193d9132b8da5e"
+    },
+    {
+      "source": "work/drafts/lab.py",
+      "target": "tools/lab.py",
+      "original_sha256": "aaacd607dcccae680a33dac0b695e53e57d1c08e809a55b97e2b9855b26d95e2",
+      "installed_sha256": "50f7346e156861c8922ff3810c50f807188987428e6f49364522fe93880a4f2b"
+    },
+    {
+      "source": "work/drafts/render_overnight.py",
+      "target": "tools/render_overnight.py",
+      "original_sha256": null,
+      "installed_sha256": "6d3c8dcfd04eb3739af634c905706ca49ad0f3ab8a9a75f3ed17406a1d623aa4"
+    },
+    {
+      "source": "work/drafts/overnight_completion_check.py",
+      "target": "tools/overnight_completion_check.py",
+      "original_sha256": "fdfb2785e82cee3f5cee1271ee50fa6a0c5a4faad493bce57c2b284386a7d6e4",
+      "installed_sha256": "731b0a5a4997b85af037ff8160b3bae37373c866c997f3cf8fc52c6124eb5307"
+    },
+    {
+      "source": "work/drafts/physical_prior_algebra.py",
+      "target": "examples/physical_prior_algebra.py",
+      "original_sha256": null,
+      "installed_sha256": "67bd54338817d02b0a2c7498224dc2172bca1b327c9f09858f9960ec09ae7d36"
+    },
+    {
+      "source": "work/drafts/representation_diagnostic.py",
+      "target": "examples/representation_diagnostic.py",
+      "original_sha256": null,
+      "installed_sha256": "9fd6d5dfbce065a8f964f377d7b60221ab4f922bc854643069c0fdfbce54bdb7"
+    },
+    {
+      "source": "work/drafts/pysr-strong-development.json",
+      "target": "configs/pysr-strong-development.json",
+      "original_sha256": null,
+      "installed_sha256": "38b087628dffcb8eacef267b5e684fdffdbe1852893b3f5590e11fd7342e08f3"
+    },
+    {
+      "source": "work/drafts/METHOD_PYSR.md",
+      "target": "docs/METHOD_PYSR.md",
+      "original_sha256": null,
+      "installed_sha256": "b9edb2fab97dc065a2199380bdb27509ba7fc38b6f97de9de13390e605059efe"
+    },
+    {
+      "source": "work/drafts/PROTOCOL_V2.md",
+      "target": "docs/PROTOCOL_V2.md",
+      "original_sha256": null,
+      "installed_sha256": "86bf5280946a472d4b72644b1a929f768dbfdc471d6d12e89c9a7e28ebc1d30a"
+    },
+    {
+      "source": "work/drafts/README.md",
+      "target": "README.md",
+      "original_sha256": "3ccfff64626b13ebdb8f31e75c81e02cc5166027b292b746ba853b03422237e1",
+      "installed_sha256": "e78362a0d264e94a5c7bcf17d6ca945564c2d857c3e36332e833d3eaf87e5b2c"
+    },
+    {
+      "source": "work/drafts/PILOT_REPORT.md",
+      "target": "reports/PILOT_REPORT.md",
+      "original_sha256": null,
+      "installed_sha256": "7db63d2274433d39b0220c3146d120e2a8c58ef443e5f02040388b793d210cbc"
+    },
+    {
+      "source": "work/drafts/committee-diagnostic-plan.md",
+      "target": ".research/notes/committee-diagnostic-plan.md",
+      "original_sha256": null,
+      "installed_sha256": "f53e62394e10aadef07a46e0286ba0a19efbc8be3b3fb1a70d291bb8f16edf94"
+    },
+    {
+      "source": "work/drafts/physical-prior-class-note.md",
+      "target": ".research/notes/physical-prior-class-note.md",
+      "original_sha256": null,
+      "installed_sha256": "03f440f679a5f45abb8ed58eae55b8d0d4ce94d243e59e19b43fa52e59daedc8"
+    },
+    {
+      "source": "work/drafts/preconfirmation-skeptical-review.md",
+      "target": ".research/notes/preconfirmation-skeptical-review.md",
+      "original_sha256": null,
+      "installed_sha256": "eb275daf26fd7669f1d14af521ed902f8f6a4f1257be4535b815ba197b4f2800"
+    },
+    {
+      "source": "work/drafts/representation-limitation.md",
+      "target": ".research/notes/representation-limitation.md",
+      "original_sha256": null,
+      "installed_sha256": "b69cabcc428952f394406b225cc74d9bb20d6dac2c276cdc9508177be7179a43"
+    },
+    {
+      "source": "work/drafts/overnight-interpretation-checklist.md",
+      "target": ".research/notes/overnight-interpretation-checklist.md",
+      "original_sha256": "8910ee75f22cf29d1df11137031adb2ad6b20aca4f180fa3532a6dd5e4c0cbb9",
+      "installed_sha256": "1052c551e874b608b0d12927bc4bfbfcc47c7e819a414153e3ac9a12a8ccb4d9"
+    },
+    {
+      "source": "work/drafts/summarize.py",
+      "target": "src/corrlaw/summarize.py",
+      "original_sha256": "4173c2a601a6b26383add886758ee7fd56e87fcf00ea61ce66b93cc009cb3603",
+      "installed_sha256": "1c05873ebbf9d81b9ae1bd48660678a0a30958de07d331500ca519e7ed8b2856"
+    },
+    {
+      "source": "work/drafts/BENCHMARKS.md",
+      "target": "docs/BENCHMARKS.md",
+      "original_sha256": "54b4da7bf8a5827a3b413d8c43030846b00de7272e79579309403e3bc5ec93b1",
+      "installed_sha256": "f90647085d95d1da8c57ea0840517ceb7ded6d1637640b25feff05151f2cd6b8"
+    }
+  ],
+  "warning": "Do not blanket-copy drafts: older duplicates remain for provenance. PROTOCOL_V3 remains DRAFT and is intentionally excluded."
+}

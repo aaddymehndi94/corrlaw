@@ -3,6 +3,7 @@ import argparse
 import copy
 import hashlib
 import json
+import math
 import os
 from pathlib import Path
 import resource
@@ -19,7 +20,15 @@ from .evaluation import auc
 
 
 SETTINGS = {'searches', 'niterations', 'search_maxsize', 'max_complexity', 'timeout_seconds'}
-DEADLINE = 1790040600.0  # 2026-09-22 01:30 UTC: user deadline minus reporting hour.
+def check_execution_cutoff():
+    """Optional wrapper-owned deadline; standalone historical reproduction stays usable."""
+    value=os.environ.get('CORRLAW_RUN_CUTOFF_UNIX')
+    if value is None:return
+    cutoff=float(value)
+    if not math.isfinite(cutoff) or cutoff<=0:
+        raise ValueError('invalid wrapper execution cutoff')
+    if time.time()>=cutoff:
+        raise TimeoutError('wrapper execution cutoff reached')
 
 
 def load_config(path):
@@ -87,8 +96,7 @@ def run_policy(trial, policy, c, enforce_cutoff=False):
     fitting_seconds = augmentation_seconds = 0.
     history=[]
     for budget in range(9):
-        if enforce_cutoff and time.time() >= DEADLINE:
-            raise TimeoutError('overnight experiment cutoff reached')
+        if enforce_cutoff:check_execution_cutoff()
         obs = trial.observations(oracle.records)
         fit_start = time.perf_counter()
         fitted = symbolic.fit(obs, [trial.seed, 1400, budget], c['search_settings'],
@@ -125,6 +133,7 @@ def run_policy(trial, policy, c, enforce_cutoff=False):
 
 
 def run(c, output, resume=False):
+    check_execution_cutoff()
     output=Path(output);output.mkdir(parents=True,exist_ok=True)
     provenance={'source_sha256':engine_hash()}
     old_manifest={}
@@ -165,8 +174,7 @@ def run(c, output, resume=False):
             scientific_sha256=digest(scientific_content(result))))
         save(output/'manifest.json',dict(units=manifest,failed=failed,expected_units=len(expected)))
         print(f'{len(manifest)}/{len(expected)} {key} {result["status"]}',flush=True)
-        if time.time()>=DEADLINE:
-            raise TimeoutError('overnight experiment cutoff reached')
+        check_execution_cutoff()
     return failed
 
 
