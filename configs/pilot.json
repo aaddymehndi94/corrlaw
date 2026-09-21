@@ -44,6 +44,6 @@
     "surface_restricted_queries"
   ],
   "engine": "finite_library",
-  "notes": "Not an executable experiment yet. Implement the parser/runner and reject unknown keys rather than silently ignoring this file. Define sampling/metrics in docs/PROTOCOL.md before confirmation.",
+  "notes": "Executable finite-library configuration. All numerical choices are specified in docs/PROTOCOL.md and docs/METHOD.md; every measured label counts. Confirmation seeds are held out from method tuning.",
   "n_test": 2048
 }

@@ -56,6 +56,15 @@ class LabTests(unittest.TestCase):
                          "--purpose", "Harness test; not scientific evidence", "--timeout", "5",
                          *extra, "--", sys.executable, "-c", python_code)
 
+    def test_inventory_excludes_generated_install_metadata(self):
+        metadata = self.root / "src/corrlaw.egg-info"
+        metadata.mkdir()
+        (metadata / "PKG-INFO").write_text("generated metadata\n")
+        (self.root / "src/.DS_Store").write_bytes(b"finder metadata")
+        self.assertEqual(set(lab.inventory(self.root, ["src"])), {"src/model.py"})
+        (self.root / "src/new_module.py").write_text("value = 2\n")
+        self.assertIn("src/new_module.py", lab.inventory(self.root, ["src"]))
+
     def test_atomic_json_round_trip(self):
         p = self.root / "nested/one.json"
         lab.atomic(p, {"a": [1, 2]})

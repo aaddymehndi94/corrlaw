@@ -43,3 +43,12 @@ Resolved after development:
   preserves all data while avoiding unnecessary pretty-print file expansion.
 - Fixed tolerance/complexity choices are not optimized statistical confidence.
 - No peer-independent validation or blind coding-agent evaluation is asserted.
+
+Freeze blocker preserved: initial v1 freeze rejected ignored src/corrlaw.egg-info
+created by the authorized editable installation. No freeze or confirmation was
+created. Fix inventory to exclude generated *.egg-info directories and .DS_Store,
+while still detecting new actual .py files; added a fixture regression test.
+A scripted premature state update was corrected immediately after inspecting the
+failed command. Freeze/confirmation completion is recorded only after success.
+Also replaced inherited obsolete config notes before any confirmation. Numeric
+settings are unchanged. Final test count is 48 with the inventory regression.

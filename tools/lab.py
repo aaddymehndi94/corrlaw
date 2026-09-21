@@ -167,7 +167,8 @@ def inventory(root: Path, paths: Iterable[str], required: bool = True) -> Dict[s
         candidates = sorted(path.rglob("*")) if path.is_dir() else [path]
         for candidate in candidates:
             rel = candidate.relative_to(root)
-            if any(part in IGNORED_PARTS for part in rel.parts) or candidate.suffix == ".pyc":
+            if any(part in IGNORED_PARTS or part.endswith(".egg-info") or part == ".DS_Store"
+                   for part in rel.parts) or candidate.suffix == ".pyc":
                 continue
             if candidate.is_symlink():
                 raise LabError("Symlink in inventory: " + str(rel))

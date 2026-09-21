@@ -108,7 +108,7 @@ or broad discovery/novelty claim is planned absent materially stronger evidence.
 
 ## Review and freeze evidence
 All decisions resolved: YES.
-Scientific tests: .research/notes/final-tests.txt (47 passing tests).
+Scientific tests: .research/notes/final-tests.txt (48 passing tests).
 Development validation: results/runs/development-001/validation.json (360 complete,
 21,651 witnesses checked, no validation errors). Development summary:
 reports/development/summary.json; no unique advantage over established active
