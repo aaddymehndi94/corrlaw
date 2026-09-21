@@ -2,7 +2,7 @@
 
 Change task status only with an evidence path/run ID. Keep old failures in dated notes.
 States: NOT_STARTED, ACTIVE, BLOCKED, DONE, SKIPPED_WITH_REASON.
-One ACTIVE implementation task by default. All rows below start NOT_STARTED.
+All tasks below have recorded completion evidence.
 
 | ID | Depends on | Task | Acceptance evidence | Status |
 |---|---|---|---|---|
@@ -16,7 +16,7 @@ One ACTIVE implementation task by default. All rows below start NOT_STARTED.
 | T08 | T06,T07 | Freeze a feasible confirmation protocol | freezes/v2.json verified (34 inputs); c15cad8; v1 preserved | DONE |
 | T09 | T08 | Run held-out confirmation without changing methods | confirmation-v2-001/run.json and manifest: 1,000 complete, zero execution failures | DONE |
 | T10 | T09 | Independent-process reproduction and skeptical audit | confirmation-v2-001/validation.json; reproduce-v2-001 exact; reports/audit regeneration | DONE |
-| T11 | T10 | Write evidence-linked report and handoff; final local checkpoint | reports/REPORT.md, reports/confirmation, CLAIMS/HANDOFF; final checkpoint preparing | ACTIVE |
+| T11 | T10 | Write evidence-linked report and handoff; final local checkpoint | report/figures/claims/handoff checkpoint 8070049; completion gate record | DONE |
 
 T07 may use the documented fallback and still satisfy its dependency. A missing PySR
 run must not be described as an evolutionary-symbolic-regression result.

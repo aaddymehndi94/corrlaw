@@ -1,0 +1,6 @@
+{
+  "complete": true,
+  "issues": [],
+  "scope": "bounded finite-library research pilot; no guarantee of research advantage",
+  "watchdog": "completion gate plus active Codex task goal; no background agent restart"
+}
