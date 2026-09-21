@@ -1,0 +1,35 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "corrlaw",
+    "run",
+    "--config",
+    "configs/smoke.json"
+  ],
+  "duration_seconds": 2.650661,
+  "ended_utc": "2026-09-21T17:16:50+00:00",
+  "error": null,
+  "freeze_id": null,
+  "git": {
+    "branch": "research/corrlaw-sprint-01",
+    "commit": "3a218db8b91939504ce563a6916aa97e20bd760a",
+    "working_tree_dirty": true
+  },
+  "log_path": "work/runs/finite-smoke-001/console.log",
+  "log_sha256": "f90be829f49058aef490fcd766de02405f08e737505dfa94140081878a6b6dd2",
+  "phase": "development",
+  "pid": 76371,
+  "platform": "Darwin",
+  "purpose": "A/B five-policy finite-library end-to-end smoke",
+  "python": "3.14.5",
+  "result_validation": "NOT_REVIEWED",
+  "returncode": 0,
+  "run_id": "finite-smoke-001",
+  "schema_version": 1,
+  "started_utc": "2026-09-21T17:16:47+00:00",
+  "status": "completed",
+  "task": "T05",
+  "threads_requested": 4,
+  "timeout_seconds": 300.0
+}

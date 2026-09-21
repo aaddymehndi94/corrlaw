@@ -1,0 +1,31 @@
+{
+  "command": [
+    "python3",
+    "examples/circle_sanity.py"
+  ],
+  "duration_seconds": 0.086953,
+  "ended_utc": "2026-09-21T17:01:12+00:00",
+  "error": null,
+  "freeze_id": null,
+  "git": {
+    "branch": "research/corrlaw-sprint-01",
+    "commit": "6b95eca4ec67ee2480200e158ad42add6ad7764e",
+    "working_tree_dirty": true
+  },
+  "log_path": "work/runs/sanity-001/console.log",
+  "log_sha256": "ed39cb28e6b6f70dc115e46986dfcab1fe37e6811891a300235abe5851af4c4e",
+  "phase": "development",
+  "pid": 74106,
+  "platform": "Darwin",
+  "purpose": "Supplied analytical sanity check",
+  "python": "3.14.5",
+  "result_validation": "NOT_REVIEWED",
+  "returncode": 0,
+  "run_id": "sanity-001",
+  "schema_version": 1,
+  "started_utc": "2026-09-21T17:01:12+00:00",
+  "status": "completed",
+  "task": "T02",
+  "threads_requested": 4,
+  "timeout_seconds": 60.0
+}

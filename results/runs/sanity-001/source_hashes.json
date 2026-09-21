@@ -1,0 +1,14 @@
+{
+  "configs/confirmation.json": "17e51fbde7d85579a033625b4a634ad6637230dde7245637a48cc6b9fbb688ba",
+  "configs/pilot.json": "500ac87c1c7903a322994a4b80dde33ef215a255aa77a5fb55d09649f53dcfdc",
+  "configs/sprint.json": "22ad2e43d5b80a6d3472d68a7a0507415112590dcc202ca75e3a6867d41eb50b",
+  "docs/PROTOCOL.md": "3d0de2ef3f80f1e6a05e8247f2b0ead4338ca4fd5a8ed394da81d40b270e2468",
+  "docs/RESEARCH_SPEC.md": "33646e30672167d7925c2710e72a111fa8d7b1c6afa31278c273a5d5a6cd8d4d",
+  "examples/circle_sanity.py": "c48ece910581765e916ce2116f32090c0780054ccf0609dd83b772fd826fdf0e",
+  "pyproject.toml": "ed5a8d9d4175210b69e74cffd409c58e26988b6eeeff23edad9faa1f298f23a4",
+  "requirements.in": "e6b228b4d49f9d31d22e7a20e414282cb24864f98b8ad7c48392aa986b26499f",
+  "src/corrlaw/__init__.py": "83b09912d1e95847234107bf82a2dba2fd2ad41f817718d4cd9885ac494f824a",
+  "tests/test_lab.py": "f2186029f4a85cc62c4481ca701fc42ba216562a260e0679a291cabfeb13badc",
+  "tools/__init__.py": "453bcbec2fcdcfad61dee08ff2c3c43525506186251ea3d1c2afc4ea865ce77c",
+  "tools/lab.py": "66edf7230a4986ff513a7c0f87a12a90002b8f7f619b187c94c69bedc5ef5f4f"
+}

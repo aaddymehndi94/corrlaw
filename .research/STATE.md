@@ -1,12 +1,14 @@
 # Current state
 Status: ACTIVE
-Task: T02/T03 environment and source audit
-Owner: Codex lead (single writer)
-Branch: research/corrlaw-sprint-01
-Sprint: started 2026-09-21 17:01 UTC; deadline 2026-09-22 03:01 UTC.
-Experiment cutoff: 2026-09-22 02:01 UTC.
-Evidence: doctor succeeded, 32 starter tests passed; results/runs/sanity-001 completed.
-Environment: Python 3.14.5 arm64 macOS; local .venv installation underway.
-No scientific findings or frozen protocol yet. No push authorized.
-Completion guard: persistent goal and .research/PLAN.md; existing deadline-aware runner.
-Next action: finish local dependency setup and implement anonymous finite-library experiment.
+Task: T06, full A/B development
+Owner: Codex lead; branch research/corrlaw-sprint-01
+Deadline: 2026-09-22 03:01 UTC; experiments stop by 02:01 UTC.
+Implemented anonymous data/learner contracts, six physical oracles, generic grammar,
+sparse ensembles, witness augmentation, five acquisitions, artifacts/audit/replay.
+Starter and scientific tests recorded in .research/notes/development-tests.txt.
+PySR 2.5.0/Julia 1.13.0 actually fit successfully: pysr-smoke-001.
+Next run: development-001, timeout 1800 s, configs/pilot.json (360 units).
+Do not edit source/config while it runs. No confirmation inspected or protocol frozen.
+Evidence: finite-smoke-001 passed artifact audit: 10 units, 500 witnesses.
+Next action: run development-001 then inspect/audit saved results.
+No push/publication authorization. Goal+tools/completion_check.py guard completion.

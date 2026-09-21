@@ -1,88 +1,75 @@
-# CorrLaw — repo-ready research starter
+# CorrLaw
 
-**Goal:** test whether automatically constructed alternative equations reveal false
-consensus in symbolic law discovery and improve selection of new simulated measurements.
-Laptop CPU experiments only. No laboratory work or additional paid APIs required.
-A useful negative result is acceptable; novelty/publication are not guaranteed.
+A reproducible local research pilot for ambiguity in equation discovery. It asks
+whether explicit alternative equations help select new measurements beyond random
+sampling, ordinary query-by-committee (QBC), library-diversified QBC and regularized
+D-optimal design. All measurements are simulated from declared ideal physical models.
+The supplied circle identity is a sanity check, not a discovery.
 
-## Start
-Copy this folder's CONTENTS, including `.research/`, `.gitignore` and `.gitattributes`,
-into the root of your existing cloned repository. Do not copy or replace `.git`.
-Merge existing README/AGENTS/.gitignore/project files rather than blindly overwriting
-them, and retain any existing LICENSE. There is no Git repository inside this kit.
+Start with [the research report](reports/REPORT.md), [current state](.research/STATE.md),
+and [claims ledger](.research/CLAIMS.md). The main experiment uses finite-library
+sparse regression. A real optional PySR smoke and small development comparison are
+recorded separately; they are not a full evolutionary-search acquisition benchmark.
 
-Open Codex in that repository root and paste:
+## Local setup
 
-> Read AGENTS.md and CODEX_PROMPT.md, then execute the CorrLaw research sprint.
-> This existing repository is the persistent record. Run the work, keep state and
-> evidence on disk, and make scoped local Git progress commits. Do not stop at a
-> plan. Resume existing work rather than restarting it. Do not push or publish.
+Python 3.14.5 was used on Apple Silicon macOS. Exact resolved Python versions are
+in `requirements.lock.txt`; Julia dependencies used by optional PySR live in the
+local environment. No Julia is needed for the main experiment.
 
-Use this kit instead of the earlier standalone `CODEX_RESEARCH_PROMPT.md`.
-The complete agent prompt is `CODEX_PROMPT.md`. For a later/new session use
-`RESUME_PROMPT.md`. No need to paste the full research specification into every chat.
-
-## What is actually included
-- Short persistent instructions plus the complete scientific research specification.
-- Prewritten task plan, state, handoff, decision/claims ledgers and reading list.
-- Draft development/confirmation configurations; the agent must finalize them.
-- A stdlib-only POSIX helper for deadline-aware runs, immutable run IDs, source
-  provenance, protocol freeze checks, careful local commits and orphan recovery.
-- Helper unit tests and a supplied analytical circle sanity check.
-
-**Not included:** a completed symbolic-regression experiment, a solved research
-problem, generated scientific results, or a background multi-agent service.
-`src/corrlaw/` is intentionally only a package scaffold. Codex implements the science.
-The helper and sanity check work before NumPy/PySR or any other science packages are
-installed. See `STARTER_VALIDATION.md` for what was tested during preparation.
-
-## File map
-| File | Purpose |
-|---|---|
-| `CODEX_PROMPT.md` | Complete lead-agent kickoff instructions |
-| `AGENTS.md` | Small instruction index and invariants |
-| `RESUME_PROMPT.md` | New-session recovery without old chat context |
-| `docs/RESEARCH_SPEC.md` | Detailed hypothesis, benchmark, baselines and science rules |
-| `docs/WORKFLOW.md` | Run, checkpoint, freeze and recovery procedures |
-| `docs/PROTOCOL.md` | Draft evaluation contract; must be finalized before confirmation |
-| `.research/STATE.md` / `HANDOFF.md` | Current situation and one exact next action |
-| `.research/PLAN.md` | Tasks, dependencies and completion evidence |
-| `.research/DECISIONS.md` / `CLAIMS.md` | Durable decisions and evidence-backed claims |
-| `tools/lab.py` | Local recorder, runner, checkpoint and freeze helper |
-| `results/runs/` | Created on execution; tracked small essential artifacts |
-| `work/` | Created on execution; ignored raw logs and larger checkpoints |
-| `reports/REPORT.md` | Honest evidence-linked final report |
-
-## Local checks
 ```sh
-python3 tools/lab.py doctor
-python3 -m unittest discover -s tests -v
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements.lock.txt
+.venv/bin/python -m pip install -e .
+.venv/bin/python -m pytest -q
 ```
 
-Do not run `start` just to inspect the archive; it starts the ten-hour budget.
-The agent does that when execution begins. The clock persists across sessions, and
-pauses count. The final hour is reserved for audit/reporting. The helper is not an
-API-credit meter and cannot force Codex itself to stay active or restart.
+The lockfile includes optional PySR. For just the finite-library implementation,
+`requirements.in` installs the scientific dependencies without initiating Julia.
+PySR's Julia setup runs only when importing PySR, and the supplied examples direct
+its depot and project into this repository's ignored local directories.
 
-## Git defaults
-Local commits: enabled. Automatic pushes: disabled. No remote/identity is invented.
-The lead preserves user changes, owns only selected files, and inspects its diffs.
-The checkpoint helper does not push and is not a complete secret scanner.
+## Run and inspect
 
-A local commit is not a remote backup. To explicitly authorize remote backups, the
-owner can add this instruction to the session:
+```sh
+# Standalone repeat into a NEW output directory (never overwrite evidence):
+OPENBLAS_NUM_THREADS=4 OMP_NUM_THREADS=4 VECLIB_MAXIMUM_THREADS=4 \
+  .venv/bin/python -m corrlaw run --config configs/smoke.json --output work/my-smoke
+.venv/bin/python -m corrlaw.audit work/my-smoke --output work/my-smoke
+.venv/bin/python -m corrlaw.summarize work/my-smoke --output work/my-smoke-report
+```
 
-> After reviewed checkpoints, push normal updates only to the already configured
-> origin and this designated research branch. Never force-push, change repository
-> visibility, publish releases or papers, or alter credentials/remotes.
+For research-sprint execution use `tools/lab.py run` so deadlines, provenance,
+failures and timeouts are recorded. Read [WORKFLOW](docs/WORKFLOW.md) first.
+`python3 tools/lab.py start` initializes one ten-hour elapsed budget; repeated calls
+never reset it. Do not run new experiments past its cutoff without a new user
+authorization. Confirmation requires a reviewed committed protocol and matching
+freeze. `--resume` accepts only identical configuration/source and hash-verified
+saved units; use a new run ID for intentional repeats or changed code.
 
-Then have the lead record that authorization and update the recorded push policy.
-No automatic push occurs merely because this archive is copied into a GitHub clone.
-Ignored raw outputs remain local even when code/summary commits are pushed.
+## What is saved
 
-## License and attribution
-No LICENSE is imposed by this starter kit, so it does not overwrite your repository's
-choice or assume ownership/authorship details. A public repo is not by itself an
-open-source license. Before public release, select a license for your original code,
-check dependency/source terms and retain required attribution. License selection
-need not block local experiments. Record actual human/AI contributions honestly.
+Each `results/runs/<run-id>/units/*.json` contains one task/seed/condition/policy:
+all candidate coefficients and equations, every accepted ambiguity witness,
+selected query IDs/coordinates/labels, five budget metrics, timing and data hashes.
+The manifest records expected/completed units and hashes. `validation.json` checks
+pairing, accounting, reconstructed labels/metrics and both witness expressions.
+Generated reports include condition-level CSVs, paired seed-level summaries and
+SVG/PNG figures. Raw logs, Julia artifacts and caches remain ignored under `work/`,
+`.venv/` and `.julia/`; local Git commits do not back those up remotely.
+
+[Physical assumptions](docs/BENCHMARKS.md), [method](docs/METHOD.md),
+[protocol](docs/PROTOCOL.md), [related work](docs/RELATED_WORK.md), and
+[known-method overlap](docs/EQUIVALENCE.md) define the scientific scope.
+No lack of a witness is interpreted as proof of uniqueness. Negative results count.
+
+## Continuation and completion
+
+The active task goal and `.research/PLAN.md` guide continued work. Run
+`python3 tools/completion_check.py` for the disk-evidence completion gate. It exits
+nonzero when required tasks, confirmation validation, reproduction or freeze checks
+are missing. It cannot restart Codex after an app/machine shutdown; use
+[RESUME_PROMPT.md](RESUME_PROMPT.md) to recover from the durable state.
+Local scoped progress commits are authorized by the repository instructions.
+Pushes, publication and paid services are not enabled. No license was supplied;
+this work does not silently impose one or assign human authorship.

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "NOT_READY",
+  "status": "ready",
   "stage": "confirmation",
   "tasks": [
     "C",
@@ -40,5 +40,13 @@
     "regularized_d_optimal",
     "augmented_qbc"
   ],
-  "notes": "These seeds are held out from method tuning, not secret from the coding agent. Finalize the suite using development runtimes before opening confirmation results. At least two confirmation tasks and all five policies are required for a completed pilot."
+  "notes": "These seeds are held out from method tuning, not secret from the coding agent. Finalize the suite using development runtimes before opening confirmation results. At least two confirmation tasks and all five policies are required for a completed pilot.",
+  "engine": "finite_library",
+  "n_test": 2048,
+  "controls": [
+    "constrained",
+    "independent_inputs",
+    "matched_marginal_shuffle",
+    "surface_restricted_queries"
+  ]
 }

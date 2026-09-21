@@ -1,0 +1,10 @@
+{
+  "kind": "analytical_sanity_only",
+  "novel_research_result": false,
+  "off_ring_alternative": "5/4",
+  "off_ring_true": "1/2",
+  "physical_prior": "No additional boundary-value prior supplied to learner.",
+  "ring_max_disagreement": 2.220446049250313e-16,
+  "symmetric_grid_covariance": 1.671000045650989e-18,
+  "warning": "The formulas were supplied to this test; it discovers nothing."
+}

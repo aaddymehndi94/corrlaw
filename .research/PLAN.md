@@ -7,11 +7,11 @@ One ACTIVE implementation task by default. All rows below start NOT_STARTED.
 | ID | Depends on | Task | Acceptance evidence | Status |
 |---|---|---|---|---|
 | T01 | none | Inspect repository, initialize bounded sprint, check environment/Git ownership | 32 starter tests; notes/startup.md; sanity-001 | DONE |
-| T02 | T01 | Run analytical sanity and minimal science-environment smoke | sanity-001; local venv installation in progress | ACTIVE |
-| T03 | T02 | Targeted prior-work and equivalence audit | exact sources/status; algebra comparing single-null-mode acquisition with regularized design | NOT_STARTED |
-| T04 | T03 | Implement oracle/data generation, learning contracts and evaluator | tests for units, distributions, split/query accounting and no formula leakage | NOT_STARTED |
-| T05 | T04 | Complete one small end-to-end finite-library comparison | all five policies run on A/B; actual equation, query and metric artifacts | NOT_STARTED |
-| T06 | T05 | Development sweep and failure analysis | repeated paired seeds; independent/shuffled/restricted-query controls; runtime profile | NOT_STARTED |
+| T02 | T01 | Run analytical sanity and minimal science-environment smoke | sanity-001; notes/environment.md; requirements.lock.txt; pysr-smoke-001 | DONE |
+| T03 | T02 | Targeted prior-work and equivalence audit | docs/RELATED_WORK.md; docs/EQUIVALENCE.md | DONE |
+| T04 | T03 | Implement oracle/data generation, learning contracts and evaluator | tests/test_science.py; notes/development-tests.txt | DONE |
+| T05 | T04 | Complete one small end-to-end finite-library comparison | finite-smoke-001/validation.json: 10 units, 500 witnesses checked | DONE |
+| T06 | T05 | Development sweep and failure analysis | configs/pilot.json: 360 planned policy units; smoke profiled at 2.65 s | ACTIVE |
 | T07 | T05 | Bounded PySR smoke and small comparison | real PySR run/equation archives OR documented finite-library-only fallback | NOT_STARTED |
 | T08 | T06,T07 | Freeze a feasible confirmation protocol | complete protocol; committed code/config/lockfile; freeze manifest and verification | NOT_STARTED |
 | T09 | T08 | Run held-out confirmation without changing methods | all policies; at least two confirmation tasks; intended repeated seeds; failures included | NOT_STARTED |

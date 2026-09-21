@@ -1,0 +1,31 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "examples/pysr_smoke.py"
+  ],
+  "duration_seconds": 471.573083,
+  "ended_utc": "2026-09-21T17:16:16+00:00",
+  "error": null,
+  "freeze_id": null,
+  "git": {
+    "branch": "research/corrlaw-sprint-01",
+    "commit": "3a218db8b91939504ce563a6916aa97e20bd760a",
+    "working_tree_dirty": true
+  },
+  "log_path": "work/runs/pysr-smoke-001/console.log",
+  "log_sha256": "a0a959f36d3cb2190a45fa990d88345109024485fa05743550693b900bbb86fa",
+  "phase": "development",
+  "pid": 74938,
+  "platform": "Darwin",
+  "purpose": "Bounded real PySR setup and smoke; optional engine",
+  "python": "3.14.5",
+  "result_validation": "NOT_REVIEWED",
+  "returncode": 0,
+  "run_id": "pysr-smoke-001",
+  "schema_version": 1,
+  "started_utc": "2026-09-21T17:08:24+00:00",
+  "status": "completed",
+  "task": "T07",
+  "threads_requested": 4,
+  "timeout_seconds": 600.0
+}

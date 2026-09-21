@@ -11,3 +11,15 @@ T07 acceptance: bounded real PySR installation/import/fit attempt, <=25 min; fal
 Completion guard: active Codex goal plus disk task plan; check T01–T11 evidence before marking
 complete. Existing lab runner enforces job timeouts/deadline; no recursive agent process.
 No promise of restart after app/machine termination. Resume via RESUME_PROMPT.md.
+
+T04/T05 evidence: 47 total tests pass (notes/development-tests.txt). finite-smoke-001
+completed 10 policy units in 2.65 s; audit reconstructed labels/metrics, checked
+500 witnesses and pairing. AUC on A tied across policies at ~0.02556. On B all four
+active policies tied at ~0.06849 versus random ~0.61032 (one seed, noiseless smoke;
+not confirmation). Largest small artifact ~305 KB. Full pilot is 360 policy units.
+
+Checkpoint hiccups (not scientific failures): the first scoped checkpoint correctly
+rejected an ignored Finder .DS_Store file inadvertently included by the leaf-path
+collector. A retry excluded it, but was refused because development-001 already
+held the runner lock. No index changes occurred. Resolution: leave that lock alone,
+wait for the active run to finish, then checkpoint only explicit eligible leaf files.

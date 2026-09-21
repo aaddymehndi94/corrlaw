@@ -1,0 +1,22 @@
+{
+  "pysr": "2.5.0",
+  "julia": [
+    1,
+    13,
+    0
+  ],
+  "elapsed_seconds": 471.04655566602014,
+  "equations": [
+    {
+      "complexity": 1,
+      "loss": 0.0852372,
+      "equation": "x1"
+    },
+    {
+      "complexity": 3,
+      "loss": 2.3869795e-15,
+      "equation": "x1 * x0"
+    }
+  ],
+  "rmse": 0.0
+}

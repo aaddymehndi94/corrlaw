@@ -1,0 +1,35 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "corrlaw",
+    "run",
+    "--config",
+    "configs/pilot.json"
+  ],
+  "duration_seconds": 86.234492,
+  "ended_utc": "2026-09-21T17:19:36+00:00",
+  "error": null,
+  "freeze_id": null,
+  "git": {
+    "branch": "research/corrlaw-sprint-01",
+    "commit": "3a218db8b91939504ce563a6916aa97e20bd760a",
+    "working_tree_dirty": true
+  },
+  "log_path": "work/runs/development-001/console.log",
+  "log_sha256": "9e75a8de8bb496b3e2e849c5fc26c39d95afe58588438518d35f744b9c680c38",
+  "phase": "development",
+  "pid": 76490,
+  "platform": "Darwin",
+  "purpose": "Full paired A/B development and three controls, three seeds",
+  "python": "3.14.5",
+  "result_validation": "NOT_REVIEWED",
+  "returncode": 0,
+  "run_id": "development-001",
+  "schema_version": 1,
+  "started_utc": "2026-09-21T17:18:09+00:00",
+  "status": "completed",
+  "task": "T06",
+  "threads_requested": 4,
+  "timeout_seconds": 1800.0
+}
