@@ -64,6 +64,17 @@ not a candidate's mean prediction denominator. Scores within rtol=1e-10,
 atol=1e-14 tie and are selected reproducibly. Any numeric tie bias is shared.
 
 ## Evaluation and resource accounting
+The finite-library implementation first computes the ordinary nine-path fit for the
+shared point predictor (one full-data path plus eight bootstrap paths). Diversified
+QBC additionally computes a separate nine-path diversified ensemble. It therefore
+uses 18 fitting paths per refit versus 9 for the other policies; its acquisition
+committee itself uses nine paths. Recorded fitting time includes that extra work.
+The separate physical-prior control reuses this design. These comparisons share
+label budgets and point selection, but do not have identical total search costs.
+The PySR extension instead uses exactly three searches per policy/refit, including
+diversified QBC; see METHOD_PYSR.md. This is a disclosure of the unchanged finite
+implementation, not a retrospective alteration of its experiments.
+
 Off-preparation and same-preparation errors are RMSE in the physical output reference
 units. AUC is trapezoidal integration of errors at [0,1,2,4,8], divided by 8.
 False consensus is a trial/budget diagnostic: hidden off-preparation RMSE >0.1 and

@@ -1,0 +1,34 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "examples/representation_diagnostic.py",
+    "--parent",
+    "results/runs/pysr-development-002"
+  ],
+  "duration_seconds": 0.623525,
+  "ended_utc": "2026-09-21T21:10:57+00:00",
+  "error": null,
+  "freeze_id": null,
+  "git": {
+    "branch": "research/corrlaw-sprint-01",
+    "commit": "f4065cd4e3e8c3bd8a26a24fbc7d94f710ae9cf8",
+    "working_tree_dirty": true
+  },
+  "log_path": "work/runs/representation-diagnostic-001/console.log",
+  "log_sha256": "9fdaae7921a137a118d701b73a0978f0ca884acf89fc07eb9bc8e38b16903153",
+  "phase": "development",
+  "pid": 89949,
+  "platform": "Darwin",
+  "purpose": "Reproduce selected development B constant-feature encoding limitation without changing learner or claiming discovered alternatives",
+  "python": "3.14.5",
+  "result_validation": "NOT_REVIEWED",
+  "returncode": 0,
+  "run_cutoff_unix": 1790025177.067882,
+  "run_id": "representation-diagnostic-001",
+  "schema_version": 1,
+  "started_utc": "2026-09-21T21:10:57+00:00",
+  "status": "completed",
+  "task": "T16",
+  "threads_requested": 4,
+  "timeout_seconds": 120.0
+}

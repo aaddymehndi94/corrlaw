@@ -1,0 +1,32 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "examples/physical_prior_algebra.py"
+  ],
+  "duration_seconds": 0.532319,
+  "ended_utc": "2026-09-21T21:10:50+00:00",
+  "error": null,
+  "freeze_id": null,
+  "git": {
+    "branch": "research/corrlaw-sprint-01",
+    "commit": "f4065cd4e3e8c3bd8a26a24fbc7d94f710ae9cf8",
+    "working_tree_dirty": true
+  },
+  "log_path": "work/runs/physical-prior-algebra-001/console.log",
+  "log_sha256": "7bfa274b9f164fbc394e607007db2efa4e3a02c54c474d34a89be3d3c180f013",
+  "phase": "development",
+  "pid": 89931,
+  "platform": "Darwin",
+  "purpose": "Exact polynomial and rational counterexamples distinguish physical priors from model-class uniqueness",
+  "python": "3.14.5",
+  "result_validation": "NOT_REVIEWED",
+  "returncode": 0,
+  "run_cutoff_unix": 1790025169.52782,
+  "run_id": "physical-prior-algebra-001",
+  "schema_version": 1,
+  "started_utc": "2026-09-21T21:10:49+00:00",
+  "status": "completed",
+  "task": "T16",
+  "threads_requested": 4,
+  "timeout_seconds": 120.0
+}

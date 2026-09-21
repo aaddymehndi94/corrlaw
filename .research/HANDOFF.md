@@ -1,27 +1,30 @@
 # Overnight research handoff — active
 
 Repository: /Users/devikasv/dev/corrlaw; branch research/corrlaw-sprint-01.
-Source checkpoint:87c5830. User authorized work until2026-09-22 08:00IST (02:30UTC).
+Current source checkpoint:f4065cd; development002 used87c5830. User authorized work until2026-09-22 08:00IST (02:30UTC).
 New experiments stop01:30UTC; final hour is for audit/reporting. Original SPRINT
 clock is preserved; OVERNIGHT overlay and wrapper enforce the earlier deadline.
 The native goal is ACTIVE. The old finite-pilot completion does not finish this scope.
 
-## Latest milestone — supersedes the earlier draft-install sequence below
+## Latest milestone (21:12 UTC) — supersedes older pending items below
 
-Development002 completed all360 units with0executionfailures at20:46:44UTC,
-duration5438.101186s. Its process/session ended normally; source87c5830 was unchanged
-while it ran. All25 reviewed files from the install manifest have NOW BEEN INSTALLED
-under a free runner lock. Do NOT reinstall the old draft manifest: original hashes
-will correctly differ now. Full installed tests passed74 in6.58s.
+Both development runs are complete and audited. Revised360:193650 candidates,
+15062 witnesses, zero audit errors. Strong10:8392 candidates,64 witnesses, zero
+errors; fresh B205 noisy augmented replay exact19bd3fac... . Physical-prior exact
+algebra and development representation scripts also completed successfully.
+74 prefreeze tests passed in6.47s. Development PNG inspected. A's large mean error
+is a retained rational spike at seed202/q2, not an execution failure or false consensus;
+see notes/development-rational-spike.json and pysr-development-review.md.
 
-Next command: run pysr-development-audit-002 through lab, timeout1800, invoking
-`.venv/bin/python -m corrlaw.symbolic_audit results/runs/pysr-development-002
---output results/runs/pysr-development-002`. Then summarize and review complete
-A/B results, profile100iterations using installed strong-development config,
-audit/replay that profile, execute the two installed analytical/evaluator examples,
-and finalize scope/protocol before v3freeze. No new CDEF PySR results have been seen.
-The detailed earlier checklist below remains useful, but its installation/test steps
-are COMPLETE. Installed source is authoritative; only PROTOCOL_V3 remains a draft.
+Final protocol v3 is READY_TO_FREEZE in docs/PROTOCOL.md. Configs validated:
+primary500 (CDEF,5seeds93001–93005,widths0/.01,noise.01,allpolicies/allcontrols);
+strong100 (same tasks/seeds/policies,constrained width0,noise.01,100iterations).
+Measured stronger profile286.048s, steadymean25.034s. Scope chosen BEFORE new CDEF.
+No v3freeze or new CDEF outcomes yet. Next checkpoint inputs/evidence, freeze v3,
+verify/checkpoint metadata, then primary500 and strong100 through lab, sequentially.
+Installed source is current; do NOT reinstall old draft manifest. Cost disclosure
+is installed in METHOD/checklist. Work/overnight-report-outline.md is a prose aid,
+NOT a result. The remaining T16 diagnostics and final reporting steps below remain.
 
 ## Completed and preserved evidence
 
@@ -37,7 +40,7 @@ are COMPLETE. Installed source is authoritative; only PROTOCOL_V3 remains a draf
   archived; lexical point-model ties were corrected before revised development.
 - Installed suite passed67 tests at552f2f0. New draft committee/sensitivity tests
   passed5 checks; draft wrapper-deadline tests passed2; exact algebra draft assertions
-  passed. Full installed suite is still required after integration (~74 tests).
+  passed. The installed suite subsequently passed all 74 tests at f4065cd.
 
 ## Watchdog
 
@@ -49,33 +52,28 @@ Respect any later user stop. No new sessions, messages to other people or unboun
 service. Availability is not guaranteed across app/host/service failure.
 Details: notes/watchdog-operation.md. Stop the daemon when work completes.
 
-## Exact next sequence after development finishes
+## Exact next sequence
 
-1. Inspect run status/source provenance and confirm runner lock is free.
-2. Review/install ONLY the25 mappings in work/drafts/install-manifest.json. Check
-   every destination still matches its recorded original SHA256 (or remains absent)
-   before copying. Do NOT blanket-copy old drafts. PROTOCOL_V3 is intentionally
-   excluded because scope/runtime fields are unresolved.
-3. Run full `.venv/bin/python -m pytest -q`, save a new test record. Inspect diffs;
-   checkpoint explicit owned leaf paths, development artifacts and metadata.
-4. Audit development with corrlaw.symbolic_audit; summarize into reports/pysr-development.
-   The strengthened symbolic auditor is already installed; don't overwrite it with
-   any stale file. Run through lab with a new audit ID and ample bounded timeout.
-5. Run `pysr-strong-development-001` using installed configs/pysr-strong-development.json:
-   A/B seed205, width0, noise.01, all5 policies,100 iterations,2048 pools/tests,10 units.
-   Audit it and fresh-replay B-s205-w0-n0.01-constrained-augmented_qbc. This profiles
-   the predetermined stronger budget before confirmation.
-6. Run the tiny exact/evaluator checks through lab: `physical-prior-algebra-001`
-   invokes examples/physical_prior_algebra.py; `representation-diagnostic-001`
-   invokes examples/representation_diagnostic.py --parent results/runs/pysr-development-002.
-7. Finalize current docs/PROTOCOL.md from work/drafts/PROTOCOL_V3.md; resolve every
-   PENDING/DRAFT field and record full development/strong timing evidence and tests.
-   Finalize primary/strong configs and scope BEFORE any new C/D/E/F outcomes.
-   Commit inputs, create freezev3, verify, commit freeze metadata; then run confirmation.
-8. After freeze, run declared full T16 search/prior diagnostics, full audits/replays,
-   primary and stronger confirmation, exact replays, numerical report bundle, visual
-   inspection, regeneration comparison, final report/claims/handoff/tests/gate.
-   Ordering can adapt to resource/time, but only one heavy process may run.
+1. Await `pysr-development-audit-002` (exec session 47149); inspect validation.json.
+2. Add the finite/prior diversified-search cost disclosure from
+   work/finite-compute-clarification.md to METHOD.md and the interpretation checklist.
+   No numerical algorithm changes. Do this after the active audit ends.
+3. Summarize the audited development into reports/pysr-development. Run the installed
+   configs/pysr-strong-development.json as pysr-strong-development-001, then audit
+   and exactly replay B-s205-w0-n0.01-constrained-augmented_qbc in a fresh process.
+4. Run physical-prior-algebra-001 and representation-diagnostic-001 from the installed
+   examples through lab. The latter takes --parent results/runs/pysr-development-002.
+5. Finalize primary/strong scope from complete A/B timings only. Resolve the draft
+   work/drafts/PROTOCOL_V3.md into docs/PROTOCOL.md and create final configs.
+   Commit inputs, freeze v3, verify, commit freeze metadata. No new CDEF outcomes yet.
+6. Run primary/strong confirmation and declared T16 diagnostics sequentially. Audit
+   all, perform exact replays, render/inspect/regenerate the report bundle, write
+   final report/claims/audit note, run final tests and completion gate, checkpoint.
+   New experiments stop 01:30 UTC; audit/reporting stop at 02:30 UTC.
+
+The 25-file integration and full 74-test installed check are already COMPLETE at
+f4065cd. Do NOT reinstall work/drafts/install-manifest.json. Installed code is
+current; draft duplicates are historical. Only PROTOCOL_V3 is still a pending draft.
 
 ## What the25 prepared mappings contain
 
@@ -156,3 +154,24 @@ Freeze the scientific method/benchmark/related-work documents, configs/src/tests
 tools/examples/dependencies and declared diagnostic plans; include the static
 SPRINT/OVERNIGHT deadline records. Do not freeze dynamicSTATE/PLAN/HANDOFF orreport
 outputs. Source remains unchanged during the active development run.
+
+Complete development resources: notes/fair-development-resources.json. Later A/B
+seed203 means17.74/18.03s per trajectory; peakbatchRSS2.353GB. Use conservative
+later-run timing when finalizing main/strong scope; no guarantee of constant speed
+in a longer Julia process. Audit is active; no source/config edits during it.
+Review finding while developmentaudit runs: historicalfinite/prior diversifiedQBC
+computes9ordinarypaths forcommonpointfit PLUS9diversifiedpaths (18vs9others). PySR
+alreadyusesexactly3searches forallpolicies. DoNOTclaim equaloverallfinite compute.
+Noalgorithmchangeplanned. Afteraudit andbeforefreeze, add costclarification from
+work/finite-compute-clarification.md to docs/METHOD.md andfixbroadinterpretationchecklist
+line. Reportlabel-efficiencywiththiscostdifference; oldaugnegativevsordinary/Dopt
+isnotdependentontheextra-costdiversecomparison. Preservehistoricalruns/protocol.
+
+21:04UTC milestone: development audit PASSED all360,193650 candidates,15062 witnesses,
+0errors,879.641s. Summary generated and PNG visually inspected. Largest A AUC comes
+from seed202 width0 noise.01, QBC andaug both19.974498; q2 offRMSE106.5185 but same
+RMSE.002071. Full saved rational equation/fit record is in notes/development-rational-
+spike.json. Preserve this valid high-error result untrimmed; no method change.
+Strong development ACTIVE: pysr-strong-development-001, execsession71624, started
+21:04:05UTC approximately, timeout1800. Audit/replay after it completes. Cost
+clarification is now installed in METHOD.md and interpretation checklist.

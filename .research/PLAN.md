@@ -30,7 +30,7 @@ remain blocked/incomplete. Label that scope honestly; do not mark skipped scienc
 |---|---|---|---|---|
 | T12 | T11 | Same-thread watchdog and explicit overnight deadline | OVERNIGHT.json; queue delivery test; idle-only daemon; live PID in work/overnight-watchdog/pid | DONE |
 | T13 | T12 | Actual PySR five-policy active learner, tests and smoke | fair smoke001 valid: 4379 candidates/460 witnesses; fair replay001 exact | DONE |
-| T14 | T13 | Development/profiling and fresh frozen protocol | development002 completed360; audit/strong profile/freeze pending | ACTIVE |
+| T14 | T13 | Development/profiling and fresh frozen protocol | development360 and strong10 valid; exact strong replay;74 tests; v3 freeze next | ACTIVE |
 | T15 | T14 | Repeated PySR confirmation with all baselines and controls | pending | NOT_STARTED |
 | T16 | T13 | Search-failure and physical-prior diagnostics | code and plans installed; numerical runs pending | ACTIVE |
 | T17 | T15,T16 | Artifact audit, reproduction, updated report and handoff | pending | NOT_STARTED |

@@ -1,0 +1,36 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "corrlaw.summarize",
+    "results/runs/pysr-development-002",
+    "--output",
+    "reports/pysr-development"
+  ],
+  "duration_seconds": 2.822777,
+  "ended_utc": "2026-09-21T21:03:54+00:00",
+  "error": null,
+  "freeze_id": null,
+  "git": {
+    "branch": "research/corrlaw-sprint-01",
+    "commit": "f4065cd4e3e8c3bd8a26a24fbc7d94f710ae9cf8",
+    "working_tree_dirty": true
+  },
+  "log_path": "work/runs/pysr-development-summary-002/console.log",
+  "log_sha256": "00e60bbdb2fcbe448de6fac01bd877b65bd9cf15ba50f4c1cdbff0a949db97dd",
+  "phase": "development",
+  "pid": 89463,
+  "platform": "Darwin",
+  "purpose": "Summarize complete audited360-unit PySR development including all controls and paired seed AUC",
+  "python": "3.14.5",
+  "result_validation": "NOT_REVIEWED",
+  "returncode": 0,
+  "run_cutoff_unix": 1790025231.68117,
+  "run_id": "pysr-development-summary-002",
+  "schema_version": 1,
+  "started_utc": "2026-09-21T21:03:51+00:00",
+  "status": "completed",
+  "task": "T14",
+  "threads_requested": 4,
+  "timeout_seconds": 600.0
+}

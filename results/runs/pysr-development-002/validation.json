@@ -1,0 +1,9 @@
+{
+  "valid": true,
+  "expected_units": 360,
+  "completed_units": 360,
+  "failed_units": [],
+  "witnesses_checked": 15062,
+  "candidates_checked": 193650,
+  "errors": []
+}

@@ -1,0 +1,100 @@
+{
+  "scope": "Post hoc A/B representation diagnostic using the supplied circle relation; NOT an algorithm-generated witness or a primary method change.",
+  "parent": "results/runs/pysr-development-002",
+  "unit_id": "B-s201-w0-n0-constrained-augmented_qbc",
+  "source_sha256": "5b890d112cb79c866697675ed3fb05268ed2654cf4fbfbada7744cb97ec0b08e",
+  "selected": "(-z3 - 1.0128754530946351)*(-z0 - z3 + z3 + 0.012711783156414372)",
+  "selected_complexity": 7,
+  "model_witness_count": 0,
+  "ordinary_committee_size": 9,
+  "initial_metric": {
+    "budget": 0,
+    "total_labels": 192,
+    "witness_count": 0,
+    "diagnostic": "no_witness_within_search_budget",
+    "rounded_symbolic_recovery": false,
+    "off_rmse": 1.0477615352770164,
+    "same_rmse": 1.8688282974948596e-11,
+    "committee_rms_std": 0.43559607644847553,
+    "false_consensus": false
+  },
+  "known_relation_alternatives": [
+    {
+      "alpha": -1.0,
+      "arithmetic_complexity": 19,
+      "observed_errors": [
+        1.9097886212218148e-11,
+        1.8975767669073857e-11,
+        0.0,
+        7.248090164055008e-22
+      ],
+      "constant_folded_complexity": 9,
+      "constant_folded_expression": "0.032792594570055048*z3 - 0.95764235433259304*z5 + 1.9667851859109369",
+      "folded_errors": [
+        1.909790038876736e-11,
+        1.8975791714836023e-11,
+        0.0,
+        7.248104704641199e-22
+      ],
+      "folded_bounded": true
+    },
+    {
+      "alpha": -0.25,
+      "arithmetic_complexity": 19,
+      "observed_errors": [
+        1.9097910584619142e-11,
+        1.897579684876973e-11,
+        0.0,
+        7.248110547438871e-22
+      ],
+      "constant_folded_complexity": 9,
+      "constant_folded_expression": "0.74866431127520299*z3 - 0.23941058858314826*z5 + 1.2416962964555651",
+      "folded_errors": [
+        1.909784625580988e-11,
+        1.8975736693898254e-11,
+        0.0,
+        7.248063146867081e-22
+      ],
+      "folded_bounded": true
+    },
+    {
+      "alpha": 0.25,
+      "arithmetic_complexity": 19,
+      "observed_errors": [
+        1.9097910584619142e-11,
+        1.897579684876973e-11,
+        0.0,
+        7.248110547438871e-22
+      ],
+      "constant_folded_complexity": 9,
+      "constant_folded_expression": "1.2259121224119683*z3 + 0.23941058858314826*z5 + 0.75830370348531719",
+      "folded_errors": [
+        1.9097912764586683e-11,
+        1.8975816523030635e-11,
+        0.0,
+        7.248118846794854e-22
+      ],
+      "folded_bounded": true
+    },
+    {
+      "alpha": 1.0,
+      "arithmetic_complexity": 19,
+      "observed_errors": [
+        1.9097934957735282e-11,
+        1.8975826029192092e-11,
+        0.0,
+        7.248130931400514e-22
+      ],
+      "constant_folded_complexity": 9,
+      "constant_folded_expression": "1.9417838391171162*z3 + 0.95764235433259304*z5 + 0.033214814029945363",
+      "folded_errors": [
+        1.9097910779673655e-11,
+        1.897581758571251e-11,
+        0.0,
+        7.248118491946114e-22
+      ],
+      "folded_bounded": true
+    }
+  ],
+  "implication": "Formula encoding can obstruct bounded witness construction; no witness is not uniqueness. No constant-folding ablation was run."
+}

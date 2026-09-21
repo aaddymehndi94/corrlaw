@@ -1,0 +1,35 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "corrlaw.symbolic_experiment",
+    "--config",
+    "configs/pysr-strong-development.json"
+  ],
+  "duration_seconds": 286.047903,
+  "ended_utc": "2026-09-21T21:08:51+00:00",
+  "error": null,
+  "freeze_id": null,
+  "git": {
+    "branch": "research/corrlaw-sprint-01",
+    "commit": "f4065cd4e3e8c3bd8a26a24fbc7d94f710ae9cf8",
+    "working_tree_dirty": true
+  },
+  "log_path": "work/runs/pysr-strong-development-001/console.log",
+  "log_sha256": "90e142c9c0128f3d53be51b7cf0ca40bab3855d277faf6e679ba340f4c610007",
+  "phase": "development",
+  "pid": 89495,
+  "platform": "Darwin",
+  "purpose": "Pre-confirmation100-iteration A/B profile with allfive acquisition policies to lock feasible paired sensitivity scope",
+  "python": "3.14.5",
+  "result_validation": "NOT_REVIEWED",
+  "returncode": 0,
+  "run_cutoff_unix": 1790026445.083742,
+  "run_id": "pysr-strong-development-001",
+  "schema_version": 1,
+  "started_utc": "2026-09-21T21:04:05+00:00",
+  "status": "completed",
+  "task": "T14",
+  "threads_requested": 4,
+  "timeout_seconds": 1800.0
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "results/runs/pysr-strong-development-001",
+  "unit_id": "B-s205-w0-n0.01-constrained-augmented_qbc",
+  "exact_match": true,
+  "original_scientific_sha256": "19bd3facc14fcfa46d6524d24786e2cb966c6824b68a049c218eb8c4b34790f8",
+  "repeated_scientific_sha256": "19bd3facc14fcfa46d6524d24786e2cb966c6824b68a049c218eb8c4b34790f8"
+}

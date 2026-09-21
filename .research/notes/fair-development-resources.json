@@ -1,0 +1,63 @@
+{
+  "run": "pysr-development-002",
+  "units": 360,
+  "failed": 0,
+  "runtime_by_task_seed": [
+    {
+      "task": "A",
+      "seed": 201,
+      "units": 60,
+      "mean_seconds": 12.677573277071739,
+      "maximum_seconds": 41.528025083011016,
+      "mean_fit_seconds": 10.460213370830752,
+      "mean_augmentation_seconds": 2.1809212063555607
+    },
+    {
+      "task": "A",
+      "seed": 202,
+      "units": 60,
+      "mean_seconds": 16.773239382643563,
+      "maximum_seconds": 47.91427275002934,
+      "mean_fit_seconds": 13.36821430081812,
+      "mean_augmentation_seconds": 3.361482849418341
+    },
+    {
+      "task": "A",
+      "seed": 203,
+      "units": 60,
+      "mean_seconds": 17.73588164791387,
+      "maximum_seconds": 36.63815258303657,
+      "mean_fit_seconds": 16.018035271659027,
+      "mean_augmentation_seconds": 1.6755673028916742
+    },
+    {
+      "task": "B",
+      "seed": 201,
+      "units": 60,
+      "mean_seconds": 11.43474883879923,
+      "maximum_seconds": 13.602995457826182,
+      "mean_fit_seconds": 11.317410613200627,
+      "mean_augmentation_seconds": 0.08732695402189468
+    },
+    {
+      "task": "B",
+      "seed": 202,
+      "units": 60,
+      "mean_seconds": 13.863832409124976,
+      "maximum_seconds": 16.360480000032112,
+      "mean_fit_seconds": 13.742902619511975,
+      "mean_augmentation_seconds": 0.08889537556096912
+    },
+    {
+      "task": "B",
+      "seed": 203,
+      "units": 60,
+      "mean_seconds": 18.034137476421893,
+      "maximum_seconds": 23.644142333883792,
+      "mean_fit_seconds": 17.90636774178129,
+      "mean_augmentation_seconds": 0.0906610461922052
+    }
+  ],
+  "peak_batch_rss_bytes": 2353332224,
+  "note": "Resource profiling of complete run; scientific artifact audit is still in progress."
+}

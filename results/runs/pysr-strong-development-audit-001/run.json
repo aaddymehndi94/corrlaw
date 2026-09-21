@@ -1,0 +1,36 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "corrlaw.symbolic_audit",
+    "results/runs/pysr-strong-development-001",
+    "--output",
+    "results/runs/pysr-strong-development-001"
+  ],
+  "duration_seconds": 47.882721,
+  "ended_utc": "2026-09-21T21:09:45+00:00",
+  "error": null,
+  "freeze_id": null,
+  "git": {
+    "branch": "research/corrlaw-sprint-01",
+    "commit": "f4065cd4e3e8c3bd8a26a24fbc7d94f710ae9cf8",
+    "working_tree_dirty": true
+  },
+  "log_path": "work/runs/pysr-strong-development-audit-001/console.log",
+  "log_sha256": "2b693f5d7f90a500fa18792648ef4813b70057cef6a6f6a1096ce68a6b9965c1",
+  "phase": "development",
+  "pid": 89799,
+  "platform": "Darwin",
+  "purpose": "Audit complete100-iteration development profile before confirmation freeze",
+  "python": "3.14.5",
+  "result_validation": "NOT_REVIEWED",
+  "returncode": 0,
+  "run_cutoff_unix": 1790025537.435534,
+  "run_id": "pysr-strong-development-audit-001",
+  "schema_version": 1,
+  "started_utc": "2026-09-21T21:08:57+00:00",
+  "status": "completed",
+  "task": "T14",
+  "threads_requested": 4,
+  "timeout_seconds": 600.0
+}

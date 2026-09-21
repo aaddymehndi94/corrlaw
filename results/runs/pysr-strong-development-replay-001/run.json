@@ -1,0 +1,38 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "corrlaw.symbolic_audit",
+    "results/runs/pysr-strong-development-001",
+    "--reproduce",
+    "B-s205-w0-n0.01-constrained-augmented_qbc",
+    "--output",
+    "results/runs/pysr-strong-development-replay-001"
+  ],
+  "duration_seconds": 49.376134,
+  "ended_utc": "2026-09-21T21:10:34+00:00",
+  "error": null,
+  "freeze_id": null,
+  "git": {
+    "branch": "research/corrlaw-sprint-01",
+    "commit": "f4065cd4e3e8c3bd8a26a24fbc7d94f710ae9cf8",
+    "working_tree_dirty": true
+  },
+  "log_path": "work/runs/pysr-strong-development-replay-001/console.log",
+  "log_sha256": "dba5979456b29dd6ea7957722b3f30fc5f107fd03b5364c6a40566946def0510",
+  "phase": "development",
+  "pid": 89836,
+  "platform": "Darwin",
+  "purpose": "Exact fresh-process replay of preselected stronger-search B development trajectory before freeze",
+  "python": "3.14.5",
+  "result_validation": "NOT_REVIEWED",
+  "returncode": 0,
+  "run_cutoff_unix": 1790025285.436867,
+  "run_id": "pysr-strong-development-replay-001",
+  "schema_version": 1,
+  "started_utc": "2026-09-21T21:09:45+00:00",
+  "status": "completed",
+  "task": "T14",
+  "threads_requested": 4,
+  "timeout_seconds": 300.0
+}

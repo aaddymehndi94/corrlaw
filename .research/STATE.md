@@ -1,18 +1,20 @@
 # Current state
 Repository: /Users/devikasv/dev/corrlaw; branch research/corrlaw-sprint-01.
-ACTIVE overnight. Experiments end01:30UTC; harddeadline02:30UTC (08:00IST).
-Native goal active; original SPRINT unchanged; watchdog85026/caffeinate85027.
-pysr-development-002 COMPLETED360/360,0executionfailures,5438.101186s.
-Completed20:46:44UTC, source87c5830. Artifact audit is NEXT, not yet validated.
-All25 prepared files are now INSTALLED after the run, including portable cutoff,
-committee/sensitivity diagnostics, report bundle, exact-algebra/encoding checks.
-74 tests passed in6.58s: notes/overnight-tests-03.txt. Do NOT reinstall old drafts.
-No new C/D/E/F PySR confirmation outcomes yet. NO v3freeze yet.
-Next: pysr-development-audit-002 using corrlaw.symbolic_audit on development002.
-Then profile100iterations on installed configs/pysr-strong-development.json (10AB
-units), audit/replay, run exact/evaluator checks, finalize scope and freeze v3.
-Candidate primary500 noisy-only units preserves4tasks,5seeds,2widths,allcontrols,
-all5policies; strong100/200 determined from completeAB/strongtimings before freeze.
-Protocol draft remains work/drafts/PROTOCOL_V3.md with PENDING fields; don'tfreeze it.
-History: superseded development001 interrupted224units; preserved. Fair smoke001
-valid4379candidates/460witnesses and exactB replay. Earlier tieaudit002 preserved.
+ACTIVE overnight. New experiments stop01:30 UTC; hard deadline02:30 UTC (08:00 IST).
+Native goal active; original SPRINT preserved; watchdog85026/caffeinate85027.
+Development002 completed360/360, zero failures,5438.101186s; full audit valid:
+193650 candidates,15062 witnesses. Summary and figure inspected.
+Strong development001 completed10/10,286.047903s; audit valid8392 candidates,
+64 witnesses; fresh B205 noisy augmented replay EXACT (19bd3fac...).
+Physical-prior algebra and representation examples completed and inspected.
+74 prefreeze tests passed in6.47s. Finite/prior extra diversified-search cost disclosed.
+Protocol v3 READY_TO_FREEZE; final configs installed and validated500/100 units.
+Primary CDEF,5seeds93001–93005,widths0/.01,noise.01,all5policies/allcontrols.
+Strong CDEF,same5seeds,width0,noise.01,constrained,all5policies,100iterations.
+No new C/D/E/F PySR outcomes opened. No v3 freeze yet.
+NEXT: checkpoint reviewed inputs/evidence, freeze v3, verify/checkpoint metadata,
+then run pysr-confirmation-v3-001 (500 units) under that freeze.
+After primary: strong100, full T16 search/prior diagnostics, audits and exact replays,
+render/inspect/regenerate bundle, report/claims/final tests/gate and local checkpoints.
+No source/config edits during a running experiment or after confirmation without
+preserving/invalidation and fresh protocol/seeds. Do not reinstall stale drafts.

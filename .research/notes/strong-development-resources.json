@@ -1,0 +1,90 @@
+{
+  "run": "results/runs/pysr-strong-development-001",
+  "duration_seconds": 286.047903,
+  "units": [
+    {
+      "unit_id": "A-s205-w0-n0.01-constrained-random",
+      "task": "A",
+      "runtime_seconds": 59.6113181670662,
+      "fitting_seconds": 49.485600334592164,
+      "augmentation_seconds": 10.057301667286083,
+      "process_peak_rss_bytes": 1108557824
+    },
+    {
+      "unit_id": "A-s205-w0-n0.01-constrained-qbc",
+      "task": "A",
+      "runtime_seconds": 26.369644457940012,
+      "fitting_seconds": 22.110240834997967,
+      "augmentation_seconds": 4.187597540207207,
+      "process_peak_rss_bytes": 1108557824
+    },
+    {
+      "unit_id": "A-s205-w0-n0.01-constrained-diversified_qbc",
+      "task": "A",
+      "runtime_seconds": 27.385819083079696,
+      "fitting_seconds": 23.137282583396882,
+      "augmentation_seconds": 4.169627043418586,
+      "process_peak_rss_bytes": 1118322688
+    },
+    {
+      "unit_id": "A-s205-w0-n0.01-constrained-regularized_d_optimal",
+      "task": "A",
+      "runtime_seconds": 26.72864487511106,
+      "fitting_seconds": 22.42450033337809,
+      "augmentation_seconds": 4.223304166458547,
+      "process_peak_rss_bytes": 1118322688
+    },
+    {
+      "unit_id": "A-s205-w0-n0.01-constrained-augmented_qbc",
+      "task": "A",
+      "runtime_seconds": 27.82625158294104,
+      "fitting_seconds": 23.44710950064473,
+      "augmentation_seconds": 4.3116681249812245,
+      "process_peak_rss_bytes": 1118322688
+    },
+    {
+      "unit_id": "B-s205-w0-n0.01-constrained-random",
+      "task": "B",
+      "runtime_seconds": 22.40837545809336,
+      "fitting_seconds": 22.300961127271876,
+      "augmentation_seconds": 0.06453191698528826,
+      "process_peak_rss_bytes": 1118322688
+    },
+    {
+      "unit_id": "B-s205-w0-n0.01-constrained-qbc",
+      "task": "B",
+      "runtime_seconds": 24.51379037485458,
+      "fitting_seconds": 24.402500750031322,
+      "augmentation_seconds": 0.06151145859621465,
+      "process_peak_rss_bytes": 1118322688
+    },
+    {
+      "unit_id": "B-s205-w0-n0.01-constrained-diversified_qbc",
+      "task": "B",
+      "runtime_seconds": 24.418703499948606,
+      "fitting_seconds": 24.144582709064707,
+      "augmentation_seconds": 0.2209164162632078,
+      "process_peak_rss_bytes": 1118322688
+    },
+    {
+      "unit_id": "B-s205-w0-n0.01-constrained-regularized_d_optimal",
+      "task": "B",
+      "runtime_seconds": 21.978960792068392,
+      "fitting_seconds": 21.867181168170646,
+      "augmentation_seconds": 0.06014725053682923,
+      "process_peak_rss_bytes": 1118322688
+    },
+    {
+      "unit_id": "B-s205-w0-n0.01-constrained-augmented_qbc",
+      "task": "B",
+      "runtime_seconds": 23.675508874934167,
+      "fitting_seconds": 23.558416167041287,
+      "augmentation_seconds": 0.06340812356211245,
+      "process_peak_rss_bytes": 1118322688
+    }
+  ],
+  "mean_trajectory_seconds": 28.49170171660371,
+  "steady_mean_excluding_first": 25.03396655544121,
+  "max_steady_seconds": 27.82625158294104,
+  "peak_rss_bytes": 1118322688
+}

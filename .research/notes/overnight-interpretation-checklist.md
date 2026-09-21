@@ -4,10 +4,13 @@
   terminals. It is not a raw-variable-only PySR replication of the active-learning
   paper. Feature/library dropout is established prior work, as is disagreement
   acquisition. Retained-candidate history is an implementation choice, not novelty.
-- All policy comparisons within an engine share their point-selection rule, search
-  resources, noise streams, domains and budgets. Cross-engine changes are confounded
-  by search, rational grammar, historical candidate retention and intervention
-  fitness weights. Do not attribute every improvement to one factor.
+- All policy comparisons within an engine share point selection, noise streams,
+  domains, priors and label budgets. PySR matches all policies at three searches per
+  refit. Historical finite/prior diversified QBC computes an extra ensemble:18 search
+  paths versus9 for the others, with that cost included in fitting time. Do not claim
+  equal total search cost for that comparison. Cross-engine changes include search,
+  rational grammar, candidate retention and intervention fitness weights; do not
+  attribute every improvement to one factor.
 - PySR searches and all accepted formulas use a common15-node arithmetic-tree
   cap over generic feature terminals. Expanded physical complexity differs because
   each terminal can represent a monomial. The superseded10/31 cap mismatch was

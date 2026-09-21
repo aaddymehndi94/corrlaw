@@ -1,0 +1,36 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "corrlaw.symbolic_audit",
+    "results/runs/pysr-development-002",
+    "--output",
+    "results/runs/pysr-development-002"
+  ],
+  "duration_seconds": 879.641036,
+  "ended_utc": "2026-09-21T21:03:10+00:00",
+  "error": null,
+  "freeze_id": null,
+  "git": {
+    "branch": "research/corrlaw-sprint-01",
+    "commit": "f4065cd4e3e8c3bd8a26a24fbc7d94f710ae9cf8",
+    "working_tree_dirty": true
+  },
+  "log_path": "work/runs/pysr-development-audit-002/console.log",
+  "log_sha256": "e3b9c3e255dd212b13ef395a19ae3d7a017bbbf3abfe98327b39afb7e7481bc0",
+  "phase": "development",
+  "pid": 88955,
+  "platform": "Darwin",
+  "purpose": "Reconstruct all360 revised PySR development trajectories, equations, witnesses, random streams and query decisions",
+  "python": "3.14.5",
+  "result_validation": "NOT_REVIEWED",
+  "returncode": 0,
+  "run_cutoff_unix": 1790025510.8393269,
+  "run_id": "pysr-development-audit-002",
+  "schema_version": 1,
+  "started_utc": "2026-09-21T20:48:30+00:00",
+  "status": "completed",
+  "task": "T14",
+  "threads_requested": 4,
+  "timeout_seconds": 1800.0
+}

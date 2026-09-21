@@ -1,0 +1,39 @@
+{
+  "parent": "results/runs/pysr-development-002",
+  "unit_id": "A-s202-w0-n0.01-constrained-augmented_qbc",
+  "selection": "Post-hoc development failure analysis: largest constrained A AUC; not a preselected confirmation example.",
+  "budget": 2,
+  "physical_expression": "0.77864049755520572*x0**2*x1/(0.83967893048696538*x0/x1 + (0.2633762662545827 + 0.81875530338386721*x1/x0)*(0.70734868555053228*x0**2/x1 - 0.6593136271974556)) + 0.12450570808510514*x0**2/x1",
+  "selected_candidate": {
+    "expression": "z14*0.17601744461884714 + z15/(z8 + (z14 - 0.6593136271974556)*(z6 - 1*(-0.2633762662545827)))",
+    "search": 0,
+    "generation": 2,
+    "index": 4,
+    "search_complexity": 15,
+    "search_loss": 5.0243508752102105e-05,
+    "errors": [
+      0.009938097339437516,
+      0.010932646475304975,
+      0.000600902944213999,
+      0.00021846938693515384
+    ],
+    "complexity": 15,
+    "bounded": true,
+    "admissible": true
+  },
+  "metric": {
+    "budget": 2,
+    "total_labels": 194,
+    "witness_count": 0,
+    "diagnostic": "no_witness_within_search_budget",
+    "rounded_symbolic_recovery": false,
+    "off_rmse": 106.51853928893028,
+    "same_rmse": 0.002071284835383916,
+    "committee_rms_std": 19.43596503631635,
+    "false_consensus": false
+  },
+  "auc": 19.97449805541184,
+  "same_as_qbc": true,
+  "interpretation": "Large finite off-preparation rational-prediction error despite small same-preparation error. Audit passed; retained without clipping/exclusion. No global pole-free guarantee was imposed. No new method change.",
+  "plot_review": "Development PNG inspected: both panels, labels and shared legend legible; A spike visible; no clipping."
+}
