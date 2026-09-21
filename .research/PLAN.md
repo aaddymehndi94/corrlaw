@@ -6,8 +6,8 @@ One ACTIVE implementation task by default. All rows below start NOT_STARTED.
 
 | ID | Depends on | Task | Acceptance evidence | Status |
 |---|---|---|---|---|
-| T01 | none | Inspect repository, initialize bounded sprint, check environment/Git ownership | doctor/tests output; safe initial checkpoint; state has next command | NOT_STARTED |
-| T02 | T01 | Run analytical sanity and minimal science-environment smoke | sanity artifact; version record; runnable venv or documented fallback | NOT_STARTED |
+| T01 | none | Inspect repository, initialize bounded sprint, check environment/Git ownership | 32 starter tests; notes/startup.md; sanity-001 | DONE |
+| T02 | T01 | Run analytical sanity and minimal science-environment smoke | sanity-001; local venv installation in progress | ACTIVE |
 | T03 | T02 | Targeted prior-work and equivalence audit | exact sources/status; algebra comparing single-null-mode acquisition with regularized design | NOT_STARTED |
 | T04 | T03 | Implement oracle/data generation, learning contracts and evaluator | tests for units, distributions, split/query accounting and no formula leakage | NOT_STARTED |
 | T05 | T04 | Complete one small end-to-end finite-library comparison | all five policies run on A/B; actual equation, query and metric artifacts | NOT_STARTED |

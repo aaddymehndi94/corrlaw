@@ -1,0 +1,21 @@
+{
+  "deadline_unix": 1790046068.014501,
+  "initial_config": {
+    "automatic_push": false,
+    "budget_hours": 10,
+    "literature_budget_minutes": 30,
+    "local_commits": true,
+    "max_simultaneous_experiments": 1,
+    "max_threads": 4,
+    "max_tracked_file_bytes": 2097152,
+    "notes": "The runner enforces deadline/timeouts and one run at a time. Thread limits are environment requests, not a CPU or memory sandbox. Git push is never executed by the helper.",
+    "preferred_workflow": "one_lead_agent; sequential implementation and skeptical review",
+    "pysr_setup_budget_minutes": 25,
+    "report_reserve_minutes": 60,
+    "schema_version": 1
+  },
+  "report_reserve_seconds": 3600.0,
+  "schema_version": 1,
+  "started_unix": 1790010068.014501,
+  "started_utc": "2026-09-21T17:01:08+00:00"
+}

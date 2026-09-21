@@ -1,31 +1,12 @@
 # Current state
-
-Status: NOT_STARTED
-Task: T01
-Owner: unassigned; first lead agent claims this in the existing repository
-Sprint clock: not initialized; `tools/lab.py start` will initialize it once
-Research outcome: none; this is a starter kit, not a completed experiment
-
-## Verified starter capabilities
-The stdlib helper, unit tests, and analytical circle example are supplied.
-See `STARTER_VALIDATION.md` for packaging-time checks, not scientific results.
-
-## Current work and evidence
-No research runs have been performed in this repository.
-No scientific dependencies or PySR have been installed by this starter kit.
-No confirmation protocol has been frozen.
-
-## Decisions and constraints
-Ten-hour elapsed sprint; one-hour reporting reserve; CPU only.
-Local commits enabled; no automatic pushes or publication.
-One lead writer. Durable notes instead of relying on conversation history.
-
-## Blockers
-None identified; inspect the actual machine and repository before assuming readiness.
-
-## Exact next action
-Read `CODEX_PROMPT.md`, inspect Git status, then run:
-`python3 tools/lab.py doctor`
-
-## Resume pointers
-`docs/WORKFLOW.md`, `.research/PLAN.md`, `docs/RESEARCH_SPEC.md`
+Status: ACTIVE
+Task: T02/T03 environment and source audit
+Owner: Codex lead (single writer)
+Branch: research/corrlaw-sprint-01
+Sprint: started 2026-09-21 17:01 UTC; deadline 2026-09-22 03:01 UTC.
+Experiment cutoff: 2026-09-22 02:01 UTC.
+Evidence: doctor succeeded, 32 starter tests passed; results/runs/sanity-001 completed.
+Environment: Python 3.14.5 arm64 macOS; local .venv installation underway.
+No scientific findings or frozen protocol yet. No push authorized.
+Completion guard: persistent goal and .research/PLAN.md; existing deadline-aware runner.
+Next action: finish local dependency setup and implement anonymous finite-library experiment.
