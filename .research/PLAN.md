@@ -13,8 +13,8 @@ One ACTIVE implementation task by default. All rows below start NOT_STARTED.
 | T05 | T04 | Complete one small end-to-end finite-library comparison | finite-smoke-001/validation.json: 10 units, 500 witnesses checked | DONE |
 | T06 | T05 | Development sweep and failure analysis | development-001/validation.json; reports/development; 360 complete units | DONE |
 | T07 | T05 | Bounded PySR smoke and small comparison | pysr-smoke-001/pysr.json; pysr-compare-001/comparison.json (six fits) | DONE |
-| T08 | T06,T07 | Freeze a feasible confirmation protocol | v1 freeze blocked by generated egg-info inventory; regression fix under test | ACTIVE |
-| T09 | T08 | Run held-out confirmation without changing methods | confirmation-v1-001 planned after valid freeze; no confirmation started | NOT_STARTED |
+| T08 | T06,T07 | Freeze a feasible confirmation protocol | freezes/v1.json; lab verify passed (34 files); source commit 7757dd5 | DONE |
+| T09 | T08 | Run held-out confirmation without changing methods | confirmation-v1-001: 1,000 policy units; frozen v1 inputs | ACTIVE |
 | T10 | T09 | Independent-process reproduction and skeptical audit | reproduced artifact/metrics; leakage/fairness/freeze audit; unresolved issues listed | NOT_STARTED |
 | T11 | T10 | Write evidence-linked report and handoff; final local checkpoint | report, figures, claims ledger, exact reproduction commands and Git status | NOT_STARTED |
 
