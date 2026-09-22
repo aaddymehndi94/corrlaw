@@ -1,0 +1,12 @@
+{
+  "valid": true,
+  "scope": "Artifact hashes, expected sets and paired initial/evaluation input hashes; separate scientific audits still required.",
+  "paired_unit_ids": 100,
+  "policy_units": 300,
+  "manifest_sha256": {
+    "none": "a7e285c13140d0d7232013e4ff17a41741ffbec13794ee1c75ce71b87801bab5",
+    "zero_origin": "756c8271c2d4dada6c88a4376b0f6e32af75544ea0e03e4859e806d0ca066a20",
+    "zero_origin_and_even": "9994300136d3bbeae1f4bf53fb225f5c2f48013bc5203ba2996ec144ec8e3386"
+  },
+  "all_starting_inputs_match": true
+}

@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "stage": "development",
+  "tasks": [
+    "B"
+  ],
+  "seeds": [
+    301,
+    302,
+    303,
+    304,
+    305
+  ],
+  "constraint_widths": [
+    0,
+    0.01
+  ],
+  "output_noise_std": [
+    0,
+    0.01
+  ],
+  "n_fit": 128,
+  "n_calibration": 64,
+  "n_query_candidates": 2048,
+  "query_budgets": [
+    0,
+    1,
+    2,
+    4,
+    8
+  ],
+  "policies": [
+    "random",
+    "qbc",
+    "diversified_qbc",
+    "regularized_d_optimal",
+    "augmented_qbc"
+  ],
+  "controls": [
+    "constrained"
+  ],
+  "engine": "finite_library_prior_control",
+  "notes": "Exploratory physical-prior sensitivity: identical priors across all five policies. Origin alone removes the constant; origin plus evenness restricts the degree<=3 polynomial class to squared-coordinate terms. Not a new held-out confirmation claim.",
+  "n_test": 2048,
+  "prior": "none"
+}

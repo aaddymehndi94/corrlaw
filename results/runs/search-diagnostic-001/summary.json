@@ -1,0 +1,523 @@
+{
+  "exploratory": true,
+  "groups": [
+    {
+      "task": "C",
+      "budget": 0,
+      "n_policy_conditions": 100,
+      "unique_observations": 20,
+      "seed_means": [
+        {
+          "seed": 92001,
+          "original_mean": 0.5897592996273266,
+          "exhaustive_mean": 0.45949335090821075,
+          "delta": -0.1302659487191159
+        },
+        {
+          "seed": 92002,
+          "original_mean": 0.3985156145508898,
+          "exhaustive_mean": 0.40030219281143964,
+          "delta": 0.0017865782605498426
+        },
+        {
+          "seed": 92003,
+          "original_mean": 1.3610386407408666,
+          "exhaustive_mean": 0.21218870311094648,
+          "delta": -1.1488499376299202
+        },
+        {
+          "seed": 92004,
+          "original_mean": 0.2690242881043755,
+          "exhaustive_mean": 0.22910675540481784,
+          "delta": -0.03991753269955767
+        },
+        {
+          "seed": 92005,
+          "original_mean": 0.5344044490606392,
+          "exhaustive_mean": 0.3754026159323211,
+          "delta": -0.15900183312831812
+        }
+      ],
+      "original_mean": 0.6305484584168197,
+      "exhaustive_mean": 0.33529872363354696,
+      "original_poor_fit": 0,
+      "exhaustive_poor_fit": 0,
+      "exhaustive_rounded_recovery": 50
+    },
+    {
+      "task": "C",
+      "budget": 2,
+      "n_policy_conditions": 100,
+      "unique_observations": 71,
+      "seed_means": [
+        {
+          "seed": 92001,
+          "original_mean": 0.0087702358639755,
+          "exhaustive_mean": 0.002081116565425834,
+          "delta": -0.006689119298549666
+        },
+        {
+          "seed": 92002,
+          "original_mean": 0.004684254198752419,
+          "exhaustive_mean": 0.008674620725094808,
+          "delta": 0.003990366526342389
+        },
+        {
+          "seed": 92003,
+          "original_mean": 0.004572070637185849,
+          "exhaustive_mean": 0.02946664099363378,
+          "delta": 0.02489457035644793
+        },
+        {
+          "seed": 92004,
+          "original_mean": 0.01754237842151971,
+          "exhaustive_mean": 0.010338283106551303,
+          "delta": -0.007204095314968406
+        },
+        {
+          "seed": 92005,
+          "original_mean": 0.004359804270721119,
+          "exhaustive_mean": 0.010371027279108703,
+          "delta": 0.006011223008387584
+        }
+      ],
+      "original_mean": 0.007985748678430918,
+      "exhaustive_mean": 0.012186337733962884,
+      "original_poor_fit": 0,
+      "exhaustive_poor_fit": 0,
+      "exhaustive_rounded_recovery": 50
+    },
+    {
+      "task": "C",
+      "budget": 8,
+      "n_policy_conditions": 100,
+      "unique_observations": 91,
+      "seed_means": [
+        {
+          "seed": 92001,
+          "original_mean": 0.0023837498260575966,
+          "exhaustive_mean": 0.0016013893836400565,
+          "delta": -0.0007823604424175401
+        },
+        {
+          "seed": 92002,
+          "original_mean": 0.0021462593724190866,
+          "exhaustive_mean": 0.0013665515986327728,
+          "delta": -0.0007797077737863138
+        },
+        {
+          "seed": 92003,
+          "original_mean": 0.0026684669397652877,
+          "exhaustive_mean": 0.0017685286562368872,
+          "delta": -0.0008999382835284005
+        },
+        {
+          "seed": 92004,
+          "original_mean": 0.003308370435421506,
+          "exhaustive_mean": 0.002168599586067001,
+          "delta": -0.0011397708493545047
+        },
+        {
+          "seed": 92005,
+          "original_mean": 0.0025387365433015103,
+          "exhaustive_mean": 0.0010963957465798114,
+          "delta": -0.0014423407967216989
+        }
+      ],
+      "original_mean": 0.0026091166233929972,
+      "exhaustive_mean": 0.0016002929942313057,
+      "original_poor_fit": 0,
+      "exhaustive_poor_fit": 0,
+      "exhaustive_rounded_recovery": 50
+    },
+    {
+      "task": "D",
+      "budget": 0,
+      "n_policy_conditions": 100,
+      "unique_observations": 20,
+      "seed_means": [
+        {
+          "seed": 92001,
+          "original_mean": 0.11295000265119533,
+          "exhaustive_mean": 0.4005128538641548,
+          "delta": 0.2875628512129595
+        },
+        {
+          "seed": 92002,
+          "original_mean": 1.0238333065217424,
+          "exhaustive_mean": 0.45264777255698363,
+          "delta": -0.5711855339647588
+        },
+        {
+          "seed": 92003,
+          "original_mean": 0.23616116416155658,
+          "exhaustive_mean": 0.3919731678711088,
+          "delta": 0.15581200370955223
+        },
+        {
+          "seed": 92004,
+          "original_mean": 0.6484758542613166,
+          "exhaustive_mean": 0.4180764530847788,
+          "delta": -0.2303994011765378
+        },
+        {
+          "seed": 92005,
+          "original_mean": 0.3540646961392711,
+          "exhaustive_mean": 0.349160157752895,
+          "delta": -0.004904538386376112
+        }
+      ],
+      "original_mean": 0.47509700474701644,
+      "exhaustive_mean": 0.40247408102598425,
+      "original_poor_fit": 0,
+      "exhaustive_poor_fit": 0,
+      "exhaustive_rounded_recovery": 25
+    },
+    {
+      "task": "D",
+      "budget": 2,
+      "n_policy_conditions": 100,
+      "unique_observations": 70,
+      "seed_means": [
+        {
+          "seed": 92001,
+          "original_mean": 0.01017359078866856,
+          "exhaustive_mean": 0.010716727990831208,
+          "delta": 0.0005431372021626468
+        },
+        {
+          "seed": 92002,
+          "original_mean": 0.028831729998579247,
+          "exhaustive_mean": 0.003972351835729568,
+          "delta": -0.02485937816284968
+        },
+        {
+          "seed": 92003,
+          "original_mean": 0.012562315791726536,
+          "exhaustive_mean": 0.015471932811373879,
+          "delta": 0.0029096170196473425
+        },
+        {
+          "seed": 92004,
+          "original_mean": 0.028542138545444747,
+          "exhaustive_mean": 0.028777230114618413,
+          "delta": 0.0002350915691736663
+        },
+        {
+          "seed": 92005,
+          "original_mean": 0.013208359970850861,
+          "exhaustive_mean": 0.02695119528205528,
+          "delta": 0.013742835311204418
+        }
+      ],
+      "original_mean": 0.018663627019053986,
+      "exhaustive_mean": 0.017177887606921675,
+      "original_poor_fit": 0,
+      "exhaustive_poor_fit": 0,
+      "exhaustive_rounded_recovery": 50
+    },
+    {
+      "task": "D",
+      "budget": 8,
+      "n_policy_conditions": 100,
+      "unique_observations": 93,
+      "seed_means": [
+        {
+          "seed": 92001,
+          "original_mean": 0.0020584106871457107,
+          "exhaustive_mean": 0.0015865043992977796,
+          "delta": -0.00047190628784793106
+        },
+        {
+          "seed": 92002,
+          "original_mean": 0.0035116051531833155,
+          "exhaustive_mean": 0.0015614571352694897,
+          "delta": -0.0019501480179138259
+        },
+        {
+          "seed": 92003,
+          "original_mean": 0.005373113586140009,
+          "exhaustive_mean": 0.0014993904451745406,
+          "delta": -0.003873723140965468
+        },
+        {
+          "seed": 92004,
+          "original_mean": 0.003207112393774046,
+          "exhaustive_mean": 0.0032138619779751485,
+          "delta": 6.749584201102329e-06
+        },
+        {
+          "seed": 92005,
+          "original_mean": 0.0021857127742180025,
+          "exhaustive_mean": 0.0013635147156347304,
+          "delta": -0.000822198058583272
+        }
+      ],
+      "original_mean": 0.003267190918892217,
+      "exhaustive_mean": 0.0018449457346703382,
+      "original_poor_fit": 0,
+      "exhaustive_poor_fit": 0,
+      "exhaustive_rounded_recovery": 50
+    },
+    {
+      "task": "E",
+      "budget": 0,
+      "n_policy_conditions": 100,
+      "unique_observations": 20,
+      "seed_means": [
+        {
+          "seed": 92001,
+          "original_mean": 0.6613935497349295,
+          "exhaustive_mean": 0.06981575448705635,
+          "delta": -0.5915777952478731
+        },
+        {
+          "seed": 92002,
+          "original_mean": 0.5923727222427542,
+          "exhaustive_mean": 0.11071169821698086,
+          "delta": -0.4816610240257733
+        },
+        {
+          "seed": 92003,
+          "original_mean": 0.4422797404978473,
+          "exhaustive_mean": 0.22222555675260974,
+          "delta": -0.22005418374523755
+        },
+        {
+          "seed": 92004,
+          "original_mean": 0.42160195276449847,
+          "exhaustive_mean": 0.2761307564616165,
+          "delta": -0.14547119630288197
+        },
+        {
+          "seed": 92005,
+          "original_mean": 0.5005825023647591,
+          "exhaustive_mean": 0.27485074355827865,
+          "delta": -0.22573175880648044
+        }
+      ],
+      "original_mean": 0.5236460935209578,
+      "exhaustive_mean": 0.1907469018953085,
+      "original_poor_fit": 0,
+      "exhaustive_poor_fit": 0,
+      "exhaustive_rounded_recovery": 25
+    },
+    {
+      "task": "E",
+      "budget": 2,
+      "n_policy_conditions": 100,
+      "unique_observations": 63,
+      "seed_means": [
+        {
+          "seed": 92001,
+          "original_mean": 0.15618657336952074,
+          "exhaustive_mean": 0.00994698396007331,
+          "delta": -0.14623958940944742
+        },
+        {
+          "seed": 92002,
+          "original_mean": 0.1250685979668563,
+          "exhaustive_mean": 0.0017027495479994361,
+          "delta": -0.12336584841885685
+        },
+        {
+          "seed": 92003,
+          "original_mean": 0.14909602109825232,
+          "exhaustive_mean": 0.0018582894633862642,
+          "delta": -0.14723773163486606
+        },
+        {
+          "seed": 92004,
+          "original_mean": 0.16870924036466095,
+          "exhaustive_mean": 0.010220405588748803,
+          "delta": -0.15848883477591214
+        },
+        {
+          "seed": 92005,
+          "original_mean": 0.15189651764612552,
+          "exhaustive_mean": 0.014077659670914112,
+          "delta": -0.1378188579752114
+        }
+      ],
+      "original_mean": 0.15019139008908314,
+      "exhaustive_mean": 0.007561217646224386,
+      "original_poor_fit": 3,
+      "exhaustive_poor_fit": 0,
+      "exhaustive_rounded_recovery": 50
+    },
+    {
+      "task": "E",
+      "budget": 8,
+      "n_policy_conditions": 100,
+      "unique_observations": 86,
+      "seed_means": [
+        {
+          "seed": 92001,
+          "original_mean": 0.02647519909855687,
+          "exhaustive_mean": 0.0012381881337480383,
+          "delta": -0.02523701096480883
+        },
+        {
+          "seed": 92002,
+          "original_mean": 0.023494426737342613,
+          "exhaustive_mean": 0.0010356934454533201,
+          "delta": -0.022458733291889292
+        },
+        {
+          "seed": 92003,
+          "original_mean": 0.04114998854216996,
+          "exhaustive_mean": 0.0013137603673845082,
+          "delta": -0.03983622817478545
+        },
+        {
+          "seed": 92004,
+          "original_mean": 0.02690361550202842,
+          "exhaustive_mean": 0.0009044051288910613,
+          "delta": -0.02599921037313736
+        },
+        {
+          "seed": 92005,
+          "original_mean": 0.041416741689451836,
+          "exhaustive_mean": 0.0013563239422341282,
+          "delta": -0.040060417747217705
+        }
+      ],
+      "original_mean": 0.03188799431390994,
+      "exhaustive_mean": 0.0011696742035422112,
+      "original_poor_fit": 54,
+      "exhaustive_poor_fit": 0,
+      "exhaustive_rounded_recovery": 50
+    },
+    {
+      "task": "F",
+      "budget": 0,
+      "n_policy_conditions": 100,
+      "unique_observations": 20,
+      "seed_means": [
+        {
+          "seed": 92001,
+          "original_mean": 0.5442436646413562,
+          "exhaustive_mean": 0.23483837831830465,
+          "delta": -0.30940528632305153
+        },
+        {
+          "seed": 92002,
+          "original_mean": 0.7901348227182383,
+          "exhaustive_mean": 0.1690362372645042,
+          "delta": -0.6210985854537341
+        },
+        {
+          "seed": 92003,
+          "original_mean": 0.17650443814411004,
+          "exhaustive_mean": 0.22250499307090132,
+          "delta": 0.04600055492679128
+        },
+        {
+          "seed": 92004,
+          "original_mean": 0.18604297572113432,
+          "exhaustive_mean": 0.23719529416933244,
+          "delta": 0.05115231844819812
+        },
+        {
+          "seed": 92005,
+          "original_mean": 0.16110349811432684,
+          "exhaustive_mean": 0.1644916547990459,
+          "delta": 0.0033881566847190625
+        }
+      ],
+      "original_mean": 0.3716058798678331,
+      "exhaustive_mean": 0.20561331152441778,
+      "original_poor_fit": 0,
+      "exhaustive_poor_fit": 0,
+      "exhaustive_rounded_recovery": 0
+    },
+    {
+      "task": "F",
+      "budget": 2,
+      "n_policy_conditions": 100,
+      "unique_observations": 60,
+      "seed_means": [
+        {
+          "seed": 92001,
+          "original_mean": 0.04840649396248313,
+          "exhaustive_mean": 0.018849256381801585,
+          "delta": -0.029557237580681545
+        },
+        {
+          "seed": 92002,
+          "original_mean": 0.025883376446368834,
+          "exhaustive_mean": 0.024476660943670327,
+          "delta": -0.0014067155026985072
+        },
+        {
+          "seed": 92003,
+          "original_mean": 0.02914895716266805,
+          "exhaustive_mean": 0.02727220132080551,
+          "delta": -0.0018767558418625388
+        },
+        {
+          "seed": 92004,
+          "original_mean": 0.057117549854951696,
+          "exhaustive_mean": 0.054014662914496726,
+          "delta": -0.00310288694045497
+        },
+        {
+          "seed": 92005,
+          "original_mean": 0.025675935651200958,
+          "exhaustive_mean": 0.02591496935427238,
+          "delta": 0.00023903370307142013
+        }
+      ],
+      "original_mean": 0.03724646261553454,
+      "exhaustive_mean": 0.03010555018300931,
+      "original_poor_fit": 0,
+      "exhaustive_poor_fit": 0,
+      "exhaustive_rounded_recovery": 0
+    },
+    {
+      "task": "F",
+      "budget": 8,
+      "n_policy_conditions": 100,
+      "unique_observations": 88,
+      "seed_means": [
+        {
+          "seed": 92001,
+          "original_mean": 0.01149763206508276,
+          "exhaustive_mean": 0.012183868792966512,
+          "delta": 0.0006862367278837531
+        },
+        {
+          "seed": 92002,
+          "original_mean": 0.009527790544176826,
+          "exhaustive_mean": 0.010752109765871761,
+          "delta": 0.0012243192216949347
+        },
+        {
+          "seed": 92003,
+          "original_mean": 0.015517684035448228,
+          "exhaustive_mean": 0.01114575734024145,
+          "delta": -0.0043719266952067775
+        },
+        {
+          "seed": 92004,
+          "original_mean": 0.008524578304847014,
+          "exhaustive_mean": 0.010679638211259048,
+          "delta": 0.002155059906412035
+        },
+        {
+          "seed": 92005,
+          "original_mean": 0.010103252058303215,
+          "exhaustive_mean": 0.011419422731574102,
+          "delta": 0.0013161706732708871
+        }
+      ],
+      "original_mean": 0.011034187401571607,
+      "exhaustive_mean": 0.011236159368382575,
+      "original_poor_fit": 48,
+      "exhaustive_poor_fit": 50,
+      "exhaustive_rounded_recovery": 0
+    }
+  ],
+  "rows": 1200,
+  "unique_fits": 702
+}

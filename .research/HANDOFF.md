@@ -168,3 +168,11 @@ All expected IDs and500 file hashes checked; full scientificaudit stillPENDING.
 MainPID90656/session47505/monitor396 ended. Resource totals in notes/primary-
 confirmation-resources.json. NEXT checkpoint owned results/state, short T16
 search/prior runs, then strong100 by01:30. Audits/reporting must finish02:30.
+
+T16 numerical executions COMPLETE: search-diagnostic-0011200rows/702unique fits,
+25.983156s; prior-control-001300units,35.041585s,0executionfailures. Prior100
+unitIDs match acrossall3tiers, identical initial/evaluation hashes and verified
+artifact hashes: reports/audit/prior-pairing.json. Formal audits/replay PENDING.
+NEXT strong100 underfreezev3; other new research executions are complete.
+A recovery-note substring edit failed before checkpointing; the note was rewritten
+from current evidence. No numerical source/result was affected.

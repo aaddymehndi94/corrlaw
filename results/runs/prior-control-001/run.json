@@ -1,0 +1,35 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "corrlaw.prior_experiment",
+    "--config",
+    "configs/prior-control.json"
+  ],
+  "duration_seconds": 35.041585,
+  "ended_utc": "2026-09-22T00:15:20+00:00",
+  "error": null,
+  "freeze_id": "v3",
+  "git": {
+    "branch": "research/corrlaw-sprint-01",
+    "commit": "b957036b575afe34ce521ec9eb5707c144e0fb7b",
+    "working_tree_dirty": true
+  },
+  "log_path": "work/runs/prior-control-001/console.log",
+  "log_sha256": "6934c12632367176558db3207eab9b05b1034f6fe168dbeee02d97a38ae395db",
+  "phase": "development",
+  "pid": 96533,
+  "platform": "Darwin",
+  "purpose": "Frozen exploratory B comparison with no prior, zero-origin, and origin-plus-evenness priors shared across five policies",
+  "python": "3.14.5",
+  "result_validation": "NOT_REVIEWED",
+  "returncode": 0,
+  "run_cutoff_unix": 1790036685.8420138,
+  "run_id": "prior-control-001",
+  "schema_version": 1,
+  "started_utc": "2026-09-22T00:14:45+00:00",
+  "status": "completed",
+  "task": "T16",
+  "threads_requested": 4,
+  "timeout_seconds": 600.0
+}
