@@ -1,11 +1,12 @@
 # CorrLaw overnight study — in progress
 
-**Status at 22:47 UTC, 21 September 2026:** development and operational validation
-are complete; the frozen 500-trajectory PySR confirmation is running, with its first
-300 trajectories (three complete seeds) saved and no execution failures. Confirmation
-results have not yet been audited or interpreted. This is not the final report.
-New experiments stop at 01:30 UTC and the authorized work deadline is 02:30 UTC
-(08:00 IST, 22 September).
+**Status at 00:29 UTC, 22 September 2026:** the primary 500-trajectory PySR
+confirmation, 300 physical-prior trajectories, and 1,200-row exhaustive-search
+diagnostic have completed. Their full scientific audits remain pending. The final
+100-trajectory stronger-search comparison is running. Preliminary primary results
+are mixed across tasks; no final performance conclusion is asserted here.
+This is not the final report. New experiments stop at 01:30 UTC and the authorized
+work deadline is 02:30 UTC (08:00 IST, 22 September).
 
 The completed earlier finite-library report is preserved as
 [PILOT_REPORT.md](PILOT_REPORT.md). It found no mean-AUC advantage for augmented QBC

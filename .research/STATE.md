@@ -10,8 +10,11 @@ Search-diagnostic-001 COMPLETE1200rows/702unique fits in25.983156s.
 Prior-control-001 COMPLETE300units in35.041585s,0failures. All300file hashes and
 100cross-tier initial/evaluation pairs match:reports/audit/prior-pairing.json.
 Prior session54120 ENDED. All new scientific audits stillPENDING.
-NEXT: checkpoint T16 evidence, then strong100 underfreezev3 withtimeout5400,
-bounded by01:30UTC. After that ONLY audits/replays/reporting are required.
+T16 checkpointb78461f. Strong100 COMPLETE01:01:00UTC,0failures,2586.885349s.
+All100unit hashes match; freezev3stillverifies. Strong session19725/monitor430ENDED.
+All new research computations are COMPLETE. Next full primary scientificaudit,
+then strong/prior/searchaudits,exactreplays,renderer/finalreport/gate before02:30UTC.
+Draft:work/overnight-report-draft.md; search-objective derivation repeats exactly.
 Primary:CDEF,seeds93001–93005,widths0/.01,noise.01,all5policies/allcontrols=500.
 Strong:same tasks/seeds/policies,constrained width0,noise.01,100iterations=100.
 Then fullprimary/strong/prior/search audits, exactreplays, reportbundle/visual

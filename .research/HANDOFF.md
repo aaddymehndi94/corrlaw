@@ -8,11 +8,12 @@ Native goal active. Old finite-pilot completion does NOT finish this extension.
 ## Current milestone and exact next action
 
 Freeze v3 VERIFIED75 files at scientific input commit5e27579; metadata7f2f62a.
-ACTIVE primary: pysr-confirmation-v3-001, PID90656, execsession47505,
-started2026-09-21T21:14:39+00:00, timeout12600s, phaseconfirmation/freezev3.
-Command uses corrlaw.symbolic_experiment --config configs/pysr-confirmation-v3.json.
-Monitor completion; next strong100 before01:30UTC. Do not restart or duplicate it.
-The main study is now open: no scientific source/config edits or outcome-based tuning.
+Primary500, strong100, and T16 executions are COMPLETE; full audits are pending.
+Strong ended01:01:00UTC,2586.885349s,100/100,0failures; all100hashesmatch,
+freezev3verified. Execsession19725/PID97392/monitor430ENDED.
+NEXT checkpointstrong, then primaryfullaudit timeout5400,phaseaudit/freezev3;
+otheraudits/replays,renderer/finalreport/gate. Allnewresearchcomputationscomplete.
+No scientific source/config edits or outcome-based tuning.
 
 One heavy process, <=4 numerical threads, serial Julia. Do not edit frozen source,
 configs, tests, tools or scientific documents. Run IDs immutable; preserve failures.
@@ -176,3 +177,32 @@ artifact hashes: reports/audit/prior-pairing.json. Formal audits/replay PENDING.
 NEXT strong100 underfreezev3; other new research executions are complete.
 A recovery-note substring edit failed before checkpointing; the note was rewritten
 from current evidence. No numerical source/result was affected.
+
+STRONG ACTIVE: pysr-confirmation-strong-v3-001,execsession19725,PID97392,
+started2026-09-22T00:17:53+00:00,timeout5400 capped at01:30UTC. T16checkpointb78461f.
+Primary execution completed10674.665679s; all500hashes match andfreezev3verifies.
+Its fullwitness instrumentation total2342.023s (~39min), so allow a generous5400s
+primaryaudit timeout subject02:30harddeadline. Strong profile audit10took48s.
+During strong, only lightweight artifact reads/reportdrafts (no secondheavyprocess).
+Preauditprimarynumbers in work/preaudit-primary-summary.json are NOT finalclaims.
+
+Read-only draft work during strong:
+- work/overnight-report-draft.md is a substantive PREAUDIT draft with placeholders.
+  Must crosscheck all numbers against canonical audited summaries before using it.
+- work/preaudit-primary-controls.json and work/preaudit-prior-summary.json are
+  temporary read-only aggregates; canonical renderer comes after audits.
+- reports/audit/search-objective.json is1200paired recorded-objective rows, created
+  by notes/search-objective-check.py (outside frozeninputs), no refits. Repeated in
+  fresh process, bytes identical:search-objective-regeneration.json. Scientific
+  searchaudit stillpending. E lowerobjectivecounts80/80/68 per100 atq0/2/8; lower
+  hiddenerror90/98/75. Rowcountsarecorrelated, notreplications.
+- work/preaudit-confirmation-rational-case.json selectedposthoclargestFdiv/DoptAUC:
+  F93001width.01Dopt,AUC.789733,q2off4.105326,same.023975,spread1.515339.
+  Acceptedrationalexpression, retaineduntrimmed, notfalseconsensus/globalpoleproof.
+- A temporary prior read used nonexistent off_rmse_auc and failed before producing
+  summary; corrected toactual auc. No scientificsource orrunrecordchanged.
+
+Additional read-only objective interpretation: every lower-objective C/D/E record
+is also observationally admissible; E80/80/68counts allpass. Fq8has13lower-score
+rows butonly11admissible, so do NOTgeneralizealllower-scoreFfitsasusablealternatives.
+SelectedEq2isadmissible andobjective delta−1.4686017781589272e−6.

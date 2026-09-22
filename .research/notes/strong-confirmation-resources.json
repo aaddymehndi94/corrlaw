@@ -1,0 +1,7 @@
+{
+  "runtime_sum_seconds": 2583.8749009945896,
+  "fitting_sum_seconds": 2353.265803991584,
+  "augmentation_sum_seconds": 224.49572921684012,
+  "peak_rss_bytes": 1482293248,
+  "last10_runtime_mean": 29.682743158261292
+}

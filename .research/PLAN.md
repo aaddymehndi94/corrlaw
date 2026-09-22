@@ -31,6 +31,6 @@ remain blocked/incomplete. Label that scope honestly; do not mark skipped scienc
 | T12 | T11 | Same-thread watchdog and explicit overnight deadline | OVERNIGHT.json; queue delivery test; idle-only daemon; live PID in work/overnight-watchdog/pid | DONE |
 | T13 | T12 | Actual PySR five-policy active learner, tests and smoke | fair smoke001 valid: 4379 candidates/460 witnesses; fair replay001 exact | DONE |
 | T14 | T13 | Development/profiling and fresh frozen protocol | development360 and strong10 valid; exact strong replay;74 tests; freeze v3 verified75inputs at5e27579 | DONE |
-| T15 | T14 | Repeated PySR confirmation with all baselines and controls | primary500 complete/hash-checked; strong100 and scientific audits pending | ACTIVE |
+| T15 | T14 | Repeated PySR confirmation with all baselines and controls | primary500/strong100 complete/hash-checked,0failures; scientific audits pending | ACTIVE |
 | T16 | T13 | Search-failure and physical-prior diagnostics | search1200rows/702fits and prior300 complete; algebra/encoding verified; audits pending | ACTIVE |
-| T17 | T15,T16 | Artifact audit, reproduction, updated report and handoff | pending | NOT_STARTED |
+| T17 | T15,T16 | Artifact audit, reproduction, updated report and handoff | full audits starting; report draft prepared | ACTIVE |

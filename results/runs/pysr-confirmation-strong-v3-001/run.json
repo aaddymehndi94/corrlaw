@@ -1,0 +1,35 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "corrlaw.symbolic_experiment",
+    "--config",
+    "configs/pysr-confirmation-strong-v3.json"
+  ],
+  "duration_seconds": 2586.885349,
+  "ended_utc": "2026-09-22T01:01:00+00:00",
+  "error": null,
+  "freeze_id": "v3",
+  "git": {
+    "branch": "research/corrlaw-sprint-01",
+    "commit": "b78461fee6a042a826b980944dce65a67671c179",
+    "working_tree_dirty": true
+  },
+  "log_path": "work/runs/pysr-confirmation-strong-v3-001/console.log",
+  "log_sha256": "500dcb44bcce425e7d0bbd3332102143e6ba3025f1ffc76ae0a94f51fc93a7d8",
+  "phase": "confirmation",
+  "pid": 97392,
+  "platform": "Darwin",
+  "purpose": "Predeclared100-iteration sensitivity on100 fully paired noisy exact-preparation CDEF trajectories with all five policies",
+  "python": "3.14.5",
+  "result_validation": "NOT_REVIEWED",
+  "returncode": 0,
+  "run_cutoff_unix": 1790040600.0,
+  "run_id": "pysr-confirmation-strong-v3-001",
+  "schema_version": 1,
+  "started_utc": "2026-09-22T00:17:53+00:00",
+  "status": "completed",
+  "task": "T15",
+  "threads_requested": 4,
+  "timeout_seconds": 4326.670977115631
+}
