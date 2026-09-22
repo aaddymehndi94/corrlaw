@@ -3,8 +3,9 @@
 The declared experiment and validation scope is complete. No new scientific run
 started after the 01:30 UTC cutoff; the final experiment ended at 01:01:00 UTC.
 All subsequent numerical work was artifact audit, exact replay, or report rendering.
-The hard deadline is 02:30 UTC (08:00 IST). Operational shutdown and final local
-checkpoint are recorded in STATE/HANDOFF and watchdog-stop.json.
+The hard deadline is 02:30 UTC (08:00 IST). Scientific/report checkpoint6a05199 and numerical checkpointab6c751 are saved.
+Watchdog and scoped caffeinate shutdown passed at02:18:02UTC; see watchdog-stop.json.
+Final operational closure is recorded in STATE/HANDOFF and Git HEAD.
 
 ## Evidence checked
 

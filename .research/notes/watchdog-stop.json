@@ -1,0 +1,12 @@
+{
+  "verified_utc": "2026-09-22T02:18:02.112766+00:00",
+  "watchdog_pid": 85026,
+  "caffeinate_pid": 85027,
+  "both_processes_exited": true,
+  "stop_record": {
+    "utc": "2026-09-22T02:18:00.565705+00:00",
+    "reason": "stop_file"
+  },
+  "accepted_queue_reminders": 4,
+  "scope": "User-requested same-thread watchdog and scoped sleep-prevention ended after completion; no queued-message cancellation API was used. Stale reminders must respect completed STATE/HANDOFF."
+}
