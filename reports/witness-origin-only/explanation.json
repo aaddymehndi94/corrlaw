@@ -1,0 +1,57 @@
+{
+  "source_run": "results/runs/prior-control-001/zero_origin",
+  "unit_id": "B-s301-w0-n0-constrained-augmented_qbc",
+  "budget": 0,
+  "diagnostic": "ambiguity_witness_found",
+  "interpretation": "Empirical ambiguity under the saved grammar and tolerances; not verified uniqueness.",
+  "witness_count": 8,
+  "base_minimum_on_public_probes": 0.0015315772609080461,
+  "alternative_minimum_on_public_probes": -0.10338567870925985,
+  "base_nonnegative_on_public_probes": true,
+  "alternative_nonnegative_on_public_probes": false,
+  "positivity_note": "Nonnegativity was not a supplied primary-study prior; finite probes do not prove global positivity.",
+  "observed_rmse": {
+    "base": {
+      "fitting": 6.638168205731153e-16,
+      "calibration": 6.922220526417403e-16
+    },
+    "alternative": {
+      "fitting": 7.141332153553285e-16,
+      "calibration": 7.184352615899217e-16
+    }
+  },
+  "witness_index": 0,
+  "base_expression": "(2)*x0**(0)*x1**(2) + (1)*x0**(2)*x1**(0)",
+  "alternative_expression": "(0.772256357175)*x0**(1)*x1**(0) + (2)*x0**(0)*x1**(2) + (1)*x0**(2)*x1**(0) + (-0.772256357175)*x0**(1)*x1**(2) + (-0.772256357175)*x0**(3)*x1**(0)",
+  "witness_errors": [
+    7.141332153553285e-16,
+    7.184352615899217e-16,
+    0.0,
+    1.0261354743695193e-30
+  ],
+  "relation_observed_to_probe_ratio": 1.7874778072045404e-16,
+  "alpha": -1.0,
+  "maximum_disagreement_query": {
+    "query_id": 1331,
+    "x": [
+      -1.4785635252523035,
+      1.444997045616446
+    ],
+    "base_prediction": 6.362183021887036,
+    "alternative_prediction": 10.100724893178995
+  },
+  "actual_next_query": {
+    "query_id": 1331,
+    "x": [
+      -1.4785635252523035,
+      1.444997045616446
+    ],
+    "label": 6.362183021887033,
+    "noise_realization_id": "1:1:301:0:0:0:query:1331",
+    "acquisition_score": 6.407139525243108
+  },
+  "supplied_prior": "zero_origin",
+  "total_measured_labels": 192,
+  "selection_rule": "first accepted witness, never selected by hidden prediction error",
+  "figure_status": "rendered"
+}

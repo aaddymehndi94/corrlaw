@@ -1,0 +1,9 @@
+{
+  "source_run": "results/runs/pysr-confirmation-v3-001",
+  "unit_id": "C-s93001-w0-n0.01-constrained-augmented_qbc",
+  "budget": 0,
+  "diagnostic": "no_witness_within_search_budget",
+  "interpretation": "Empirical ambiguity under the saved grammar and tolerances; not verified uniqueness.",
+  "witness_count": 0,
+  "explanation": "No accepted witness in the saved search; this does not establish uniqueness."
+}

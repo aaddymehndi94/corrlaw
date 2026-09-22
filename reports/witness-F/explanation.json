@@ -1,0 +1,57 @@
+{
+  "source_run": "results/runs/pysr-confirmation-v3-001",
+  "unit_id": "F-s93001-w0-n0.01-constrained-augmented_qbc",
+  "budget": 0,
+  "diagnostic": "ambiguity_witness_found",
+  "interpretation": "Empirical ambiguity under the saved grammar and tolerances; not verified uniqueness.",
+  "witness_count": 48,
+  "base_minimum_on_public_probes": 0.25102562776292925,
+  "alternative_minimum_on_public_probes": -3.0092857927126153,
+  "base_nonnegative_on_public_probes": true,
+  "alternative_nonnegative_on_public_probes": false,
+  "positivity_note": "Nonnegativity was not a supplied primary-study prior; finite probes do not prove global positivity.",
+  "observed_rmse": {
+    "base": {
+      "fitting": 0.00889462677996434,
+      "calibration": 0.01010418255566036
+    },
+    "alternative": {
+      "fitting": 0.008894626779964363,
+      "calibration": 0.010104182555660354
+    }
+  },
+  "witness_index": 0,
+  "base_expression": "0.49974817301777246*x0",
+  "alternative_expression": "0.59690614683695335*x0**2/x1 + 0.49974817301777246*x0 + 0.25040228486072434*x1 - 0.84730843169767757*x1**2/x0",
+  "witness_errors": [
+    0.008894626779964363,
+    0.010104182555660354,
+    0.0,
+    0.00018120889067297022
+  ],
+  "relation_observed_to_probe_ratio": 1.0229476704359799e-16,
+  "alpha": -1.0,
+  "maximum_disagreement_query": {
+    "query_id": 1530,
+    "x": [
+      0.5154848489467778,
+      1.493691153042023
+    ],
+    "base_prediction": 0.25761261147949466,
+    "alternative_prediction": -2.9294820897460747
+  },
+  "actual_next_query": {
+    "query_id": 1518,
+    "x": [
+      1.4963648575070434,
+      0.5095922296007998
+    ],
+    "label": 0.36760202301994266,
+    "noise_realization_id": "2:5:93001:0:100:0:query:1518",
+    "acquisition_score": 3.2737102307752037
+  },
+  "supplied_prior": "incomplete generic priors only",
+  "total_measured_labels": 192,
+  "selection_rule": "first accepted witness, never selected by hidden prediction error",
+  "figure_status": "rendered"
+}

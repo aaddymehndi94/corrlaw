@@ -1,0 +1,626 @@
+{
+  "scope": "Post-hoc read-only comparison of complete eight-query histories; canonical acquisition summaries remain primary. Full unit science audit separate.",
+  "source_manifest_sha256": "b2cd141d205cc0f711c9c6dd1ef0581b8ecfe02a2064d056de2db2d513e34e1c",
+  "rows": [
+    {
+      "task": "C",
+      "seed": 93001,
+      "augmented_unit": "C-s93001-w0-n0.01-constrained-augmented_qbc",
+      "ordinary_unit": "C-s93001-w0-n0.01-constrained-qbc",
+      "augmented_query_ids": [
+        2031,
+        665,
+        2039,
+        1372,
+        340,
+        1875,
+        426,
+        1008
+      ],
+      "ordinary_query_ids": [
+        2031,
+        665,
+        2039,
+        1372,
+        340,
+        1875,
+        426,
+        1008
+      ],
+      "same_query_ids": true,
+      "same_auc": true,
+      "augmented_auc": 0.10377995367980955,
+      "ordinary_auc": 0.10377995367980955,
+      "initial_added_witnesses": 12
+    },
+    {
+      "task": "C",
+      "seed": 93002,
+      "augmented_unit": "C-s93002-w0-n0.01-constrained-augmented_qbc",
+      "ordinary_unit": "C-s93002-w0-n0.01-constrained-qbc",
+      "augmented_query_ids": [
+        1795,
+        1819,
+        423,
+        17,
+        124,
+        1506,
+        1803,
+        999
+      ],
+      "ordinary_query_ids": [
+        1795,
+        1819,
+        423,
+        17,
+        124,
+        1506,
+        1803,
+        999
+      ],
+      "same_query_ids": true,
+      "same_auc": true,
+      "augmented_auc": 0.06550584571955093,
+      "ordinary_auc": 0.06550584571955093,
+      "initial_added_witnesses": 48
+    },
+    {
+      "task": "C",
+      "seed": 93003,
+      "augmented_unit": "C-s93003-w0-n0.01-constrained-augmented_qbc",
+      "ordinary_unit": "C-s93003-w0-n0.01-constrained-qbc",
+      "augmented_query_ids": [
+        346,
+        1569,
+        480,
+        1199,
+        1946,
+        535,
+        968,
+        1680
+      ],
+      "ordinary_query_ids": [
+        346,
+        1569,
+        480,
+        1199,
+        1946,
+        535,
+        968,
+        1680
+      ],
+      "same_query_ids": true,
+      "same_auc": true,
+      "augmented_auc": 1.5360204177787693,
+      "ordinary_auc": 1.5360204177787693,
+      "initial_added_witnesses": 48
+    },
+    {
+      "task": "C",
+      "seed": 93004,
+      "augmented_unit": "C-s93004-w0-n0.01-constrained-augmented_qbc",
+      "ordinary_unit": "C-s93004-w0-n0.01-constrained-qbc",
+      "augmented_query_ids": [
+        1852,
+        693,
+        35,
+        1580,
+        428,
+        1698,
+        1973,
+        1433
+      ],
+      "ordinary_query_ids": [
+        1852,
+        693,
+        35,
+        1580,
+        428,
+        1698,
+        1973,
+        1433
+      ],
+      "same_query_ids": true,
+      "same_auc": true,
+      "augmented_auc": 0.09614932440909528,
+      "ordinary_auc": 0.09614932440909528,
+      "initial_added_witnesses": 48
+    },
+    {
+      "task": "C",
+      "seed": 93005,
+      "augmented_unit": "C-s93005-w0-n0.01-constrained-augmented_qbc",
+      "ordinary_unit": "C-s93005-w0-n0.01-constrained-qbc",
+      "augmented_query_ids": [
+        1598,
+        226,
+        1281,
+        779,
+        1103,
+        1913,
+        1980,
+        1397
+      ],
+      "ordinary_query_ids": [
+        1598,
+        226,
+        1281,
+        779,
+        1103,
+        1913,
+        1980,
+        1397
+      ],
+      "same_query_ids": true,
+      "same_auc": true,
+      "augmented_auc": 0.007667433438327582,
+      "ordinary_auc": 0.007667433438327582,
+      "initial_added_witnesses": 48
+    },
+    {
+      "task": "D",
+      "seed": 93001,
+      "augmented_unit": "D-s93001-w0-n0.01-constrained-augmented_qbc",
+      "ordinary_unit": "D-s93001-w0-n0.01-constrained-qbc",
+      "augmented_query_ids": [
+        1693,
+        1807,
+        1891,
+        386,
+        812,
+        1808,
+        59,
+        1002
+      ],
+      "ordinary_query_ids": [
+        1807,
+        1693,
+        98,
+        386,
+        435,
+        151,
+        485,
+        1932
+      ],
+      "same_query_ids": false,
+      "same_auc": false,
+      "augmented_auc": 0.026833428711328936,
+      "ordinary_auc": 0.04028520026594322,
+      "initial_added_witnesses": 48
+    },
+    {
+      "task": "D",
+      "seed": 93002,
+      "augmented_unit": "D-s93002-w0-n0.01-constrained-augmented_qbc",
+      "ordinary_unit": "D-s93002-w0-n0.01-constrained-qbc",
+      "augmented_query_ids": [
+        1411,
+        657,
+        304,
+        1769,
+        1284,
+        1261,
+        1121,
+        962
+      ],
+      "ordinary_query_ids": [
+        1411,
+        304,
+        828,
+        372,
+        480,
+        606,
+        1445,
+        657
+      ],
+      "same_query_ids": false,
+      "same_auc": false,
+      "augmented_auc": 0.06041412339006282,
+      "ordinary_auc": 0.06343353377652161,
+      "initial_added_witnesses": 48
+    },
+    {
+      "task": "D",
+      "seed": 93003,
+      "augmented_unit": "D-s93003-w0-n0.01-constrained-augmented_qbc",
+      "ordinary_unit": "D-s93003-w0-n0.01-constrained-qbc",
+      "augmented_query_ids": [
+        1109,
+        1516,
+        306,
+        1797,
+        1801,
+        1630,
+        395,
+        1658
+      ],
+      "ordinary_query_ids": [
+        1109,
+        128,
+        316,
+        1630,
+        395,
+        1214,
+        470,
+        737
+      ],
+      "same_query_ids": false,
+      "same_auc": false,
+      "augmented_auc": 0.02862676942133746,
+      "ordinary_auc": 0.20775316769289853,
+      "initial_added_witnesses": 0
+    },
+    {
+      "task": "D",
+      "seed": 93004,
+      "augmented_unit": "D-s93004-w0-n0.01-constrained-augmented_qbc",
+      "ordinary_unit": "D-s93004-w0-n0.01-constrained-qbc",
+      "augmented_query_ids": [
+        280,
+        205,
+        1689,
+        1249,
+        1987,
+        1020,
+        1611,
+        1679
+      ],
+      "ordinary_query_ids": [
+        280,
+        1689,
+        1515,
+        205,
+        972,
+        1249,
+        1890,
+        1034
+      ],
+      "same_query_ids": false,
+      "same_auc": false,
+      "augmented_auc": 0.002667673349825579,
+      "ordinary_auc": 0.0024713329937388197,
+      "initial_added_witnesses": 0
+    },
+    {
+      "task": "D",
+      "seed": 93005,
+      "augmented_unit": "D-s93005-w0-n0.01-constrained-augmented_qbc",
+      "ordinary_unit": "D-s93005-w0-n0.01-constrained-qbc",
+      "augmented_query_ids": [
+        1207,
+        510,
+        465,
+        688,
+        505,
+        643,
+        1070,
+        1413
+      ],
+      "ordinary_query_ids": [
+        1207,
+        510,
+        465,
+        688,
+        505,
+        643,
+        1070,
+        1413
+      ],
+      "same_query_ids": true,
+      "same_auc": true,
+      "augmented_auc": 0.002079707003272458,
+      "ordinary_auc": 0.002079707003272458,
+      "initial_added_witnesses": 0
+    },
+    {
+      "task": "E",
+      "seed": 93001,
+      "augmented_unit": "E-s93001-w0-n0.01-constrained-augmented_qbc",
+      "ordinary_unit": "E-s93001-w0-n0.01-constrained-qbc",
+      "augmented_query_ids": [
+        1828,
+        1390,
+        1224,
+        1716,
+        1140,
+        660,
+        107,
+        1821
+      ],
+      "ordinary_query_ids": [
+        1828,
+        1390,
+        1224,
+        1716,
+        1140,
+        660,
+        107,
+        1821
+      ],
+      "same_query_ids": true,
+      "same_auc": true,
+      "augmented_auc": 0.04396304081164108,
+      "ordinary_auc": 0.04396304081164108,
+      "initial_added_witnesses": 0
+    },
+    {
+      "task": "E",
+      "seed": 93002,
+      "augmented_unit": "E-s93002-w0-n0.01-constrained-augmented_qbc",
+      "ordinary_unit": "E-s93002-w0-n0.01-constrained-qbc",
+      "augmented_query_ids": [
+        585,
+        1452,
+        1634,
+        1913,
+        1250,
+        1351,
+        1303,
+        1609
+      ],
+      "ordinary_query_ids": [
+        585,
+        1452,
+        1634,
+        1913,
+        1250,
+        1351,
+        1303,
+        1609
+      ],
+      "same_query_ids": true,
+      "same_auc": true,
+      "augmented_auc": 0.0028140411147528537,
+      "ordinary_auc": 0.0028140411147528537,
+      "initial_added_witnesses": 48
+    },
+    {
+      "task": "E",
+      "seed": 93003,
+      "augmented_unit": "E-s93003-w0-n0.01-constrained-augmented_qbc",
+      "ordinary_unit": "E-s93003-w0-n0.01-constrained-qbc",
+      "augmented_query_ids": [
+        1560,
+        67,
+        1385,
+        1070,
+        1290,
+        31,
+        948,
+        547
+      ],
+      "ordinary_query_ids": [
+        1560,
+        67,
+        1385,
+        1070,
+        1290,
+        31,
+        948,
+        547
+      ],
+      "same_query_ids": true,
+      "same_auc": true,
+      "augmented_auc": 0.044202000292274723,
+      "ordinary_auc": 0.044202000292274723,
+      "initial_added_witnesses": 48
+    },
+    {
+      "task": "E",
+      "seed": 93004,
+      "augmented_unit": "E-s93004-w0-n0.01-constrained-augmented_qbc",
+      "ordinary_unit": "E-s93004-w0-n0.01-constrained-qbc",
+      "augmented_query_ids": [
+        1949,
+        266,
+        1552,
+        202,
+        1798,
+        130,
+        1745,
+        1709
+      ],
+      "ordinary_query_ids": [
+        1949,
+        266,
+        1552,
+        202,
+        1798,
+        130,
+        1745,
+        1709
+      ],
+      "same_query_ids": true,
+      "same_auc": true,
+      "augmented_auc": 0.0027472173611608735,
+      "ordinary_auc": 0.0027472173611608735,
+      "initial_added_witnesses": 48
+    },
+    {
+      "task": "E",
+      "seed": 93005,
+      "augmented_unit": "E-s93005-w0-n0.01-constrained-augmented_qbc",
+      "ordinary_unit": "E-s93005-w0-n0.01-constrained-qbc",
+      "augmented_query_ids": [
+        972,
+        134,
+        927,
+        270,
+        1222,
+        506,
+        1725,
+        823
+      ],
+      "ordinary_query_ids": [
+        972,
+        134,
+        927,
+        270,
+        1222,
+        506,
+        1725,
+        823
+      ],
+      "same_query_ids": true,
+      "same_auc": true,
+      "augmented_auc": 0.1468737740788464,
+      "ordinary_auc": 0.1468737740788464,
+      "initial_added_witnesses": 32
+    },
+    {
+      "task": "F",
+      "seed": 93001,
+      "augmented_unit": "F-s93001-w0-n0.01-constrained-augmented_qbc",
+      "ordinary_unit": "F-s93001-w0-n0.01-constrained-qbc",
+      "augmented_query_ids": [
+        1518,
+        1530,
+        569,
+        243,
+        1133,
+        245,
+        1083,
+        1884
+      ],
+      "ordinary_query_ids": [
+        1518,
+        1530,
+        569,
+        243,
+        1133,
+        245,
+        1083,
+        1884
+      ],
+      "same_query_ids": true,
+      "same_auc": true,
+      "augmented_auc": 0.03175110696264444,
+      "ordinary_auc": 0.03175110696264444,
+      "initial_added_witnesses": 0
+    },
+    {
+      "task": "F",
+      "seed": 93002,
+      "augmented_unit": "F-s93002-w0-n0.01-constrained-augmented_qbc",
+      "ordinary_unit": "F-s93002-w0-n0.01-constrained-qbc",
+      "augmented_query_ids": [
+        8,
+        226,
+        804,
+        553,
+        574,
+        2011,
+        1198,
+        1371
+      ],
+      "ordinary_query_ids": [
+        8,
+        226,
+        804,
+        553,
+        574,
+        2011,
+        1198,
+        1371
+      ],
+      "same_query_ids": true,
+      "same_auc": true,
+      "augmented_auc": 0.021501425337099846,
+      "ordinary_auc": 0.021501425337099846,
+      "initial_added_witnesses": 48
+    },
+    {
+      "task": "F",
+      "seed": 93003,
+      "augmented_unit": "F-s93003-w0-n0.01-constrained-augmented_qbc",
+      "ordinary_unit": "F-s93003-w0-n0.01-constrained-qbc",
+      "augmented_query_ids": [
+        2035,
+        66,
+        1334,
+        1720,
+        1658,
+        321,
+        1981,
+        286
+      ],
+      "ordinary_query_ids": [
+        2035,
+        66,
+        1334,
+        1720,
+        1658,
+        321,
+        1981,
+        286
+      ],
+      "same_query_ids": true,
+      "same_auc": true,
+      "augmented_auc": 0.010980398315147464,
+      "ordinary_auc": 0.010980398315147464,
+      "initial_added_witnesses": 48
+    },
+    {
+      "task": "F",
+      "seed": 93004,
+      "augmented_unit": "F-s93004-w0-n0.01-constrained-augmented_qbc",
+      "ordinary_unit": "F-s93004-w0-n0.01-constrained-qbc",
+      "augmented_query_ids": [
+        1402,
+        1474,
+        1144,
+        1877,
+        1934,
+        1300,
+        672,
+        1149
+      ],
+      "ordinary_query_ids": [
+        1402,
+        1474,
+        1144,
+        1877,
+        1934,
+        1300,
+        672,
+        1149
+      ],
+      "same_query_ids": true,
+      "same_auc": true,
+      "augmented_auc": 0.03133846135145597,
+      "ordinary_auc": 0.03133846135145597,
+      "initial_added_witnesses": 0
+    },
+    {
+      "task": "F",
+      "seed": 93005,
+      "augmented_unit": "F-s93005-w0-n0.01-constrained-augmented_qbc",
+      "ordinary_unit": "F-s93005-w0-n0.01-constrained-qbc",
+      "augmented_query_ids": [
+        1445,
+        1996,
+        856,
+        1418,
+        95,
+        309,
+        1741,
+        1980
+      ],
+      "ordinary_query_ids": [
+        1445,
+        1996,
+        856,
+        1418,
+        95,
+        309,
+        1741,
+        1980
+      ],
+      "same_query_ids": true,
+      "same_auc": true,
+      "augmented_auc": 0.021540480378348926,
+      "ordinary_auc": 0.021540480378348926,
+      "initial_added_witnesses": 0
+    }
+  ]
+}

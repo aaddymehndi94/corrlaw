@@ -1,0 +1,559 @@
+{
+  "source_run": "results/runs/prior-control-001/none",
+  "units": 100,
+  "failed": [],
+  "summaries": [
+    {
+      "task": "B",
+      "control": "constrained",
+      "policy": "augmented_qbc",
+      "seeds": [
+        301,
+        302,
+        303,
+        304,
+        305
+      ],
+      "units": 20,
+      "auc_mean": 0.0762488727881906,
+      "auc_seed_values": [
+        0.05374383636732846,
+        0.0798057820028825,
+        0.08050627548375958,
+        0.05289188047449254,
+        0.11429658961248994
+      ],
+      "budgets": [
+        {
+          "budget": 0,
+          "mean": 0.7777384736739215,
+          "seed_min": 0.5524311989309643,
+          "seed_max": 1.107510229488742,
+          "same_rmse_mean": 0.0010813496525623177,
+          "false_consensus_count": 0,
+          "witness_count": 20,
+          "no_discriminating_count": 0,
+          "poor_fit_count": 0,
+          "rounded_recovery_count": 5,
+          "denominator": 20
+        },
+        {
+          "budget": 1,
+          "mean": 0.20899639091043945,
+          "seed_min": 0.001356086365914437,
+          "seed_max": 0.3495309426626419,
+          "same_rmse_mean": 0.0010631193186175743,
+          "false_consensus_count": 0,
+          "witness_count": 0,
+          "no_discriminating_count": 0,
+          "poor_fit_count": 0,
+          "rounded_recovery_count": 10,
+          "denominator": 20
+        },
+        {
+          "budget": 2,
+          "mean": 0.0022844114752712695,
+          "seed_min": 0.0016206077851738383,
+          "seed_max": 0.0029608922599418464,
+          "same_rmse_mean": 0.0011039699277140083,
+          "false_consensus_count": 0,
+          "witness_count": 0,
+          "no_discriminating_count": 0,
+          "poor_fit_count": 0,
+          "rounded_recovery_count": 10,
+          "denominator": 20
+        },
+        {
+          "budget": 4,
+          "mean": 0.0019173791546602224,
+          "seed_min": 0.0017466855148284316,
+          "seed_max": 0.0022749025974375457,
+          "same_rmse_mean": 0.0010634663031812161,
+          "false_consensus_count": 0,
+          "witness_count": 0,
+          "no_discriminating_count": 0,
+          "poor_fit_count": 0,
+          "rounded_recovery_count": 10,
+          "denominator": 20
+        },
+        {
+          "budget": 8,
+          "mean": 0.0014732999406185535,
+          "seed_min": 0.0009996465004179825,
+          "seed_max": 0.0017724453438522651,
+          "same_rmse_mean": 0.0010150351166624124,
+          "false_consensus_count": 0,
+          "witness_count": 0,
+          "no_discriminating_count": 0,
+          "poor_fit_count": 0,
+          "rounded_recovery_count": 10,
+          "denominator": 20
+        }
+      ],
+      "runtime_mean_seconds": 0.13269757715752348,
+      "augmentation_mean_seconds": 0.02021788350539282,
+      "peak_batch_rss_bytes": 101367808
+    },
+    {
+      "task": "B",
+      "control": "constrained",
+      "policy": "diversified_qbc",
+      "seeds": [
+        301,
+        302,
+        303,
+        304,
+        305
+      ],
+      "units": 20,
+      "auc_mean": 0.07631744582631403,
+      "auc_seed_values": [
+        0.05362153592054821,
+        0.08005523759768265,
+        0.08054101524081601,
+        0.05306534680380041,
+        0.11430409356872277
+      ],
+      "budgets": [
+        {
+          "budget": 0,
+          "mean": 0.7777384736739215,
+          "seed_min": 0.5524311989309643,
+          "seed_max": 1.107510229488742,
+          "same_rmse_mean": 0.0010813496525623177,
+          "false_consensus_count": 0,
+          "witness_count": 20,
+          "no_discriminating_count": 0,
+          "poor_fit_count": 0,
+          "rounded_recovery_count": 5,
+          "denominator": 20
+        },
+        {
+          "budget": 1,
+          "mean": 0.20920580792791266,
+          "seed_min": 0.0019227563916907717,
+          "seed_max": 0.3495309426626422,
+          "same_rmse_mean": 0.0011304436607860696,
+          "false_consensus_count": 0,
+          "witness_count": 0,
+          "no_discriminating_count": 0,
+          "poor_fit_count": 0,
+          "rounded_recovery_count": 10,
+          "denominator": 20
+        },
+        {
+          "budget": 2,
+          "mean": 0.002561339796205668,
+          "seed_min": 0.0020411077112203486,
+          "seed_max": 0.0035520302177378905,
+          "same_rmse_mean": 0.001076330519179803,
+          "false_consensus_count": 0,
+          "witness_count": 0,
+          "no_discriminating_count": 0,
+          "poor_fit_count": 0,
+          "rounded_recovery_count": 10,
+          "denominator": 20
+        },
+        {
+          "budget": 4,
+          "mean": 0.001901142012481341,
+          "seed_min": 0.0017177738420389287,
+          "seed_max": 0.002290880055278823,
+          "same_rmse_mean": 0.0010919317327482765,
+          "false_consensus_count": 0,
+          "witness_count": 0,
+          "no_discriminating_count": 0,
+          "poor_fit_count": 0,
+          "rounded_recovery_count": 10,
+          "denominator": 20
+        },
+        {
+          "budget": 8,
+          "mean": 0.0014595430569430746,
+          "seed_min": 0.0012306762149256792,
+          "seed_max": 0.0016906900487933443,
+          "same_rmse_mean": 0.0010125374826847413,
+          "false_consensus_count": 0,
+          "witness_count": 0,
+          "no_discriminating_count": 0,
+          "poor_fit_count": 0,
+          "rounded_recovery_count": 10,
+          "denominator": 20
+        }
+      ],
+      "runtime_mean_seconds": 0.2579355354653671,
+      "augmentation_mean_seconds": 0.02052160840248689,
+      "peak_batch_rss_bytes": 101253120
+    },
+    {
+      "task": "B",
+      "control": "constrained",
+      "policy": "qbc",
+      "seeds": [
+        301,
+        302,
+        303,
+        304,
+        305
+      ],
+      "units": 20,
+      "auc_mean": 0.07628094320116387,
+      "auc_seed_values": [
+        0.053743836367329385,
+        0.07980578200288264,
+        0.08066662754862503,
+        0.05289188047449256,
+        0.11429658961248974
+      ],
+      "budgets": [
+        {
+          "budget": 0,
+          "mean": 0.7777384736739215,
+          "seed_min": 0.5524311989309643,
+          "seed_max": 1.107510229488742,
+          "same_rmse_mean": 0.0010813496525623177,
+          "false_consensus_count": 3,
+          "witness_count": 20,
+          "no_discriminating_count": 0,
+          "poor_fit_count": 0,
+          "rounded_recovery_count": 5,
+          "denominator": 20
+        },
+        {
+          "budget": 1,
+          "mean": 0.20909247392275723,
+          "seed_min": 0.0013560863659135992,
+          "seed_max": 0.3495309426626422,
+          "same_rmse_mean": 0.0010688085495505078,
+          "false_consensus_count": 0,
+          "witness_count": 0,
+          "no_discriminating_count": 0,
+          "poor_fit_count": 0,
+          "rounded_recovery_count": 10,
+          "denominator": 20
+        },
+        {
+          "budget": 2,
+          "mean": 0.0023913983362502645,
+          "seed_min": 0.0019847212925363255,
+          "seed_max": 0.002960892259942438,
+          "same_rmse_mean": 0.001151580812377206,
+          "false_consensus_count": 0,
+          "witness_count": 0,
+          "no_discriminating_count": 0,
+          "poor_fit_count": 0,
+          "rounded_recovery_count": 10,
+          "denominator": 20
+        },
+        {
+          "budget": 4,
+          "mean": 0.0019173791546600472,
+          "seed_min": 0.0017466855148281207,
+          "seed_max": 0.0022749025974371285,
+          "same_rmse_mean": 0.0010634663031811047,
+          "false_consensus_count": 0,
+          "witness_count": 0,
+          "no_discriminating_count": 0,
+          "poor_fit_count": 0,
+          "rounded_recovery_count": 10,
+          "denominator": 20
+        },
+        {
+          "budget": 8,
+          "mean": 0.0014732999406187324,
+          "seed_min": 0.000999646500418428,
+          "seed_max": 0.0017724453438525394,
+          "same_rmse_mean": 0.0010150351166625512,
+          "false_consensus_count": 0,
+          "witness_count": 0,
+          "no_discriminating_count": 0,
+          "poor_fit_count": 0,
+          "rounded_recovery_count": 10,
+          "denominator": 20
+        }
+      ],
+      "runtime_mean_seconds": 0.1397030749125406,
+      "augmentation_mean_seconds": 0.02053834144026041,
+      "peak_batch_rss_bytes": 101187584
+    },
+    {
+      "task": "B",
+      "control": "constrained",
+      "policy": "random",
+      "seeds": [
+        301,
+        302,
+        303,
+        304,
+        305
+      ],
+      "units": 20,
+      "auc_mean": 0.12156682275726864,
+      "auc_seed_values": [
+        0.10822442537949428,
+        0.08242369771706702,
+        0.08796497349688606,
+        0.14696416855475725,
+        0.18225684863813857
+      ],
+      "budgets": [
+        {
+          "budget": 0,
+          "mean": 0.7777384736739215,
+          "seed_min": 0.5524311989309643,
+          "seed_max": 1.107510229488742,
+          "same_rmse_mean": 0.0010813496525623177,
+          "false_consensus_count": 3,
+          "witness_count": 20,
+          "no_discriminating_count": 0,
+          "poor_fit_count": 0,
+          "rounded_recovery_count": 5,
+          "denominator": 20
+        },
+        {
+          "budget": 1,
+          "mean": 0.4416922079152813,
+          "seed_min": 0.2814977666473814,
+          "seed_max": 0.7436205536321038,
+          "same_rmse_mean": 0.001309733066478378,
+          "false_consensus_count": 4,
+          "witness_count": 2,
+          "no_discriminating_count": 0,
+          "poor_fit_count": 1,
+          "rounded_recovery_count": 8,
+          "denominator": 20
+        },
+        {
+          "budget": 2,
+          "mean": 0.08248781241102751,
+          "seed_min": 0.0020423057327619704,
+          "seed_max": 0.3987704712675321,
+          "same_rmse_mean": 0.001927847784352138,
+          "false_consensus_count": 1,
+          "witness_count": 1,
+          "no_discriminating_count": 0,
+          "poor_fit_count": 1,
+          "rounded_recovery_count": 9,
+          "denominator": 20
+        },
+        {
+          "budget": 4,
+          "mean": 0.004000618736292361,
+          "seed_min": 0.0022282790625743625,
+          "seed_max": 0.00625429584878966,
+          "same_rmse_mean": 0.0008680264855909011,
+          "false_consensus_count": 0,
+          "witness_count": 0,
+          "no_discriminating_count": 0,
+          "poor_fit_count": 0,
+          "rounded_recovery_count": 10,
+          "denominator": 20
+        },
+        {
+          "budget": 8,
+          "mean": 0.003119781240244323,
+          "seed_min": 0.0025121541673658963,
+          "seed_max": 0.003990019547253815,
+          "same_rmse_mean": 0.001018422153625299,
+          "false_consensus_count": 0,
+          "witness_count": 0,
+          "no_discriminating_count": 0,
+          "poor_fit_count": 0,
+          "rounded_recovery_count": 10,
+          "denominator": 20
+        }
+      ],
+      "runtime_mean_seconds": 0.1597915061749518,
+      "augmentation_mean_seconds": 0.020922572957351802,
+      "peak_batch_rss_bytes": 101171200
+    },
+    {
+      "task": "B",
+      "control": "constrained",
+      "policy": "regularized_d_optimal",
+      "seeds": [
+        301,
+        302,
+        303,
+        304,
+        305
+      ],
+      "units": 20,
+      "auc_mean": 0.07630304522671086,
+      "auc_seed_values": [
+        0.0536985297649821,
+        0.08005971307655728,
+        0.08062000422718038,
+        0.052913397765893114,
+        0.11422358129894136
+      ],
+      "budgets": [
+        {
+          "budget": 0,
+          "mean": 0.7777384736739215,
+          "seed_min": 0.5524311989309643,
+          "seed_max": 1.107510229488742,
+          "same_rmse_mean": 0.0010813496525623177,
+          "false_consensus_count": 3,
+          "witness_count": 20,
+          "no_discriminating_count": 0,
+          "poor_fit_count": 0,
+          "rounded_recovery_count": 5,
+          "denominator": 20
+        },
+        {
+          "budget": 1,
+          "mean": 0.20916863168260535,
+          "seed_min": 0.001356086365914437,
+          "seed_max": 0.3495309426626419,
+          "same_rmse_mean": 0.0010692931298913835,
+          "false_consensus_count": 0,
+          "witness_count": 0,
+          "no_discriminating_count": 0,
+          "poor_fit_count": 0,
+          "rounded_recovery_count": 10,
+          "denominator": 20
+        },
+        {
+          "budget": 2,
+          "mean": 0.0025195776520236554,
+          "seed_min": 0.001984721292535437,
+          "seed_max": 0.0032779720331087368,
+          "same_rmse_mean": 0.0011567928197260464,
+          "false_consensus_count": 0,
+          "witness_count": 0,
+          "no_discriminating_count": 0,
+          "poor_fit_count": 0,
+          "rounded_recovery_count": 10,
+          "denominator": 20
+        },
+        {
+          "budget": 4,
+          "mean": 0.0019343536645373104,
+          "seed_min": 0.0016388409855810126,
+          "seed_max": 0.002300107479415424,
+          "same_rmse_mean": 0.0011051988019244324,
+          "false_consensus_count": 0,
+          "witness_count": 0,
+          "no_discriminating_count": 0,
+          "poor_fit_count": 0,
+          "rounded_recovery_count": 10,
+          "denominator": 20
+        },
+        {
+          "budget": 8,
+          "mean": 0.0014020329112366477,
+          "seed_min": 0.001268902004047257,
+          "seed_max": 0.0015488772991324683,
+          "same_rmse_mean": 0.001004432899729661,
+          "false_consensus_count": 0,
+          "witness_count": 0,
+          "no_discriminating_count": 0,
+          "poor_fit_count": 0,
+          "rounded_recovery_count": 10,
+          "denominator": 20
+        }
+      ],
+      "runtime_mean_seconds": 0.13379435003735124,
+      "augmentation_mean_seconds": 0.020357733441051094,
+      "peak_batch_rss_bytes": 101285888
+    }
+  ],
+  "paired_auc_deltas": [
+    {
+      "task": "B",
+      "comparator": "random",
+      "seed_deltas": [
+        -0.05448058901216581,
+        -0.0026179157141845055,
+        -0.0074586980131264614,
+        -0.0940722880802647,
+        -0.06796025902564864
+      ],
+      "mean_delta": -0.04531794996907802,
+      "min_delta": -0.0940722880802647,
+      "max_delta": -0.0026179157141845055,
+      "negative_seeds": 5,
+      "n_seeds": 5
+    },
+    {
+      "task": "B",
+      "comparator": "qbc",
+      "seed_deltas": [
+        -9.191445651760707e-16,
+        -1.332453755607217e-16,
+        -0.00016035206486544242,
+        -1.9908559574657762e-17,
+        1.9627842980417947e-16
+      ],
+      "mean_delta": -3.207041297326368e-05,
+      "min_delta": -0.00016035206486544242,
+      "max_delta": 1.9627842980417947e-16,
+      "negative_seeds": 1,
+      "n_seeds": 5
+    },
+    {
+      "task": "B",
+      "comparator": "diversified_qbc",
+      "seed_deltas": [
+        0.0001223004467802616,
+        -0.0002494555948001424,
+        -3.473975705642739e-05,
+        -0.00017346632930786147,
+        -7.503956232837296e-06
+      ],
+      "mean_delta": -6.857303812340139e-05,
+      "min_delta": -0.0002494555948001424,
+      "max_delta": 0.0001223004467802616,
+      "negative_seeds": 4,
+      "n_seeds": 5
+    },
+    {
+      "task": "B",
+      "comparator": "regularized_d_optimal",
+      "seed_deltas": [
+        4.530660234637715e-05,
+        -0.0002539310736747801,
+        -0.00011372874342080127,
+        -2.1517291400570758e-05,
+        7.300831354856656e-05
+      ],
+      "mean_delta": -5.417243852024168e-05,
+      "min_delta": -0.0002539310736747801,
+      "max_delta": 7.300831354856656e-05,
+      "negative_seeds": 3,
+      "n_seeds": 5
+    }
+  ],
+  "first_query_agreement": [
+    {
+      "task": "B",
+      "comparator": "random",
+      "matches": 0,
+      "pairs": 20
+    },
+    {
+      "task": "B",
+      "comparator": "qbc",
+      "matches": 14,
+      "pairs": 20
+    },
+    {
+      "task": "B",
+      "comparator": "diversified_qbc",
+      "matches": 13,
+      "pairs": 20
+    },
+    {
+      "task": "B",
+      "comparator": "regularized_d_optimal",
+      "matches": 16,
+      "pairs": 20
+    }
+  ],
+  "engine": "finite_library_prior_control",
+  "search_settings": null,
+  "prior": "none",
+  "expected_units": 100,
+  "incomplete": false
+}
