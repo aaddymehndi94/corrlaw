@@ -1,0 +1,38 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "corrlaw.prior_audit",
+    "results/runs/prior-control-001/zero_origin_and_even",
+    "--reproduce",
+    "B-s301-w0.01-n0.01-constrained-augmented_qbc",
+    "--output",
+    "results/runs/prior-reproduce-001"
+  ],
+  "duration_seconds": 0.733149,
+  "ended_utc": "2026-09-22T02:05:04+00:00",
+  "error": null,
+  "freeze_id": "v3",
+  "git": {
+    "branch": "research/corrlaw-sprint-01",
+    "commit": "f8056b9190bb7da1b466cf0f20a53468b993ef3b",
+    "working_tree_dirty": true
+  },
+  "log_path": "work/runs/prior-reproduce-001/console.log",
+  "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "phase": "audit",
+  "pid": 1614,
+  "platform": "Darwin",
+  "purpose": "Exact preselected noisy near-preparation prior-aware B replay",
+  "python": "3.14.5",
+  "result_validation": "NOT_REVIEWED",
+  "returncode": 0,
+  "run_cutoff_unix": 1790043003.567447,
+  "run_id": "prior-reproduce-001",
+  "schema_version": 1,
+  "started_utc": "2026-09-22T02:05:03+00:00",
+  "status": "completed",
+  "task": "T17",
+  "threads_requested": 4,
+  "timeout_seconds": 300.0
+}

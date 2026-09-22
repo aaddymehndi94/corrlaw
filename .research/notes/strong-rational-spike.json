@@ -1,0 +1,68 @@
+{
+  "selection": "Post-hoc largest stronger-tier C augmented trajectory AUC",
+  "unit_id": "C-s93003-w0-n0.01-constrained-augmented_qbc",
+  "auc": 1.5360204177787693,
+  "metrics": [
+    {
+      "budget": 0,
+      "total_labels": 192,
+      "witness_count": 48,
+      "diagnostic": "ambiguity_witness_found",
+      "rounded_symbolic_recovery": false,
+      "off_rmse": 0.9645043538253326,
+      "same_rmse": 7.921514772336408e-05,
+      "committee_rms_std": 0.6334919129282934,
+      "false_consensus": false
+    },
+    {
+      "budget": 1,
+      "total_labels": 193,
+      "witness_count": 0,
+      "diagnostic": "no_witness_within_search_budget",
+      "rounded_symbolic_recovery": false,
+      "off_rmse": 0.01054012624996249,
+      "same_rmse": 0.013247996329303333,
+      "committee_rms_std": 0.0035525450908608066,
+      "false_consensus": false
+    },
+    {
+      "budget": 2,
+      "total_labels": 194,
+      "witness_count": 0,
+      "diagnostic": "no_witness_within_search_budget",
+      "rounded_symbolic_recovery": false,
+      "off_rmse": 0.0011654812838238933,
+      "same_rmse": 0.0005528152314712437,
+      "committee_rms_std": 0.0014631009381631662,
+      "false_consensus": false
+    },
+    {
+      "budget": 4,
+      "total_labels": 196,
+      "witness_count": 0,
+      "diagnostic": "no_witness_within_search_budget",
+      "rounded_symbolic_recovery": false,
+      "off_rmse": 0.005396361564552485,
+      "same_rmse": 0.0007665372825067563,
+      "committee_rms_std": 0.005452945800911256,
+      "false_consensus": false
+    },
+    {
+      "budget": 8,
+      "total_labels": 200,
+      "witness_count": 0,
+      "diagnostic": "no_witness_within_search_budget",
+      "rounded_symbolic_recovery": false,
+      "off_rmse": 5.888716866224066,
+      "same_rmse": 0.0011643977666570922,
+      "committee_rms_std": 0.5246053111618338,
+      "false_consensus": false
+    }
+  ],
+  "physical_expression": "0.99725221954832507*x0**2/x1 + 0.0034067619787328564 - 0.00033980892647693749*x1/(x0**2*(0.96526355849262769*x1 - 0.69722919195903744*x1**2/x0))",
+  "selected_expression": "z14*1.403273757918732 + 0.0034067619787328564 - 0.00024148902111164887/(z14*(-z11 + z3))",
+  "status": "Post-hoc selected failure analysis; full parent scientific audit passed. All values remain in aggregates.",
+  "parent": "pysr-confirmation-strong-v3-001",
+  "unit_sha256": "16c481578a3681f8937a7e8ba81825e48d5d274c8b5216a32e743fbe32af59a9",
+  "validation": "results/runs/pysr-confirmation-strong-v3-001/validation.json"
+}

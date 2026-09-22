@@ -1,0 +1,34 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "tools/render_overnight.py",
+    "--output",
+    "reports"
+  ],
+  "duration_seconds": 79.450704,
+  "ended_utc": "2026-09-22T02:06:30+00:00",
+  "error": null,
+  "freeze_id": "v3",
+  "git": {
+    "branch": "research/corrlaw-sprint-01",
+    "commit": "f8056b9190bb7da1b466cf0f20a53468b993ef3b",
+    "working_tree_dirty": true
+  },
+  "log_path": "work/runs/overnight-report-001/console.log",
+  "log_sha256": "a4de7a10933e226e668ec8a52e8390badeac9f9dee6ebf4c6f66e035acee3775",
+  "phase": "audit",
+  "pid": 1632,
+  "platform": "Darwin",
+  "purpose": "Render all audited overnight summaries, matched diagnostics and preselected witness illustrations",
+  "python": "3.14.5",
+  "result_validation": "NOT_REVIEWED",
+  "returncode": 0,
+  "run_cutoff_unix": 1790043910.8154922,
+  "run_id": "overnight-report-001",
+  "schema_version": 1,
+  "started_utc": "2026-09-22T02:05:10+00:00",
+  "status": "completed",
+  "task": "T17",
+  "threads_requested": 4,
+  "timeout_seconds": 1200.0
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "results/runs/prior-control-001/zero_origin_and_even",
+  "unit_id": "B-s301-w0.01-n0.01-constrained-augmented_qbc",
+  "prior": "zero_origin_and_even",
+  "exact_match": true,
+  "original_scientific_sha256": "fd8f8c1ce0162c64e3925676d2da5642fe639383cb21590a16f6e0c2a713a131",
+  "repeated_scientific_sha256": "fd8f8c1ce0162c64e3925676d2da5642fe639383cb21590a16f6e0c2a713a131"
+}

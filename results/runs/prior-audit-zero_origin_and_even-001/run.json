@@ -1,0 +1,36 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "corrlaw.prior_audit",
+    "results/runs/prior-control-001/zero_origin_and_even",
+    "--output",
+    "results/runs/prior-control-001/zero_origin_and_even"
+  ],
+  "duration_seconds": 0.689746,
+  "ended_utc": "2026-09-22T02:03:01+00:00",
+  "error": null,
+  "freeze_id": "v3",
+  "git": {
+    "branch": "research/corrlaw-sprint-01",
+    "commit": "f8056b9190bb7da1b466cf0f20a53468b993ef3b",
+    "working_tree_dirty": true
+  },
+  "log_path": "work/runs/prior-audit-zero_origin_and_even-001/console.log",
+  "log_sha256": "1f451641f23faa0b0f30dbf45c6399cd424a805c368e14c6c5e285e63b889167",
+  "phase": "audit",
+  "pid": 1360,
+  "platform": "Darwin",
+  "purpose": "Full prior-control artifact and algebraic prior audit",
+  "python": "3.14.5",
+  "result_validation": "NOT_REVIEWED",
+  "returncode": 0,
+  "run_cutoff_unix": 1790043180.425508,
+  "run_id": "prior-audit-zero_origin_and_even-001",
+  "schema_version": 1,
+  "started_utc": "2026-09-22T02:03:00+00:00",
+  "status": "completed",
+  "task": "T16",
+  "threads_requested": 4,
+  "timeout_seconds": 600.0
+}

@@ -1,0 +1,38 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "tools/render_overnight.py",
+    "--output",
+    "work/overnight-regenerated-001",
+    "--compare",
+    "reports",
+    "--comparison-output",
+    "reports/audit/overnight-report-regeneration.json"
+  ],
+  "duration_seconds": 79.319958,
+  "ended_utc": "2026-09-22T02:08:39+00:00",
+  "error": null,
+  "freeze_id": "v3",
+  "git": {
+    "branch": "research/corrlaw-sprint-01",
+    "commit": "f8056b9190bb7da1b466cf0f20a53468b993ef3b",
+    "working_tree_dirty": true
+  },
+  "log_path": "work/runs/overnight-report-regeneration-001/console.log",
+  "log_sha256": "60aaa6721064b963115fe30739397b892ef8556fe2fe85a624c8e7fb729f6d39",
+  "phase": "audit",
+  "pid": 1798,
+  "platform": "Darwin",
+  "purpose": "Fresh numerical report regeneration and exact byte comparison against original artifacts",
+  "python": "3.14.5",
+  "result_validation": "NOT_REVIEWED",
+  "returncode": 0,
+  "run_cutoff_unix": 1790043739.9252758,
+  "run_id": "overnight-report-regeneration-001",
+  "schema_version": 1,
+  "started_utc": "2026-09-22T02:07:19+00:00",
+  "status": "completed",
+  "task": "T17",
+  "threads_requested": 4,
+  "timeout_seconds": 900.0
+}

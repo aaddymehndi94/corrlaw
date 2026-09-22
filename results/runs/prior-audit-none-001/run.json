@@ -1,0 +1,36 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "corrlaw.prior_audit",
+    "results/runs/prior-control-001/none",
+    "--output",
+    "results/runs/prior-control-001/none"
+  ],
+  "duration_seconds": 1.355023,
+  "ended_utc": "2026-09-22T02:02:58+00:00",
+  "error": null,
+  "freeze_id": "v3",
+  "git": {
+    "branch": "research/corrlaw-sprint-01",
+    "commit": "f8056b9190bb7da1b466cf0f20a53468b993ef3b",
+    "working_tree_dirty": true
+  },
+  "log_path": "work/runs/prior-audit-none-001/console.log",
+  "log_sha256": "c3167294f25220dc5c8ee43f033c290f911921438fb23291e2da965d1f0a5632",
+  "phase": "audit",
+  "pid": 1300,
+  "platform": "Darwin",
+  "purpose": "Full prior-control artifact and algebraic prior audit",
+  "python": "3.14.5",
+  "result_validation": "NOT_REVIEWED",
+  "returncode": 0,
+  "run_cutoff_unix": 1790043177.457123,
+  "run_id": "prior-audit-none-001",
+  "schema_version": 1,
+  "started_utc": "2026-09-22T02:02:57+00:00",
+  "status": "completed",
+  "task": "T16",
+  "threads_requested": 4,
+  "timeout_seconds": 600.0
+}

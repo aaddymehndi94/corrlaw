@@ -1,0 +1,38 @@
+{
+  "status": "Post-hoc selected failure analysis; full parent scientific audit passed. All values remain in aggregates.",
+  "selection": "Largest constrained F diversified/D-optimal trajectory AUC",
+  "unit_id": "F-s93001-w0.01-n0.01-constrained-regularized_d_optimal",
+  "auc": 0.7897330953032388,
+  "worst_metric": {
+    "budget": 2,
+    "total_labels": 194,
+    "witness_count": 0,
+    "diagnostic": "no_witness_within_search_budget",
+    "rounded_symbolic_recovery": false,
+    "off_rmse": 4.105325643439201,
+    "same_rmse": 0.023974687952466565,
+    "committee_rms_std": 1.5153394470058192,
+    "false_consensus": false
+  },
+  "physical_expression": "0.2669420990819195*x0*x1 + 0.19219342817802615 + 0.0011565326546161291/(-0.078167726652046807 + 0.21725608543777456*x1**2/x0)",
+  "selected_candidate": {
+    "expression": "z0*(z9 + 0.6627052174050098)*0.290013452633749 + 0.0011565326546161291/(0.3064602816084819*(z11 - 1*0.25506641918416667))",
+    "search": 0,
+    "generation": 2,
+    "index": 7,
+    "search_complexity": 15,
+    "search_loss": 0.0003875038092423,
+    "errors": [
+      0.025349671038237428,
+      0.024576222722787037,
+      0.01562431586111962,
+      0.0013708998652172952
+    ],
+    "complexity": 15,
+    "bounded": true,
+    "admissible": true
+  },
+  "parent": "pysr-confirmation-v3-001",
+  "unit_sha256": "dad65bad7ee8892f6c9b32b9c041f689a157068df00084950fe09c85cd97e7a9",
+  "validation": "results/runs/pysr-confirmation-v3-001/validation.json"
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "results/runs/pysr-confirmation-v3-001",
+  "unit_id": "F-s93001-w0.01-n0.01-constrained-augmented_qbc",
+  "exact_match": true,
+  "original_scientific_sha256": "8a566dbf0e0dbcc0a82ae8afc40558626f7218c6e913ef505bb05df088232bb7",
+  "repeated_scientific_sha256": "8a566dbf0e0dbcc0a82ae8afc40558626f7218c6e913ef505bb05df088232bb7"
+}

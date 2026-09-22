@@ -1,0 +1,9 @@
+{
+  "valid": true,
+  "expected_units": 100,
+  "completed_units": 100,
+  "failed_units": [],
+  "witnesses_checked": 654,
+  "errors": [],
+  "prior_models_checked": 900
+}

@@ -1,0 +1,38 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "corrlaw.search_diagnostic_audit",
+    "results/runs/search-diagnostic-001",
+    "--parent",
+    "results/runs/confirmation-v2-001",
+    "--output",
+    "results/runs/search-diagnostic-001"
+  ],
+  "duration_seconds": 4.579478,
+  "ended_utc": "2026-09-22T02:02:41+00:00",
+  "error": null,
+  "freeze_id": "v3",
+  "git": {
+    "branch": "research/corrlaw-sprint-01",
+    "commit": "f8056b9190bb7da1b466cf0f20a53468b993ef3b",
+    "working_tree_dirty": true
+  },
+  "log_path": "work/runs/search-diagnostic-audit-001/console.log",
+  "log_sha256": "64bf6f845618469839635649d7b3b3ada211dd1bd6be77081fbedb19933853b7",
+  "phase": "audit",
+  "pid": 1266,
+  "platform": "Darwin",
+  "purpose": "Audit1200 exploratory support rows and exactly replay preselected E support fit",
+  "python": "3.14.5",
+  "result_validation": "NOT_REVIEWED",
+  "returncode": 0,
+  "run_cutoff_unix": 1790043156.632098,
+  "run_id": "search-diagnostic-audit-001",
+  "schema_version": 1,
+  "started_utc": "2026-09-22T02:02:36+00:00",
+  "status": "completed",
+  "task": "T16",
+  "threads_requested": 4,
+  "timeout_seconds": 600.0
+}

@@ -1,0 +1,36 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "corrlaw.symbolic_audit",
+    "results/runs/pysr-confirmation-v3-001",
+    "--output",
+    "results/runs/pysr-confirmation-v3-001"
+  ],
+  "duration_seconds": 3184.874296,
+  "ended_utc": "2026-09-22T01:54:58+00:00",
+  "error": null,
+  "freeze_id": "v3",
+  "git": {
+    "branch": "research/corrlaw-sprint-01",
+    "commit": "f8056b9190bb7da1b466cf0f20a53468b993ef3b",
+    "working_tree_dirty": true
+  },
+  "log_path": "work/runs/pysr-confirmation-audit-v3-001/console.log",
+  "log_sha256": "ece5e3aefe29d839938d7dc36f64febc6bf5a9c713ee744638c20542341d24d6",
+  "phase": "audit",
+  "pid": 99033,
+  "platform": "Darwin",
+  "purpose": "Full frozen primary artifact reconstruction: data, candidates, witnesses, query rankings and metrics",
+  "python": "3.14.5",
+  "result_validation": "NOT_REVIEWED",
+  "returncode": 0,
+  "run_cutoff_unix": 1790044200.0,
+  "run_id": "pysr-confirmation-audit-v3-001",
+  "schema_version": 1,
+  "started_utc": "2026-09-22T01:01:53+00:00",
+  "status": "completed",
+  "task": "T17",
+  "threads_requested": 4,
+  "timeout_seconds": 5286.35796713829
+}
