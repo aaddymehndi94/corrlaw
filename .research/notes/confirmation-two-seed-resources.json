@@ -1,0 +1,24 @@
+{
+  "run": "results/runs/pysr-confirmation-v3-001",
+  "scope": "Resource monitoring only; scientific interpretation awaits full audit.",
+  "completed_at_check": 203,
+  "execution_failures": 0,
+  "blocks": [
+    {
+      "seed": 93001,
+      "units": 100,
+      "runtime_sum_seconds": 1611.8559747445397,
+      "mean_seconds": 16.118559747445396,
+      "max_seconds": 45.610102334059775,
+      "peak_rss_bytes": 1432666112
+    },
+    {
+      "seed": 93002,
+      "units": 100,
+      "runtime_sum_seconds": 1831.0270789952483,
+      "mean_seconds": 18.310270789952483,
+      "max_seconds": 50.979379625059664,
+      "peak_rss_bytes": 1736671232
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "corrlaw.symbolic_experiment",
+    "--config",
+    "configs/pysr-confirmation-v3.json"
+  ],
+  "duration_seconds": 10674.665679,
+  "ended_utc": "2026-09-22T00:12:34+00:00",
+  "error": null,
+  "freeze_id": "v3",
+  "git": {
+    "branch": "research/corrlaw-sprint-01",
+    "commit": "7f2f62aebeb5c19dc7522d315fbb393fbab73a36",
+    "working_tree_dirty": true
+  },
+  "log_path": "work/runs/pysr-confirmation-v3-001/console.log",
+  "log_sha256": "ae44c050c441bb211f58fbc70d7c22a5e06290e0d34e8a54b592c8d0512acf50",
+  "phase": "confirmation",
+  "pid": 90656,
+  "platform": "Darwin",
+  "purpose": "Frozen five-policy PySR confirmation across four tasks, five seeds, exact/near preparations and all controls",
+  "python": "3.14.5",
+  "result_validation": "NOT_REVIEWED",
+  "returncode": 0,
+  "run_cutoff_unix": 1790037879.7977679,
+  "run_id": "pysr-confirmation-v3-001",
+  "schema_version": 1,
+  "started_utc": "2026-09-21T21:14:39+00:00",
+  "status": "completed",
+  "task": "T15",
+  "threads_requested": 4,
+  "timeout_seconds": 12600.0
+}

@@ -1,0 +1,40 @@
+{
+  "run": "results/runs/pysr-confirmation-v3-001",
+  "duration_seconds": 10674.665679,
+  "runtime_sum_seconds": 10664.028063525911,
+  "fitting_sum_seconds": 8292.986731403507,
+  "augmentation_sum_seconds": 2342.022732003592,
+  "peak_rss_bytes": 2140995584,
+  "seed_blocks": [
+    {
+      "seed": 93001,
+      "units": 100,
+      "mean_seconds": 16.118559747445396,
+      "sum_seconds": 1611.8559747445397
+    },
+    {
+      "seed": 93002,
+      "units": 100,
+      "mean_seconds": 18.310270789952483,
+      "sum_seconds": 1831.0270789952483
+    },
+    {
+      "seed": 93003,
+      "units": 100,
+      "mean_seconds": 20.52070674202172,
+      "sum_seconds": 2052.070674202172
+    },
+    {
+      "seed": 93004,
+      "units": 100,
+      "mean_seconds": 24.330494128305,
+      "sum_seconds": 2433.0494128305
+    },
+    {
+      "seed": 93005,
+      "units": 100,
+      "mean_seconds": 27.360249227534513,
+      "sum_seconds": 2736.0249227534514
+    }
+  ]
+}

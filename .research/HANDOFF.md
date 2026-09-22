@@ -7,14 +7,12 @@ Native goal active. Old finite-pilot completion does NOT finish this extension.
 
 ## Current milestone and exact next action
 
-Freeze v3 VERIFIED75 files at scientific input commit5e27579, created21:13 UTC.
-Final configs: primary500 trajectories and secondary100; no new CDEF outcomes yet.
-Next run through lab:
-python3 tools/lab.py run --id pysr-confirmation-v3-001 --task T15
---purpose 'Frozen five-policy PySR confirmation across four tasks and all controls'
---phase confirmation --freeze v3 --timeout12600 -- .venv/bin/python
--m corrlaw.symbolic_experiment --config configs/pysr-confirmation-v3.json
-(Use normal separated flags; line breaks here are prose.)
+Freeze v3 VERIFIED75 files at scientific input commit5e27579; metadata7f2f62a.
+ACTIVE primary: pysr-confirmation-v3-001, PID90656, execsession47505,
+started2026-09-21T21:14:39+00:00, timeout12600s, phaseconfirmation/freezev3.
+Command uses corrlaw.symbolic_experiment --config configs/pysr-confirmation-v3.json.
+Monitor completion; next strong100 before01:30UTC. Do not restart or duplicate it.
+The main study is now open: no scientific source/config edits or outcome-based tuning.
 
 One heavy process, <=4 numerical threads, serial Julia. Do not edit frozen source,
 configs, tests, tools or scientific documents. Run IDs immutable; preserve failures.
@@ -123,3 +121,50 @@ becauseextensioncodechanged; historicalbytesremain inGit. Oldcompletiongate does
 NOTcomplete overnight. Current REPORT stillneedsrewrite. Work/overnight-report-outline.md
 is only a prose aid with placeholders, not a finished result. Full earlier state
 and superseded methods are preserved in localGit commits, nothing pushed.
+
+First primary seed completed100/500,0executionfailures; resource-only review in
+notes/confirmation-first-seed-resources.json. Report is now an honest IN-PROGRESS
+landing page; archived pilot preserved. CLAIMS now includes verified development/
+analytical C019–C027, no unaudited new confirmation claims. These report/ledger
+updates are uncommitted while the runner lock is active.
+After primary, consider running the short frozen exploratory T16 search/prior
+studies before strong100 to reserve their completion; ordering may adapt to time,
+scientific scope cannot. Strong timeout5400s can be bounded by absolute01:30cutoff.
+No new experiments after01:30; audits/replays/reporting may use auditphase until02:30.
+
+Final audit addition (read-only consistency check, no method change): after the
+three prior-control tiers complete, verify identical unit-ID sets and matching
+initial_data_hash/evaluation_hash across none/zero_origin/zero_origin_and_even for
+each corresponding unit. Save reports/audit/prior-pairing.json and cite it when
+interpreting prior effects. Individual prior audits reconstruct inputs, but this
+explicit cross-tier check makes the shared-data comparison directly reviewable.
+
+Latest primary milestone:300/500, first3complete seeds,0executionfailures. Main
+execsession47505/PID90656 still active; monitoring cell392 ended normally. Read
+notes/confirmation-three-seed-resources.json for resource growth. Do not re-run
+the primary or change frozen source/config. Continue remaining2seeds, then the
+short T16 search/prior studies and strong100 (timeout5400 but01:30UTC absolutecap).
+
+Latest milestone:400/500,0executionfailures; main execsession47505/PID90656
+active, monitoring cell394 ended normally. Lastseed93005 starting. Four-seed
+resource file recorded. Report currentlyinterim; CLAIMSC019–27 verifieddev/algebra.
+
+Additional interpretation checks identified BEFORE the new T16 diagnostic outcomes:
+- For exhaustive supports, compare the same recorded model-selection objective
+  (observed_errors[3]+1e-8*nonzero_terms) against the archived selected candidate,
+  across ALL1200rows. Better hidden error alone cannot establish better optimization:
+  restricting supports to<=3 also changes the model class/regularization. Save raw
+  paired objective differences in an audit artifact if making a search-failure claim.
+  This is read-only interpretation of the original declared objective, not a change
+  to frozen fits/acquisitions. Enumeration is of ordinary-LS support fits with
+  coefficient filtering, not global constrained optimization over all coefficients.
+- Cross-engine aggregate AUCs use different seeds AND grids (oldfinite noises0/.01;
+  newprimary noise.01only), plus grammar/search/retention/weighting changes. Do not
+  portray those aggregate differences as a matched causal engine comparison.
+- Strong30vs100 comparisons DO use the matched condition set and input hashes.
+
+PRIMARY COMPLETE at00:12:34UTC:500/500,0executionfailures,10674.665679s.
+All expected IDs and500 file hashes checked; full scientificaudit stillPENDING.
+MainPID90656/session47505/monitor396 ended. Resource totals in notes/primary-
+confirmation-resources.json. NEXT checkpoint owned results/state, short T16
+search/prior runs, then strong100 by01:30. Audits/reporting must finish02:30.

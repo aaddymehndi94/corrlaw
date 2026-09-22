@@ -1,0 +1,40 @@
+{
+  "run": "results/runs/pysr-confirmation-v3-001",
+  "scope": "Resource monitoring only; performance interpretation awaits audit.",
+  "completed_at_check": 402,
+  "execution_failures": 0,
+  "blocks": [
+    {
+      "seed": 93001,
+      "units": 100,
+      "runtime_sum_seconds": 1611.8559747445397,
+      "mean_seconds": 16.118559747445396,
+      "max_seconds": 45.610102334059775,
+      "peak_rss_bytes": 1432666112
+    },
+    {
+      "seed": 93002,
+      "units": 100,
+      "runtime_sum_seconds": 1831.0270789952483,
+      "mean_seconds": 18.310270789952483,
+      "max_seconds": 50.979379625059664,
+      "peak_rss_bytes": 1736671232
+    },
+    {
+      "seed": 93003,
+      "units": 100,
+      "runtime_sum_seconds": 2052.070674202172,
+      "mean_seconds": 20.52070674202172,
+      "max_seconds": 51.25009254203178,
+      "peak_rss_bytes": 1885667328
+    },
+    {
+      "seed": 93004,
+      "units": 100,
+      "runtime_sum_seconds": 2433.0494128305,
+      "mean_seconds": 24.330494128305,
+      "max_seconds": 60.25871433294378,
+      "peak_rss_bytes": 2055782400
+    }
+  ]
+}

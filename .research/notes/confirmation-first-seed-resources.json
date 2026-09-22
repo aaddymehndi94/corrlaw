@@ -1,0 +1,16 @@
+{
+  "run": "results/runs/pysr-confirmation-v3-001",
+  "scope": "Execution resource monitoring only; no confirmation performance interpretation before audit.",
+  "seed": 93001,
+  "units": 100,
+  "runtime_sum_seconds": 1611.8559747445397,
+  "mean_seconds": 16.118559747445396,
+  "max_seconds": 45.610102334059775,
+  "peak_rss_bytes": 1432666112,
+  "by_task": {
+    "C": 17.802979604993016,
+    "D": 14.84708376822062,
+    "E": 15.279667414948344,
+    "F": 16.54450820161961
+  }
+}
